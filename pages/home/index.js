@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Header from "../header";
 import Nav from "../nav";
 import Footer from "../footer";
+import Skills from '../skills';
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
           </div>
         </main>
       </Container>
+        <Skills />
       <Footer />
     </BlackContainer>
   );
@@ -42,14 +44,11 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "Bodoni Moda", serif;
-  background-image: url("images/background2.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
+  background: url("images/background2.jpeg") no-repeat center center/cover;
+  /* position: absolute; */
   & main {
     width: 100%;
-    max-width: 1360px;
+    max-width: 1260px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -62,15 +61,43 @@ const Container = styled.div`
     max-width: 620px;
     max-height: 769px;
     border-radius: 50%;
-    /* border: 5px solid white; */
   }
 
   & div {
     display: flex;
     flex-direction: column;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-top: 5rem;
     & p {
       font-size: x-large;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    & main {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    & img {
+      color: white;
+      width: 100%;
+      height: 100%;
+      max-width: 320px;
+      max-height: 469px;
+      border-radius: 50%;
+      /* border: 5px solid white; */
+    }
+
+    & div {
+      display: flex;
+      flex-direction: column;
+      font-size: 1rem;
+      & p {
+        font-size: large;
+      }
     }
   }
 `;
