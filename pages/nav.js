@@ -8,14 +8,12 @@ export default function Nav() {
     <HeaderContainer>
       <h1>Young Lee</h1>
         <ul>
-          <Link href={"/skills"}>
-            <li>skills</li>
-          </Link>
+            <li>Skills</li>
           <Link href={"/experiences"}>
-            <li>experiences</li>
+            <li>Experiences</li>
           </Link>
           <Link href={"/projects"}>
-            <li>projects</li>
+            <li>Projects</li>
           </Link>
         </ul>
         <button onClick={() => router.push("/contact")}>Contact Me</button>
@@ -31,6 +29,8 @@ const HeaderContainer = styled.header`
   padding: 1rem 4rem;
   letter-spacing: 0.1rem;
   font-family: "Bodoni Moda", serif;
+  position: absolute;
+  top: 0;
 
   & ul {
     font-size: x-large;
@@ -39,6 +39,7 @@ const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
     list-style-type: none;
+
 
     & li {
       :hover {

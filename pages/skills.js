@@ -5,18 +5,18 @@ export default function Skills() {
       <Container>
           <ul>
             <li>
-              <img src="https://img.icons8.com/color/96/null/javascript--v1.png" />
-              <p>JavaScript</p>
+              <img src="https://img.icons8.com/color/96/null/html-5--v1.png" />
+              <p>HTML</p>
             </li>
             <li>
               <img src="https://img.icons8.com/color/96/null/css3.png" />
               <p>CSS</p>
             </li>
-            <li>
-              <img src="https://img.icons8.com/color/96/null/html-5--v1.png" />
-              <p>HTML</p>
-            </li>
 
+            <li>
+              <img src="https://img.icons8.com/color/96/null/javascript--v1.png" />
+              <p>JavaScript</p>
+            </li>
             <li>
               <img src="https://img.icons8.com/color/96/null/react-native.png" />
               <p>React.js</p>
@@ -35,13 +35,6 @@ export default function Skills() {
               <p>Redux</p>
             </li>
 
-            <li>
-              <img
-                src="/images/strapi.svg"
-                style={{ width: "98px", height: "98px" }}
-              />
-              <p>Strapi</p>
-            </li>
 
             <li>
               <img
@@ -75,6 +68,13 @@ export default function Skills() {
                 style={{ width: "98px", height: "98px" }}
               />
               <p>Styled components</p>
+            </li>
+            <li>
+              <img
+                src="/images/strapi.svg"
+                style={{ width: "98px", height: "98px" }}
+              />
+              <p>Strapi</p>
             </li>
             <li>
               <img

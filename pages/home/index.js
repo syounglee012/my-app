@@ -52,7 +52,7 @@ const Container = styled.div`
     height: 100%;
     display: flex;
     justify-content: space-between;
-    /* margin-top: 3rem; */
+    margin-top: 5rem;
   }
   & img {
     color: white;
