@@ -1,79 +1,66 @@
-import Head from "next/head";
 import styled from "styled-components";
+import Header from "../header";
+import Nav from "../nav";
+import Footer from "../footer";
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Young Lee</title>
-        <meta name="author" content="Young Lee" />
-        <link rel="icon" href="images/profile copy.png" type="image/gif" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=DM+Serif+Display&family=DM+Serif+Text&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-
+    <BlackContainer>
+      <Header />
       <Container>
-        <HeaderContainer>
-          <h1>Young Lee</h1>
-          <button>Contact Me</button>
-        </HeaderContainer>
+        <Nav />
 
         <main>
-          <img src="images/profile.jpeg" alt="profile picture" />
+          <img src="images/profile1.png" alt="profile picture" />
 
           <div>
             <h1>
               Hello! <br />
               I&apos;m Young Lee
             </h1>
-            <p>Front-End Developer</p>
-            <p>based in Seattle</p>
+            <p>
+              Front-End Developer
+              <br /> based in Seattle
+            </p>
           </div>
         </main>
       </Container>
-      <FooterContainer>
-        <footer>Created by Young Lee</footer>
-      </FooterContainer>
-    </>
+      <Footer />
+    </BlackContainer>
   );
 }
-const HeaderContainer = styled.header`
+
+const BlackContainer = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 4rem;
-  letter-spacing: 0.1rem;
-  font-family: "Bodoni Moda", serif;
-  /* color: black; */
-
-  & button {
-    font-size: 18px;
-    width: 100%;
-    height: 50px;
-    max-width: 150px;
-    color: black;
-    background-color: yellow;
-    border: none;
-    outline: none;
-    letter-spacing: 0.1rem;
-    font-family: "Bodoni Moda", serif;
-  }
+  height: 100%;
 `;
-
 const Container = styled.div`
   display: flex;
+  width: 100%;
+  height: 944px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Bodoni Moda", serif;
+  background-image: url("images/background2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
+  & main {
+    width: 100%;
+    max-width: 1360px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 3rem; */
+  }
   & img {
     color: white;
-    width: 480px;
-    height: 569px;
+    width: 100%;
+    height: 100%;
+    max-width: 620px;
+    max-height: 769px;
     border-radius: 50%;
     /* border: 5px solid white; */
   }
@@ -81,25 +68,9 @@ const Container = styled.div`
   & div {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-size: xx-large;
+    font-size: 3rem;
     & p {
       font-size: x-large;
     }
   }
-
-  & main {
-    width: 100%;
-    max-width: 1060px;
-    display: flex;
-    /* justify-content: space-between; */
-    margin-top: 3rem;
-  }
-`;
-
-const FooterContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  bottom: 0;
-  font-family: "Bodoni Moda", serif;
 `;
