@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export default function Skills() {
+
   return (
     <Container>
       <ul>
@@ -113,6 +114,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding: 5rem;
+
   & ul {
     width: 100%;
     max-width: 800px;

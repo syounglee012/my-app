@@ -23,6 +23,8 @@ export default function Home() {
   const HandleProjectsScroll = () => {
     projectsRef.current.scrollIntoView({ behavior: "smooth" },1000);
   };
+
+  
   return (
     <BlackContainer>
       <Header />
