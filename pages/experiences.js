@@ -64,12 +64,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   font-family: "Bodoni Moda", serif;
-  height: 100vh;
-  background: url("images/background2.jpeg") no-repeat center center/cover;
+  height: 100%;
   padding-top: 5rem;
 
   .testimonial {
-    margin: 50px auto;
+    margin: 100px auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 5rem;
@@ -79,25 +78,28 @@ const Container = styled.div`
     position: relative;
     margin: 0 auto;
     max-width: 800px;
-    background: #222;
+    background-color: none;
     padding-bottom: 20px;
     box-sizing: border-box;
     text-align: center;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     overflow: hidden;
-    border-radius: 15%;
+    border-radius: 50% 10% / 50% 30%;
 
     :hover {
       cursor: pointer;
     }
+    @media screen and (max-width: 900px) {
+    margin: 0 0 3rem;
+  
+  }
   }
   .testimonial .card .layer {
     position: absolute;
-    top: calc(100% - 2px);
+    top: calc(100% - 1px);
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(#03a9f4, #e91ee3);
+    background: linear-gradient(#ffaaab, #00a0a0);
     z-index: 1;
     transition: 0.5s;
   }

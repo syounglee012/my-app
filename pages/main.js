@@ -23,8 +23,8 @@ const BlackContainer = styled.div`
   .cater3-movingBG {
     height: 100%;
     background-image: url(http://salsaritas.johngroupinteractive.com/wp-content/uploads/2017/06/enchilada-bg.jpg);
-    background-size: 125%;
-    background-repeat: repeat-x;
+    background-size: 100%;
+    background-repeat: no-repeat;
     animation: animatedBackground 15s linear alternate infinite;
   }
 
@@ -54,6 +54,9 @@ const BlackContainer = styled.div`
     align-items: flex-start;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
+    @media screen and (max-width: 900px) {
+
+    }
   }
   .flyIn {
     color: #fff;
@@ -93,7 +96,6 @@ const BlackContainer = styled.div`
     transition-delay: 4s;
     transition: 4s ease in;
     animation: fadeIn 5s linear;
-    width: 100%;
     display: inline-block;
     color: white;
     box-size: border-box;
@@ -119,21 +121,24 @@ const BlackContainer = styled.div`
   }
 
   @media screen and (max-width: 900px) {
+    width: 270px;
     position: absolute;
-    top: 8rem;
+    margin: 0 0 0;
+
     .lineOne,
     .lineTwo {
       font-size: 2rem;
     }
     .lineThree {
-    font-size: 1rem;
-    margin-top: 1em;
-    text-align: center;
-  }
-  .lineFour {
-    font-size: .8rem;
-    text-align: center;
+      font-size: 1rem;
+      margin-top: 1em;
+      text-align: center;
+      letter-spacing: .3rem;
+    }
+    .lineFour {
+      font-size: 0.8rem;
+      letter-spacing: .3rem;
 
-  }
+    }
   }
 `;

@@ -55,6 +55,10 @@ export default function Home() {
 const BlackContainer = styled.div`
   width: 100%;
   height: 100%;
+  background: url("images/background7.jpeg") no-repeat center center/contain;
+  @media screen and (max-width: 900px) {
+    background: url("images/background7.jpeg") no-repeat center center/cover;
+  }
 `;
 const Container = styled.div`
   display: flex;
@@ -64,8 +68,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   letter-spacing: 0.2rem;
-  background: url("images/background2.jpeg") no-repeat center center/cover;
-  /* position: absolute; */
+
   & main {
     width: 100%;
     max-width: 1360px;
@@ -99,14 +102,23 @@ const Container = styled.div`
         z-index: -1;
       }
       &::after {
-        background-image: linear-gradient(0deg, #fff 20%, #ffae3d 98%);
-        border-radius: 50%;
+        background-image: linear-gradient(
+          0deg,
+          #e5eaf5 20%,
+          #edf756 100%
+        );
+        border-radius: 25% 10%;
         animation: slick-hover 3s 0.4s linear infinite reverse;
         transform: translateY(20px) translateX(20px);
       }
       &::before {
-        background-image: linear-gradient(0deg, #a1deff 60%, #5ea3db 97%);
-        border-radius: 50%;
+        background-image: linear-gradient(
+          0deg,
+          #edf7f6 40%,
+          #9df9ef 90%,
+          #51e2f5 100%
+        );
+        border-radius: 25% 10%;
         animation: slick-hover-2 3s 0.4s linear infinite;
         transform: translateY(-20px) translateX(-20px);
       }
@@ -123,6 +135,8 @@ const Container = styled.div`
           animation: slick-hover 3s 0.4s linear infinite reverse;
           transform: translateY(20px) translateX(20px);
         } */
+      }
+      @media screen and (max-width: 900px) {
       }
     }
 
@@ -188,13 +202,13 @@ const Container = styled.div`
     }
     @media screen and (max-width: 900px) {
       display: grid;
-      .container{
-        display: flex;
-        justify-content: center;
+      .container {
+        margin-top: 12rem;
+        margin-bottom: 2rem;
       }
-      .item{
-        height: 300px;
-        width: 300px;
+      .item {
+        height: 250px;
+        width: 250px;
       }
     }
   }
@@ -204,5 +218,9 @@ const Container = styled.div`
     max-width: 520px;
     max-height: 669px;
     margin-top: 4em;
+  }
+  @media screen and (max-width: 900px) {
+    display: grid;
+    height: 100%;
   }
 `;

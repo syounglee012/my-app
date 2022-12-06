@@ -142,18 +142,18 @@ const Container = styled.div`
   }
 
   @media screen and (max-width: 1300px) {
-    font-size:12px;
+    font-size:10px;
     font-weight:400;
-    padding: 1rem;
+    padding: 3rem 0;
     & ul {
       display: grid;
       grid-template-columns:1fr 1fr 1fr 1fr;
-      gap: 1rem;
-      padding: 0 1rem;
+      gap: 0;
+      padding: 0.6rem;
     }
     & img{
-      width: 49px;
-      height: 49px;
+      width: 32px;
+      height: 32px;
     }
   }
 `;
