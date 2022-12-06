@@ -9,9 +9,7 @@ export default function Main() {
           <div class="flyIn lineOne">Hello!</div>
           <div class="flyIn lineTwo">I&#39;m Young Lee</div>
           <div class="flyIn lineThree">Front-End Developer</div>
-          <div class="flyIn lineFour">
-            Based In Seattle
-          </div>
+          <div class="flyIn lineFour">Based In Seattle</div>
         </div>
       </div>
     </BlackContainer>
@@ -83,7 +81,7 @@ const BlackContainer = styled.div`
   }
   .lineOne,
   .lineTwo {
-    font-size: 5rem;
+    font-size: 6rem;
     letter-spacing: 3px;
   }
   .lineThree {
@@ -118,5 +116,24 @@ const BlackContainer = styled.div`
     100% {
       transform: translateX(0%);
     }
+  }
+
+  @media screen and (max-width: 900px) {
+    position: absolute;
+    top: 8rem;
+    .lineOne,
+    .lineTwo {
+      font-size: 2rem;
+    }
+    .lineThree {
+    font-size: 1rem;
+    margin-top: 1em;
+    text-align: center;
+  }
+  .lineFour {
+    font-size: .8rem;
+    text-align: center;
+
+  }
   }
 `;

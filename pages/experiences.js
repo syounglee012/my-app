@@ -65,11 +65,11 @@ const Container = styled.div`
   flex-direction: column;
   font-family: "Bodoni Moda", serif;
   height: 100vh;
-  background: url("images/background.jpg") no-repeat center center/cover;
+  background: url("images/background2.jpeg") no-repeat center center/cover;
   padding-top: 5rem;
 
   .testimonial {
-    margin: 100px auto;
+    margin: 50px auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 5rem;
@@ -79,12 +79,13 @@ const Container = styled.div`
     position: relative;
     margin: 0 auto;
     max-width: 800px;
-    background: #333;
+    background: #222;
     padding-bottom: 20px;
     box-sizing: border-box;
     text-align: center;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     overflow: hidden;
+    border-radius: 15%;
 
     :hover {
       cursor: pointer;
@@ -132,7 +133,7 @@ const Container = styled.div`
   .testimonial .card .details ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    list-style-type: none;
+    list-style-type: circle;
     font-size: 14px;
     line-height: 24px;
   }
@@ -145,6 +146,44 @@ const Container = styled.div`
   .testimonial .card:hover .content .details span {
     color: #fff;
   }
+  @media screen and (max-width: 900px) {
+    padding-top: 2rem;
+    .testimonial {
+      margin: 1rem;
+  }
+  .testimonial .card {
+  }
+
+  .testimonial .card .content h2 {
+    font-size: 28px;
+  }
+  .testimonial .card .content h4 {
+    font-size: 22px;
+    line-height: 20px;
+    margin: 0;
+  }
+  .testimonial .card .content p {
+    font-size: 18px;
+    line-height: 10px;
+  }
+  .testimonial .card .content ul {
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 2rem;
+  }
+  .testimonial .card .details h4 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .testimonial .card .details ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  } ;
 `;
 
 const Title = styled.div`
@@ -155,4 +194,9 @@ const Title = styled.div`
     font-family: "Abril Fatface", cursive;
     letter-spacing: 0.4rem;
   }
+  @media screen and (max-width: 900px) {
+    & h1 {
+      font-size: xx-large;
+    }
+  } ;
 `;

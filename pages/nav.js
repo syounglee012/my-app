@@ -209,7 +209,12 @@ const HeaderContainer = styled.header`
   }
 
 
- 
   @media screen and (max-width: 900px) {
-  }
+    & ul {
+      display: none;
+    }
+    & button {
+      display: none;
+    }
+    }
 `;

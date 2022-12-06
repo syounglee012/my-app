@@ -26,7 +26,7 @@ export default function Skills() {
         <li>
           <img
             src="/images/next.svg"
-            style={{ width: "96px", height: "96px" }}
+            // style={{ width: "96px", height: "96px" }}
           />
           <p>Next.js</p>
         </li>
@@ -39,14 +39,14 @@ export default function Skills() {
         <li>
           <img
             src="/images/jest.svg"
-            style={{ width: "96px", height: "96px" }}
+            // style={{ width: "96px", height: "96px" }}
           />
           <p>Jest</p>
         </li>
         <li>
           <img
             src="/images/testing.png"
-            style={{ width: "96px", height: "96px" }}
+            // style={{ width: "96px", height: "96px" }}
           />
           <p>Testing Library</p>
         </li>
@@ -57,7 +57,7 @@ export default function Skills() {
         <li>
           <img
             src="/images/babel.svg"
-            style={{ width: "98px", height: "98px" }}
+            // style={{ width: "98px", height: "98px" }}
           />
           <p>Babel</p>
         </li>
@@ -65,21 +65,21 @@ export default function Skills() {
         <li>
           <img
             src="/images/styled.png"
-            style={{ width: "98px", height: "98px" }}
+            // style={{ width: "98px", height: "98px" }}
           />
           <p>Styled components</p>
         </li>
         <li>
           <img
             src="/images/strapi.svg"
-            style={{ width: "98px", height: "98px" }}
+            // style={{ width: "98px", height: "98px" }}
           />
           <p>Strapi</p>
         </li>
         <li>
           <img
             src="/images/algolia.svg"
-            style={{ width: "98px", height: "98px" }}
+            // style={{ width: "98px", height: "98px" }}
           />
           <p>Algolia</p>
         </li>
@@ -94,7 +94,7 @@ export default function Skills() {
         <li>
           <img
             src="/images/adobeXD.png"
-            style={{ width: "98px", height: "98px" }}
+            // style={{ width: "98px", height: "98px" }}
           />
           <p>Adobe XD</p>
         </li>
@@ -112,17 +112,19 @@ const Container = styled.div`
   letter-spacing: 1px;
   font-weight: 600;
   align-items: center;
-  justify-content: center;
-  padding: 5rem;
+  justify-content: space-between;
+  padding: 5rem 2rem 5rem;
+  & img {
+    width: 98px;
+    height: 98px;
+  }
 
   & ul {
     width: 100%;
-    max-width: 800px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     gap: 4rem;
     padding: 0;
-    align-items: center;
   }
   & li {
     display: flex;
@@ -140,11 +142,18 @@ const Container = styled.div`
   }
 
   @media screen and (max-width: 1300px) {
+    font-size:12px;
+    font-weight:400;
+    padding: 1rem;
     & ul {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
+      grid-template-columns:1fr 1fr 1fr 1fr;
+      gap: 1rem;
       padding: 0 1rem;
+    }
+    & img{
+      width: 49px;
+      height: 49px;
     }
   }
 `;

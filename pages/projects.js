@@ -4,9 +4,7 @@ export default function Projects() {
   return (
     <Container>
       <div class="all">
-        <div class="lefter">
-          <div class="text">Hosting</div>
-        </div>
+       
         <div class="left">
           <div class="text">Web Design</div>
         </div>
@@ -19,9 +17,7 @@ export default function Projects() {
         <div class="right">
           <div class="text">Backend Development</div>
         </div>
-        <div class="righter">
-          <div class="text">SEO</div>
-        </div>
+       
       </div>
     </Container>
   );
@@ -38,6 +34,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   font-weight: 300;
+  background: url("images/background.jpg") no-repeat center center/cover;
 
   .all {
   display: flex;
@@ -48,6 +45,9 @@ const Container = styled.div`
   transition: all 1.3s ease-out;
   justify-content: center;
   transform-style: preserve-3d;
+  @media screen and (max-width: 900px) {
+    display: grid;
+  } ;
 }
 .all:hover {
   perspective: 1000px;
@@ -63,6 +63,10 @@ const Container = styled.div`
   .explainer {
     opacity: 0;
   }
+  @media screen and (max-width: 900px) {
+    gap: 3rem;
+  } ;
+
 }
 
 .left, .center, .right, .lefter, .righter {
@@ -87,6 +91,7 @@ const Container = styled.div`
     box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
   background-color: #ccf;
   }
+
 }
 .text {
   transform: translateY(30px);

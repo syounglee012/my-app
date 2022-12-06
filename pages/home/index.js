@@ -7,7 +7,6 @@ import Footer from "../footer";
 import Skills from "../skills";
 import Experiences from "../experiences";
 import Projects from "../projects";
-import Background from "../background";
 
 export default function Home() {
   const skillsRef = useRef(null);
@@ -18,21 +17,20 @@ export default function Home() {
     skillsRef.current.scrollIntoView({ behavior: "smooth" }, 1000);
   };
   const HandleExperiencesScroll = () => {
-    experiencesRef.current.scrollIntoView({ behavior: "smooth" },1000);
+    experiencesRef.current.scrollIntoView({ behavior: "smooth" }, 1000);
   };
   const HandleProjectsScroll = () => {
-    projectsRef.current.scrollIntoView({ behavior: "smooth" },1000);
+    projectsRef.current.scrollIntoView({ behavior: "smooth" }, 1000);
   };
 
-  
   return (
     <BlackContainer>
       <Header />
-        <Nav
-          HandleSkillsScroll={HandleSkillsScroll}
-          HandleExperiencesScroll={HandleExperiencesScroll}
-          HandleProjectsScroll={HandleProjectsScroll}
-        />
+      <Nav
+        HandleSkillsScroll={HandleSkillsScroll}
+        HandleExperiencesScroll={HandleExperiencesScroll}
+        HandleProjectsScroll={HandleProjectsScroll}
+      />
       <Container>
         <main>
           <div class="container">
@@ -42,7 +40,7 @@ export default function Home() {
           </div>
           <Main />
         </main>
-      <div ref={skillsRef} />
+        <div ref={skillsRef} />
       </Container>
       <Skills />
       <div ref={experiencesRef} />
@@ -70,30 +68,27 @@ const Container = styled.div`
   /* position: absolute; */
   & main {
     width: 100%;
-    max-width: 1160px;
+    max-width: 1360px;
     height: 100%;
     display: flex;
     justify-content: space-between;
     .container {
       width: 100%;
-      margin-top: 10rem;
-      
+      margin-top: 8rem;
     }
     .item {
       align-items: center;
       display: flex;
-      height: 400px;
+      height: 600px;
       justify-content: center;
       position: relative;
-      width: 400px;
+      width: 600px;
       z-index: 1000;
       img {
         object-fit: cover;
       }
       &::before,
       &::after {
-        background-image: linear-gradient(-180deg, #a1deff 0%, #5ea3db 97%);
-        border-radius: 50%;
         content: "";
         height: 100%;
         position: absolute;
@@ -104,21 +99,30 @@ const Container = styled.div`
         z-index: -1;
       }
       &::after {
-        background-image: linear-gradient(0deg, #ffcf70 0%, #ffae3d 97%);
+        background-image: linear-gradient(0deg, #fff 20%, #ffae3d 98%);
         border-radius: 50%;
+        animation: slick-hover 3s 0.4s linear infinite reverse;
+        transform: translateY(20px) translateX(20px);
+      }
+      &::before {
+        background-image: linear-gradient(0deg, #a1deff 60%, #5ea3db 97%);
+        border-radius: 50%;
+        animation: slick-hover-2 3s 0.4s linear infinite;
+        transform: translateY(-20px) translateX(-20px);
       }
       &:hover {
         animation-name: hoverPop;
         animation-duration: 0.4s;
         animation-fill-direction: forward;
-        &::before {
+
+        /* &::before {
           animation: slick-hover-2 3s 0.4s linear infinite;
           transform: translateY(-20px) translateX(-20px);
         }
         &::after {
           animation: slick-hover 3s 0.4s linear infinite reverse;
           transform: translateY(20px) translateX(20px);
-        }
+        } */
       }
     }
 
@@ -182,6 +186,17 @@ const Container = styled.div`
         transform: translateY(-20px) translateX(-20px);
       }
     }
+    @media screen and (max-width: 900px) {
+      display: grid;
+      .container{
+        display: flex;
+        justify-content: center;
+      }
+      .item{
+        height: 300px;
+        width: 300px;
+      }
+    }
   }
   & img {
     width: 100%;
@@ -189,9 +204,5 @@ const Container = styled.div`
     max-width: 520px;
     max-height: 669px;
     margin-top: 4em;
-  }
-
-  @media screen and (max-width: 900px) {
-  
   }
 `;
