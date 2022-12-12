@@ -5,16 +5,16 @@ export default function Projects() {
     <Container>
       <div class="all">
         <div class="left">
-          <div class="text">Web Design</div>
+          <div class="text">Daily Devotion</div>
         </div>
         <div class="center">
           <div class="explainer">
             <span>PROJECTS</span>
           </div>
-          <div class="text">Frontend Development</div>
+          <div class="text">Soldier Challengers</div>
         </div>
         <div class="right">
-          <div class="text">Backend Development</div>
+          <div class="text">Seoul Restroom</div>
         </div>
       </div>
     </Container>
@@ -36,12 +36,17 @@ const Container = styled.div`
   .all {
     display: flex;
     perspective: 10px;
-    transform: perspective(300px) rotateX(20deg);
+    transform: perspective(300px) rotateX(10deg);
     will-change: perspective;
     perspective-origin: center center;
     transition: all 1.3s ease-out;
     justify-content: center;
     transform-style: preserve-3d;
+    & span {
+        font-size: xx-large;
+        font-family: "Mukta", sans-serif;
+        letter-spacing: 1rem;
+      }
     @media screen and (max-width: 900px) {
       display: grid;
     }
@@ -49,9 +54,10 @@ const Container = styled.div`
   .all:hover {
     perspective: 1000px;
     transition: all 1.3s ease-in;
-    transform: perspective(10000px) rotateX(0deg);
+    transform: perspective(1000000000px) rotateX(0deg);
     .text {
       opacity: 1;
+      font-size: x-large;
     }
     & > div {
       opacity: 1;
@@ -59,6 +65,7 @@ const Container = styled.div`
     }
     .explainer {
       opacity: 0;
+  
     }
     @media screen and (max-width: 900px) {
       gap: 4rem;
@@ -68,8 +75,8 @@ const Container = styled.div`
   .left,
   .center,
   .right {
-    width: 500px;
-    height: 450px;
+    width: 400px;
+    height: 350px;
     transform-style: preserve-3d;
     border-radius: 10px;
     border: 1px solid #fff;
@@ -106,7 +113,7 @@ const Container = styled.div`
     color: #fff;
     text-shadow: 0 0 5px rgba(100, 100, 255, 0.6);
     @media screen and (max-width: 900px) {
-    top: 85%;
+      top: 85%;
     }
   }
 
@@ -140,7 +147,6 @@ const Container = styled.div`
     @media screen and (max-width: 900px) {
       font-size: x-large;
       letter-spacing: 0.3rem;
-      
     }
   }
 

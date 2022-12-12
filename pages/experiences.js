@@ -83,7 +83,7 @@ const Container = styled.div`
     box-sizing: border-box;
     text-align: center;
     overflow: hidden;
-    border-radius: 50% 10% / 50% 30%;
+    border-radius: 20% 20% / 20% 30%;
 
     :hover {
       cursor: pointer;
@@ -95,7 +95,7 @@ const Container = styled.div`
   }
   .testimonial .card .layer {
     position: absolute;
-    top: calc(100% - 1px);
+    top: calc(100% - 2px);
     left: 0;
     height: 100%;
     width: 100%;

@@ -108,6 +108,7 @@ const Container = styled.div`
           #edf756 100%
         );
         border-radius: 25% 10%;
+        /* border-radius: 50%; */
         animation: slick-hover 3s 0.4s linear infinite reverse;
         transform: translateY(20px) translateX(20px);
       }
@@ -119,6 +120,8 @@ const Container = styled.div`
           #51e2f5 100%
         );
         border-radius: 25% 10%;
+        /* border-radius: 50%; */
+
         animation: slick-hover-2 3s 0.4s linear infinite;
         transform: translateY(-20px) translateX(-20px);
       }
