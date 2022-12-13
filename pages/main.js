@@ -4,14 +4,12 @@ import styled from "styled-components";
 export default function Main() {
   return (
     <BlackContainer>
-      <div class="cater3-movingBG">
         <div class="flyinTxtCont">
           <div class="flyIn lineOne">Hello!</div>
           <div class="flyIn lineTwo">I&#39;m Young Lee</div>
           <div class="flyIn lineThree">Front-End Developer</div>
           <div class="flyIn lineFour">Based In Seattle</div>
         </div>
-      </div>
     </BlackContainer>
   );
 }
@@ -19,27 +17,9 @@ export default function Main() {
 const BlackContainer = styled.div`
   width: 100%;
   height: 100%;
-  margin: 12rem 0;
-  .cater3-movingBG {
-    height: 100%;
-    background-image: url(http://salsaritas.johngroupinteractive.com/wp-content/uploads/2017/06/enchilada-bg.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    animation: animatedBackground 15s linear alternate infinite;
-  }
-
-  @keyframes animatedBackground {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 50% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
-  }
-
+  max-height: 410px;
+  margin: 12rem 0 0;
+  
   .flyinTxtCont {
     height: 100%;
     display: -webkit-box;
@@ -65,22 +45,25 @@ const BlackContainer = styled.div`
     text-shadow: 2px 2px 40px rgba(0, 0, 0, 0.7);
   }
   .lineOne {
-    font-family: "Gloria Hallelujah", cursive;
+    font-family: "Abril Fatface", cursive;
     transition-delay: 1s;
     transition: 1s ease in;
-    animation: txtFlyIn 1s linear;
+    animation: fadeIn 2s linear;
+
   }
   .lineTwo {
     font-family: "Abril Fatface", cursive;
-    transition-delay: 2s;
-    transition: 2s ease in;
-    animation: txtFlyIn 2s linear;
+    transition-delay: 1s;
+    transition: 1s ease in;
+    animation: fadeIn 2s linear;
+
   }
   .lineThree {
     font-family: "Mukta", sans-serif;
-    transition-delay: 3s;
-    transition: 3s ease in;
-    animation: txtFlyIn 3s linear;
+    transition-delay: 1s;
+    transition: 1s ease in;
+    animation: fadeIn 2s linear;
+
   }
   .lineOne,
   .lineTwo {
@@ -88,20 +71,20 @@ const BlackContainer = styled.div`
     letter-spacing: 3px;
   }
   .lineThree {
-    font-size: 2rem;
-    letter-spacing: 1rem;
+    font-size: 2.5rem;
+    letter-spacing: .6rem;
     margin-top: 1em;
   }
   .lineFour {
     transition-delay: 4s;
     transition: 4s ease in;
-    animation: fadeIn 5s linear;
+    animation: fadeIn 2s linear;
     display: inline-block;
     color: white;
     box-size: border-box;
     font-size: 1.3rem;
     font-family: "Mukta", sans-serif;
-    letter-spacing: 1rem;
+    letter-spacing: .5rem;
   }
   @keyframes fadeIn {
     0% {
@@ -111,14 +94,7 @@ const BlackContainer = styled.div`
       opacity: 1;
     }
   }
-  @keyframes txtFlyIn {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
+
 
   @media screen and (max-width: 900px) {
     width: 270px;

@@ -18,4 +18,5 @@ const FooterContainer = styled.div`
   justify-content: center;
   bottom: 0;
   font-family: "Bodoni Moda", serif;
+  background-color: black;
 `;

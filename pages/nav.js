@@ -18,20 +18,23 @@ export default function Nav({
       </h1>
       <div className="container">
         <ul>
+          <li onClick={() => router.push("/home")}>
+            <span>HOME</span>
+          </li>
           <li onClick={() => HandleSkillsScroll()}>
-            <span>Skills</span>
+            <span>SKILLS</span>
           </li>
           <li onClick={() => HandleExperiencesScroll()}>
-            <span>Experiences</span>
+            <span>EXPERIENCES</span>
           </li>
           <li onClick={() => HandleProjectsScroll()}>
-            <span>Projects</span>
+            <span>PROJECTS</span>
           </li>
         </ul>
       </div>
 
       <button className="btn" onClick={() => router.push("/contact")}>
-        Contact Me
+        Contact
       </button>
     </HeaderContainer>
   );
@@ -50,16 +53,17 @@ const HeaderContainer = styled.header`
   background-color: rgba(2, 2, 2, 0.7);
   z-index: 99999999;
   float: left;
+  
   & h1 {
     font-size: x-large;
     font-family: "Bebas Neue", cursive;
     color: white;
     padding: 0.5rem;
-    border: 3px solid white;
+    border: 2px solid white;
     text-decoration: none;
     margin: 0;
     color: #fff;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
 
     &:before,
     &:after {
@@ -141,7 +145,6 @@ const HeaderContainer = styled.header`
   & ul {
     display: flex;
     justify-content: space-between;
-    font-size: x-large;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -155,6 +158,7 @@ const HeaderContainer = styled.header`
   & span {
     position: relative;
     display: block;
+    font-size: x-large;
     cursor: pointer;
   }
 
@@ -179,7 +183,7 @@ const HeaderContainer = styled.header`
   }
 
   & span:hover:before {
-    background: yellow;
+    background: #edf756;
     width: 100%;
     transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
@@ -191,36 +195,20 @@ const HeaderContainer = styled.header`
   }
 
   & button {
-    font-size: 22px;
+    font-size: 24px;
     width: 100%;
     height: 35px;
     max-width: 120px;
-    color: black;
-    background-color: #fff685;
+    color: #fff;
     border: none;
-    outline: thick double #fff685;
-    outline-offset: 0.4rem;
     letter-spacing: 0.1rem;
-    /* transition: opacity 1s ease-in; */
     font-family: "Bebas Neue", cursive;
+    background-color: transparent;
     :hover {
       cursor: pointer;
+      letter-spacing: 0.2rem;
+
       /* opacity: 0.5; */
-      animation: shake-btn 0.1s infinite alternate;
-    }
-    @keyframes shake-btn {
-      0% {
-        transform: translate(0px, -4px);
-      }
-      33% {
-        transform: translate(-2px, -4px);
-      }
-      66% {
-        transform: translate(-2px, -6px);
-      }
-      100% {
-        transform: translate(0px, -6px);
-      }
     }
   }
 

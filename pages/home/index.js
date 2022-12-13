@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import Header from "../header";
 import Nav from "../nav";
@@ -9,6 +9,7 @@ import Experiences from "../experiences";
 import Projects from "../projects";
 
 export default function Home() {
+  const homeRef = useRef(null);
   const skillsRef = useRef(null);
   const experiencesRef = useRef(null);
   const projectsRef = useRef(null);
@@ -23,8 +24,11 @@ export default function Home() {
     projectsRef.current.scrollIntoView({ behavior: "smooth" }, 1000);
   };
 
+  useEffect(() => {
+    homeRef.current.scrollIntoView({ behavior: "smooth" }, 1000);
+  }, []);
   return (
-    <BlackContainer>
+    <BlackContainer ref={homeRef}>
       <Header />
       <Nav
         HandleSkillsScroll={HandleSkillsScroll}
@@ -55,7 +59,7 @@ export default function Home() {
 const BlackContainer = styled.div`
   width: 100%;
   height: 100%;
-  background: url("images/background7.jpeg") no-repeat center center/contain;
+  background: url("images/background7.jpeg") no-repeat center center/cover;
   @media screen and (max-width: 900px) {
     background: url("images/background7.jpeg") no-repeat center center/cover;
   }
@@ -68,6 +72,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   letter-spacing: 0.2rem;
+  animation: txtFlyIn 1s linear;
 
   & main {
     width: 100%;
@@ -78,6 +83,7 @@ const Container = styled.div`
     .container {
       width: 100%;
       margin-top: 8rem;
+      animation: fadeIn 2s linear;
     }
     .item {
       align-items: center;
@@ -102,15 +108,8 @@ const Container = styled.div`
         z-index: -1;
       }
       &::after {
-        background-image: linear-gradient(
-          0deg,
-          #e5eaf5 20%,
-          #edf756 100%
-        );
-        border-radius: 25% 10%;
-        /* border-radius: 50%; */
-        animation: slick-hover 3s 0.4s linear infinite reverse;
-        transform: translateY(20px) translateX(20px);
+        background-image: linear-gradient(0deg, #e5eaf5 20%, #edf756 100%);
+        border-radius: 50%;
       }
       &::before {
         background-image: linear-gradient(
@@ -119,25 +118,21 @@ const Container = styled.div`
           #9df9ef 90%,
           #51e2f5 100%
         );
-        border-radius: 25% 10%;
-        /* border-radius: 50%; */
-
-        animation: slick-hover-2 3s 0.4s linear infinite;
-        transform: translateY(-20px) translateX(-20px);
+        border-radius: 50%;
       }
       &:hover {
         animation-name: hoverPop;
         animation-duration: 0.4s;
         animation-fill-direction: forward;
 
-        /* &::before {
+        &::before {
           animation: slick-hover-2 3s 0.4s linear infinite;
           transform: translateY(-20px) translateX(-20px);
         }
         &::after {
           animation: slick-hover 3s 0.4s linear infinite reverse;
           transform: translateY(20px) translateX(20px);
-        } */
+        }
       }
       @media screen and (max-width: 900px) {
       }
@@ -225,5 +220,14 @@ const Container = styled.div`
   @media screen and (max-width: 900px) {
     display: grid;
     height: 100%;
+  }
+
+  @keyframes txtFlyIn {
+    0% {
+      transform: translateY(15%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
   }
 `;
