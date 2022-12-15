@@ -14,6 +14,10 @@ export default function Home() {
   const experiencesRef = useRef(null);
   const projectsRef = useRef(null);
 
+  const HandleHomeScroll = () => {
+    homeRef.current.scrollIntoView({ behavior: "smooth" }, 1000);
+  };
+
   const HandleSkillsScroll = () => {
     skillsRef.current.scrollIntoView({ behavior: "smooth" }, 1000);
   };
@@ -31,14 +35,15 @@ export default function Home() {
     <BlackContainer ref={homeRef}>
       <Header />
       <Nav
+      HandleHomeScroll={HandleHomeScroll}
         HandleSkillsScroll={HandleSkillsScroll}
         HandleExperiencesScroll={HandleExperiencesScroll}
         HandleProjectsScroll={HandleProjectsScroll}
       />
       <Container>
         <main>
-          <div class="container">
-            <div class="item">
+          <div className="container">
+            <div className="item">
               <img src="images/profile1.png" alt="profile picture" />
             </div>
           </div>

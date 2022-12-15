@@ -4,11 +4,11 @@ import styled from "styled-components";
 export default function Main() {
   return (
     <BlackContainer>
-        <div class="flyinTxtCont">
-          <div class="flyIn lineOne">Hello!</div>
-          <div class="flyIn lineTwo">I&#39;m Young Lee</div>
-          <div class="flyIn lineThree">Front-End Developer</div>
-          <div class="flyIn lineFour">Based In Seattle</div>
+        <div className="flyinTxtCont">
+          <div className="flyIn lineOne">Hello!</div>
+          <div className="flyIn lineTwo">I&#39;m Young Lee</div>
+          <div className="flyIn lineThree">Front-End Developer</div>
+          <div className="flyIn lineFour">Based In Seattle</div>
         </div>
     </BlackContainer>
   );

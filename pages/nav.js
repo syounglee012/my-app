@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useRouter } from "next/router";
 
 export default function Nav({
+  HandleHomeScroll,
   HandleSkillsScroll,
   HandleExperiencesScroll,
   HandleProjectsScroll,
@@ -12,13 +13,13 @@ export default function Nav({
       <h1
         className="glitch"
         data-glitch="Young Lee"
-        onClick={() => router.push("/home")}
+        onClick={() => (window.location.href = "/home")}
       >
         Young Lee
       </h1>
       <div className="container">
         <ul>
-          <li onClick={() => router.push("/home")}>
+          <li onClick={() => HandleHomeScroll()}>
             <span>HOME</span>
           </li>
           <li onClick={() => HandleSkillsScroll()}>
@@ -34,7 +35,7 @@ export default function Nav({
       </div>
 
       <button className="btn" onClick={() => router.push("/contact")}>
-        Contact
+        Contact Me
       </button>
     </HeaderContainer>
   );
@@ -53,7 +54,7 @@ const HeaderContainer = styled.header`
   background-color: rgba(2, 2, 2, 0.7);
   z-index: 99999999;
   float: left;
-  
+
   & h1 {
     font-size: x-large;
     font-family: "Bebas Neue", cursive;
@@ -198,7 +199,7 @@ const HeaderContainer = styled.header`
     font-size: 24px;
     width: 100%;
     height: 35px;
-    max-width: 120px;
+    max-width: 150px;
     color: #fff;
     border: none;
     letter-spacing: 0.1rem;

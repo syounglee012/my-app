@@ -7,14 +7,14 @@ export default function Projects() {
         <h1>PROJECTS</h1>
       </Title>
       <section id="timeline">
-        <div class="tl-item">
-          <div class="tl-bg"></div>
+        <div className="tl-item">
+          <div className="tl-bg"></div>
 
-          <div class="tl-year">
-            <p class="f2 heading--sanSerif">Triumph Group</p>
+          <div className="tl-year">
+            <p className="f2 heading--sanSerif">Triumph Group</p>
           </div>
 
-          <div class="tl-content">
+          <div className="tl-content">
             <h1>Lorem ipsum dolor sit</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -26,15 +26,15 @@ export default function Projects() {
           </div>
         </div>
 
-        <div class="tl-item">
-          <div class="tl-bg"></div>
+        <div className="tl-item">
+          <div className="tl-bg"></div>
 
-          <div class="tl-year">
-            <p class="f2 heading--sanSerif">Daily Devotion</p>
+          <div className="tl-year">
+            <p className="f2 heading--sanSerif">Daily Devotion</p>
           </div>
 
-          <div class="tl-content">
-            <h1 class="f3 text--accent ttu">Vestibulum laoreet lorem</h1>
+          <div className="tl-content">
+            <h1 className="f3 text--accent ttu">Vestibulum laoreet lorem</h1>
             <p>
               Suspendisse potenti. Sed sollicitudin eros lorem, eget accumsan
               risus dictum id. Maecenas dignissim ipsum vel mi rutrum egestas.
@@ -44,15 +44,15 @@ export default function Projects() {
           </div>
         </div>
 
-        <div class="tl-item">
-          <div class="tl-bg"></div>
+        <div className="tl-item">
+          <div className="tl-bg"></div>
 
-          <div class="tl-year">
-            <p class="f2 heading--sanSerif">Soldier Challengers</p>
+          <div className="tl-year">
+            <p className="f2 heading--sanSerif">Soldier Challengers</p>
           </div>
 
-          <div class="tl-content">
-            <h1 class="f3 text--accent ttu">Phasellus mauris elit</h1>
+          <div className="tl-content">
+            <h1 className="f3 text--accent ttu">Phasellus mauris elit</h1>
             <p>
               Mauris cursus magna at libero lobortis tempor. Suspendisse
               potenti. Aliquam interdum vulputate neque sit amet varius.
@@ -64,15 +64,15 @@ export default function Projects() {
           </div>
         </div>
 
-        <div class="tl-item">
-          <div class="tl-bg"></div>
+        <div className="tl-item">
+          <div className="tl-bg"></div>
 
-          <div class="tl-year">
-            <p class="f2 heading--sanSerif">Seoul Restrooms</p>
+          <div className="tl-year">
+            <p className="f2 heading--sanSerif">Seoul Restrooms</p>
           </div>
 
-          <div class="tl-content">
-            <h1 class="f3 text--accent ttu">Mauris vitae nunc elem</h1>
+          <div className="tl-content">
+            <h1 className="f3 text--accent ttu">Mauris vitae nunc elem</h1>
             <p>
               Suspendisse ac mi at dolor sodales faucibus. Nunc sagittis ornare
               purus non euismod. Donec vestibulum efficitur tortor, eget

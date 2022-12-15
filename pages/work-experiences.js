@@ -10,12 +10,12 @@ export default function Experiences() {
         <h1>EXPERIENCES</h1>
       </Title>
       <Wrap>
-        <div class="timeline">
+        <div className="timeline">
           <ul>
             <li>
               <h1>Front End Developer</h1>
-              <div class="content">
-                <div class="wrap">
+              <div className="content">
+                <div className="wrap">
                   <h4>Triumph Group</h4>&ensp;
                   <h5>(Contract via BlueRock Marketing)</h5>
                 </div>
@@ -24,8 +24,8 @@ export default function Experiences() {
             </li>
             <li>
               <h1>Coding Bootcamp Participant</h1>
-              <div class="content">
-                <div class="wrap">
+              <div className="content">
+                <div className="wrap">
                   <h4>HangHae99</h4>&ensp;
                   <h5>(Software Development Coding Bootcamp)</h5>
                 </div>
@@ -33,8 +33,8 @@ export default function Experiences() {
               </div>
             </li>
             <li>
-              <div class="content">
-                <div class="wrap">
+              <div className="content">
+                <div className="wrap">
                   <button onClick={()=> router.push('')}>Check Out My Resume</button>
                 </div>
               </div>

@@ -10,31 +10,33 @@ export default function Experiences() {
         <h1>EXPERIENCES</h1>
       </Title>
       <Wrap>
-        <div class="timeline">
+        <div className="timeline">
           <ul>
             <li>
               <h1>Front End Developer</h1>
-              <div class="content">
-                <div class="wrap">
+              <div className="content">
+                <div className="wrap">
                   <h4>Triumph Group</h4>&ensp;
                   <h5>(Contract via BlueRock Marketing)</h5>
                 </div>
-                <p>Sep 2022 - Present</p>
+                <p>Sep 2022 - Present</p><br />
+                <p>description here</p>
               </div>
             </li>
             <li>
-              <h1>Coding Bootcamp Participant</h1>
-              <div class="content">
-                <div class="wrap">
-                  <h4>HangHae99</h4>&ensp;
-                  <h5>(Software Development Coding Bootcamp)</h5>
+              <div className="content">
+                <div className="wrap">
+                  <h4>HangHae99 Coding Bootcamp</h4>&ensp;
+                  {/* <h5>(Software Development Coding Bootcamp)</h5> */}
                 </div>
                 <p>Mar 2022 - Jun 2022</p>
+                <br/>
+                <p>-Participated as a student and focused on Front-End Development</p>
               </div>
             </li>
             <li>
-              <div class="content">
-                <div class="wrap">
+              <div className="content">
+                <div className="wrap">
                   <button onClick={()=> router.push('')}>Check Out My Resume</button>
                 </div>
               </div>
@@ -59,6 +61,7 @@ const Container = styled.div`
     width: 600px;
     color: #fff;
   }
+ 
   .timeline ul {
     list-style-type: none;
     border-left: 1px solid #fff;
