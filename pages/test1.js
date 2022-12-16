@@ -1,16 +1,16 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
 
-export default function Test() {
+export default function Test1() {
   const router = useRouter();
-  const card = document.querySelector('.card')
-  const cardWidth = card.offsetWidth
-  const cardHeight = card.offsetHeight
-  const rotationLimit = 7
-  const middleX = cardWidth/2
-  const middleY = cardHeight/2
-  
-  function addRotation(){
+    const card = document.querySelector('.card');
+    const cardWidth = card.offsetWidth
+    const cardHeight = card.offsetHeight
+    const rotationLimit = 7
+    const middleX = cardWidth/2
+    const middleY = cardHeight/2
+    
+   function addRotation(){
     this.classList.add('transition')
     this.firstElementChild.classList.add('transition')
     setTimeout(() => { 
@@ -45,6 +45,9 @@ export default function Test() {
   card.addEventListener('mouseenter', addRotation)
   card.addEventListener('mousemove', animateRotation)
   card.addEventListener('mouseleave', removeRotation)
+  
+  
+ 
   return (
     <Wrap>
       <div class="card">

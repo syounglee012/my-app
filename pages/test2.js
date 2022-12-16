@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
 
-export default function Test() {
+export default function Test2() {
   const router = useRouter();
 
 

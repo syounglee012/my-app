@@ -7,44 +7,32 @@ export default function Experiences() {
   return (
     <Container>
       <Title>
-        <h1>EXPERIENCES</h1>
+        <h1>&lsaquo; WORK EXPERIENCES &rsaquo;</h1>
       </Title>
-      <Wrap>
-        <div className="timeline">
-          <ul>
-            <li>
-              <h1>Front End Developer</h1>
-              <div className="content">
-                <div className="wrap">
-                  <h4>Triumph Group</h4>&ensp;
-                  <h5>(Contract via BlueRock Marketing)</h5>
-                </div>
-                <p>Sep 2022 - Present</p><br />
-                <p>description here</p>
-              </div>
-            </li>
-            <li>
-              <div className="content">
-                <div className="wrap">
-                  <h4>HangHae99 Coding Bootcamp</h4>&ensp;
-                  {/* <h5>(Software Development Coding Bootcamp)</h5> */}
-                </div>
-                <p>Mar 2022 - Jun 2022</p>
-                <br/>
-                <p>-Participated as a student and focused on Front-End Development</p>
-              </div>
-            </li>
-            <li>
-              <div className="content">
-                <div className="wrap">
-                  <button onClick={()=> router.push('')}>Check Out My Resume</button>
-                </div>
-              </div>
-            </li>
-         
-          </ul>
+      <div className="container">
+        <div className="square">
+          <div className="imageWrap">
+            <img src="images/triump.jpeg" className="mask" />
+          </div>
+          <div className="bottomWrap">
+            <h1 className="h1">Front-End Developer</h1>
+            <h2>Sep 2022 - Present</h2>
+            <h4>Triumph Group (Contract via BlueRock)</h4>
+            <ul>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+            </ul>
+
+            <button>RESUME</button>
+          </div>
         </div>
-      </Wrap>
+      </div>
     </Container>
   );
 }
@@ -57,97 +45,85 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
-  .timeline {
-    width: 600px;
-    color: #fff;
-  }
- 
-  .timeline ul {
-    list-style-type: none;
-    border-left: 1px solid #fff;
-    padding: 150px 5px 50px;
-    display: grid;
-    gap: 4rem;
+  width: 100%;
 
-    & button{
-      background: transparent;
-      border: none;
-      margin: .8rem 0 0;
-      padding: 0;
-      font-size: 20px;
-      cursor: pointer;
-      :hover{
-        color: gold;
-      }
-    }
-  }
-  .timeline ul li {
-    padding: 10px 20px;
-    position: relative;
-    transition: 0.5s;
-  }
-  .wrap {
+  .container {
     display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .bottomWrap {
+    padding-left: 30px;
+    border-top: 1rem double #000;
+  }
+
+  .square {
+    width: 700px;
+    height: 730px;
+    background: white;
+    border-radius: 4px;
+    color: #000;
+    .h1 {
+      text-align: left;
+      font-family: "Merriweather", serif;
+      color: #000;
+      margin: 1rem 0 0;
+      letter-spacing: 2px;
+    }
+    & h2 {
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
     & h4 {
-      font-size: 24px;
+      font-size: 18px;
       margin: 0;
     }
-    & h5 {
-      font-size: 20px;
-      margin: 5px 0 0;
-    }
   }
-  .timeline ul li h1 {
-    display: inline-block;
-    padding: 1px 0;
-    font-size: 28px;
+  .imageWrap {
+    display: flex;
+    background: url("images/building.jpeg") no-repeat center center/cover;
+    justify-content: center;
+    align-items: center;
+  }
+  .mask {
+    clip: rect(0px, 460px, 220px, 0px);
+    border-radius: 4px;
+    object-fit: contain;
+    width: 220px;
+    height: 250px;
+  }
+
+  & ul {
+    text-align: justify;
+    padding-right: 30px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #777;
+    line-height: 18px;
+  }
+
+  & button {
+    background-color: #3edd84;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 3px;
+    border: none;
     text-align: center;
-    color: gold;
-    margin: 0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
   }
-  .timeline ul li .content p {
-    color: #fff;
-    font-size: 18px;
-    margin: 0;
-  }
-
-  .timeline ul li:before {
-    position: absolute;
-    content: "";
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    border-radius: 50%;
-    left: -11px;
-    top: 28px;
-    transition: 0.5s;
-  }
-  .timeline ul li:hover {
-    /* color: black; */
-  }
-  .timeline ul li:hover:before {
-    background-color: gold;
-    box-shadow: 0px 0px 10px 2px orange;
-  }
-  @media (max-width: 300px) {
-    .timeline {
-      width: 100%;
-      padding: 30px 5px 30px 10px;
-    }
-    .timeline ul li .content h3 {
-      color: #34ace0;
-      font-size: 15px;
-    }
-  }
-`;
-
-const Wrap = styled.div`
-  display: flex;
 `;
 
 const Title = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 3rem;
   & h1 {
     font-size: 3rem;
     font-family: "Mukta", sans-serif;

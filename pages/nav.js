@@ -161,6 +161,11 @@ const HeaderContainer = styled.header`
     display: block;
     font-size: x-large;
     cursor: pointer;
+    :hover {
+      letter-spacing: 0.3rem;
+      transition: 1s ease;
+      color: #edf756;
+    }
   }
 
   & span:before,
@@ -192,7 +197,6 @@ const HeaderContainer = styled.header`
   & span:hover:after {
     background: transparent;
     width: 100%;
-    transition: 0s;
   }
 
   & button {
@@ -205,9 +209,13 @@ const HeaderContainer = styled.header`
     letter-spacing: 0.1rem;
     font-family: "Bebas Neue", cursive;
     background-color: transparent;
+    transition: 0.7s ease;
+
     :hover {
       cursor: pointer;
-      letter-spacing: 0.2rem;
+      letter-spacing: 0.3rem;
+      color: #edf756;
+      transition: 0.7s ease;
 
       /* opacity: 0.5; */
     }
