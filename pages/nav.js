@@ -1,5 +1,7 @@
+import React from "react";
 import styled from "styled-components";
 import { useRouter } from "next/router";
+import Modal from "./modal";
 
 export default function Nav({
   HandleHomeScroll,
@@ -8,8 +10,11 @@ export default function Nav({
   HandleProjectsScroll,
 }) {
   const router = useRouter();
+  const [isOpen, setIsOpen] = React.useState(false);
+
   return (
-    <HeaderContainer>
+    <>
+     <HeaderContainer>
       <h1
         className="glitch"
         data-glitch="Young Lee"
@@ -34,10 +39,22 @@ export default function Nav({
         </ul>
       </div>
 
-      <button className="btn" onClick={() => router.push("/contact")}>
+      <button
+        className="btn"
+        onClick={() => {
+          setIsOpen(true);
+        }}
+        // onClick={() => router.push("/contact")}
+      >
         Contact Me
       </button>
     </HeaderContainer>
+      <div className="none">
+        <Modal open={isOpen} close={() => setIsOpen(false)} />
+      </div>
+    
+    </>
+   
   );
 }
 
@@ -52,7 +69,7 @@ const HeaderContainer = styled.header`
   position: sticky;
   top: 0;
   background-color: rgba(2, 2, 2, 0.7);
-  z-index: 99999999;
+  z-index: 99;
   float: left;
 
   & h1 {
@@ -137,7 +154,6 @@ const HeaderContainer = styled.header`
   }
 
   .container {
-    display: table-cell;
     vertical-align: middle;
     text-align: center;
     width: 600px;
@@ -241,5 +257,9 @@ const HeaderContainer = styled.header`
       outline-offset: 0.2rem;
       letter-spacing: 0.1rem;
     }
+  }
+
+  .none {
+    position: absolute;
   }
 `;

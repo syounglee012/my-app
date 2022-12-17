@@ -99,7 +99,7 @@ const Container = styled.div`
       justify-content: center;
       position: relative;
       width: 600px;
-      z-index: 1000;
+      z-index: 10;
       img {
         object-fit: cover;
       }
