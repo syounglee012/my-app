@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import Modal from "./modal";
+import MobileNav from "./home/mobile-nav";
 
 export default function Nav({
   HandleHomeScroll,
@@ -11,50 +12,53 @@ export default function Nav({
 }) {
   const router = useRouter();
   const [isOpen, setIsOpen] = React.useState(false);
-
+  const [isMobile, setIsMobile] = React.useState(false);
   return (
     <>
-     <HeaderContainer>
-      <h1
-        className="glitch"
-        data-glitch="Young Lee"
-        onClick={() => (window.location.href = "/home")}
-      >
-        Young Lee
-      </h1>
-      <div className="container">
-        <ul>
-          <li onClick={() => HandleHomeScroll()}>
-            <span>HOME</span>
-          </li>
-          <li onClick={() => HandleSkillsScroll()}>
-            <span>SKILLS</span>
-          </li>
-          <li onClick={() => HandleExperiencesScroll()}>
-            <span>EXPERIENCES</span>
-          </li>
-          <li onClick={() => HandleProjectsScroll()}>
-            <span>PROJECTS</span>
-          </li>
-        </ul>
-      </div>
+      {!isMobile ? (
+        <HeaderContainer>
+          <h1
+            className="glitch"
+            data-glitch="Young Lee"
+            onClick={() => (window.location.href = "/home")}
+          >
+            Young Lee
+          </h1>
+          <div className="container">
+            <ul>
+              <li onClick={() => HandleHomeScroll()}>
+                <span>HOME</span>
+              </li>
+              <li onClick={() => HandleSkillsScroll()}>
+                <span>SKILLS</span>
+              </li>
+              <li onClick={() => HandleExperiencesScroll()}>
+                <span>EXPERIENCES</span>
+              </li>
+              <li onClick={() => HandleProjectsScroll()}>
+                <span>PROJECTS</span>
+              </li>
+            </ul>
+          </div>
 
-      <button
-        className="btn"
-        onClick={() => {
-          setIsOpen(true);
-        }}
-        // onClick={() => router.push("/contact")}
-      >
-        Contact Me
-      </button>
-    </HeaderContainer>
+          <button
+            className="btn"
+            onClick={() => {
+              setIsOpen(true);
+            }}
+          >
+            Contact Me
+          </button>
+        </HeaderContainer>
+      ) : (
+        <HeaderContainer>
+          <MobileNav setIsOpen={setIsOpen} />
+        </HeaderContainer>
+      )}
       <div className="none">
         <Modal open={isOpen} close={() => setIsOpen(false)} />
       </div>
-    
     </>
-   
   );
 }
 
@@ -239,27 +243,15 @@ const HeaderContainer = styled.header`
 
   @media screen and (max-width: 900px) {
     padding: 1rem;
-    & ul {
-      font-size: 12px;
-      justify-content: space-evenly;
+    .container {
+      display: none;
     }
-    & li {
-      padding: 0;
-    }
-
     & button {
-      font-size: 12px;
-      height: 20px;
-      max-width: 74px;
-      outline: none;
-      color: yellow;
-      background-color: transparent;
-      outline-offset: 0.2rem;
-      letter-spacing: 0.1rem;
+      display: none;
     }
-  }
 
-  .none {
-    position: absolute;
+    .none {
+      position: absolute;
+    }
   }
 `;

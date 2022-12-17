@@ -17,7 +17,7 @@ export default function Experiences() {
           <div className="bottomWrap">
             <h1 className="h1">Front-End Developer</h1>
             <h2>Sep 2022 - Present</h2>
-            <h4>Triumph Group (Contract via BlueRock)</h4>
+            <h4>Triumph Group (Seattle, WA) - Contract via BlueRock</h4>
             <ul>
               <li>1</li>
               <li>1</li>
@@ -57,13 +57,20 @@ const Container = styled.div`
     padding-left: 30px;
     border-top: 1rem double #000;
   }
+  @media screen and (max-width: 900px) {
+    height: 100%;
+    .bottomWrap {
+      padding-left: 20px;
+    }
+  }
 
   .square {
     width: 700px;
     height: 730px;
     background: white;
-    border-radius: 4px;
     color: #000;
+    border-radius: 20px;
+
     .h1 {
       text-align: left;
       font-family: "Merriweather", serif;
@@ -80,12 +87,35 @@ const Container = styled.div`
       font-size: 18px;
       margin: 0;
     }
+   
+    @media screen and (max-width: 400px) {
+      width: 350px;
+      height: 600px;
+      .h1 {
+        font-size: x-large;
+      }
+      & h2 {
+        font-size: medium;
+      }
+      & h4 {
+        font-size: medium;
+      }
+      & h5 {
+        font-size: 14px;
+      }
+    }
   }
   .imageWrap {
     display: flex;
     background: url("images/building.jpeg") no-repeat center center/cover;
     justify-content: center;
     align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    @media screen and (max-width: 400px) {
+      width: 350px;
+      height: 150px;
+    }
   }
   .mask {
     clip: rect(0px, 460px, 220px, 0px);
@@ -125,13 +155,14 @@ const Title = styled.div`
   justify-content: center;
   margin-top: 3rem;
   & h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: "Mukta", sans-serif;
     letter-spacing: 0.4rem;
   }
   @media screen and (max-width: 900px) {
+    margin-top: 1rem;
     & h1 {
-      font-size: xx-large;
+      font-size: x-large;
     }
   } ;
 `;

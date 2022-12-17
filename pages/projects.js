@@ -236,7 +236,7 @@ const Title = styled.div`
   display: flex;
   justify-content: center;
   & h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: "Mukta", sans-serif;
     letter-spacing: 0.4rem;
   }

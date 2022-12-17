@@ -42,8 +42,6 @@ const BlackContainer = styled.div`
     align-items: flex-start;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
-    @media screen and (max-width: 900px) {
-    }
   }
   .flyIn {
     color: #fff;
@@ -111,12 +109,20 @@ const BlackContainer = styled.div`
     position: relative;
     width: 100%;
     animation: fadeIn 2s linear;
-
+    @media screen and (max-width: 900px) {
+      font-size: 18px;
+      margin: 7rem 0 0 -2rem;
+      width: 350px;
+    }
   }
 
   h1 span {
     font-size: 40px;
     margin-right: 1rem;
+    @media screen and (max-width: 900px) {
+      font-size: 18px;
+      margin-right: 0;
+    }
   }
 
   .message {
@@ -130,7 +136,9 @@ const BlackContainer = styled.div`
     top: 0.2rem;
     left: 250px;
     animation: openclose 7s ease-in-out infinite;
-
+    @media screen and (max-width: 900px) {
+      left: 130px;
+    }
   }
 
   .word1,
@@ -202,6 +210,73 @@ const BlackContainer = styled.div`
       top: 0;
       width: 0;
       text-indent: 0;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    @keyframes openclose {
+      0% {
+        top: 0rem;
+        width: 0;
+      }
+      5% {
+        top: 0rem;
+        width: 0;
+      }
+      15% {
+        top: 0rem;
+        width: 105px;
+      }
+      30% {
+        top: 0rem;
+        width: 105px;
+      }
+      33% {
+        top: 0rem;
+        width: 0;
+      }
+      35% {
+        top: 0rem;
+        width: 0;
+      }
+      38% {
+        top: -1.7rem;
+      }
+      48% {
+        top: -1.7rem;
+        width: 125px;
+      }
+      62% {
+        top: -1.7rem;
+        width: 125px;
+      }
+      66% {
+        top: -1.7rem;
+        width: 0;
+        text-indent: 0;
+      }
+      71% {
+        top: -3.4rem;
+        width: 0;
+        text-indent: 0;
+      }
+      86% {
+        top: -3.4rem;
+        width: 190px;
+      }
+      95% {
+        top: -3.4rem;
+        width: 190px;
+      }
+      98% {
+        top: -3.4rem;
+        width: 0;
+        text-indent: 0;
+      }
+      100% {
+        top: 0;
+        width: 0;
+        text-indent: 0;
+      }
     }
   }
 

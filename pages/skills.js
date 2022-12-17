@@ -4,7 +4,7 @@ export default function Skills() {
   return (
     <Container>
       <Title>
-        <h1>&lsaquo; SKILLS	&rsaquo;</h1>
+        <h1>&lsaquo; SKILLS &rsaquo;</h1>
       </Title>
       <ul className="icons">
         <li>
@@ -142,10 +142,12 @@ const Container = styled.div`
   }
 
   @media screen and (max-width: 900px) {
+    height: 100%;
     font-size: 10px;
     font-weight: 400;
-    padding: 3rem 0;
+    padding: 0;
     gap: 1rem;
+
     & ul {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -173,20 +175,38 @@ const Container = styled.div`
       transform: translatey(5px);
     }
   }
+  @media screen and (max-width: 900px) {
+    @keyframes float {
+      0% {
+        /* box-shadow: -10px 5px 10px 0px rgba(22, 43, 88, 0.8); */
+        transform: translatey(5px);
+      }
+      50% {
+        /* box-shadow: 10px 10px 20px 0px rgba(81, 124, 146, 0.8); */
+        transform: translatey(-10px);
+      }
+      100% {
+        /* box-shadow: -10px 5px 10px 0px rgba(22, 43, 88, 0.8); */
+        transform: translatey(5px);
+      }
+    }
+  } ;
 `;
 
 const Title = styled.div`
   display: flex;
   justify-content: center;
   & h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: "Mukta", sans-serif;
     letter-spacing: 0.4rem;
     margin: 4rem 0 0;
   }
   @media screen and (max-width: 900px) {
+    margin-top: 4rem;
+
     & h1 {
-      font-size: xx-large;
+      font-size: x-large;
     }
   } ;
 `;

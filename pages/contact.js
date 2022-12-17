@@ -7,7 +7,7 @@ export default function Contact({ close }) {
       <div className="container">
         <div className="wrap">
           <button className="btn" onClick={close}>
-            <img className="bi" src="images/return.svg" />
+            <img className="bi" src="images/x.svg" />
           </button>
 
           <svg
@@ -824,7 +824,7 @@ const Wrap = styled.div`
   z-index: 100000;
   svg {
     display: flex;
-    padding: 7rem 0 0 2rem;
+    padding: 6rem 0 0 2rem;
   }
   @media screen and (max-width: 900px) {
     max-width: 450px;
@@ -898,11 +898,11 @@ const Wrap = styled.div`
       border: none;
       background-color: transparent;
       width: 40px;
-      height: 30px;
+      height: 40px;
       margin: 1rem 0 0 1rem;
       .bi {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
       }
       cursor: pointer;
       transition: transform 250ms;

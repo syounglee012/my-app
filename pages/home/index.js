@@ -32,12 +32,11 @@ export default function Home() {
     homeRef.current.scrollIntoView({ behavior: "smooth" }, 1000);
   }, []);
 
-  
   return (
     <BlackContainer ref={homeRef}>
       <Header />
       <Nav
-      HandleHomeScroll={HandleHomeScroll}
+        HandleHomeScroll={HandleHomeScroll}
         HandleSkillsScroll={HandleSkillsScroll}
         HandleExperiencesScroll={HandleExperiencesScroll}
         HandleProjectsScroll={HandleProjectsScroll}
@@ -117,8 +116,8 @@ const Container = styled.div`
       &::after {
         background-image: linear-gradient(0deg, #e5eaf5 20%, #edf756 100%);
         border-radius: 50%;
-        animation: slick-hover 3s 1s linear infinite reverse;
-          transform: translateY(20px) translateX(20px);
+        /* animation: slick-hover 3s 1s linear infinite reverse;
+          transform: translateY(20px) translateX(20px); */
       }
       &::before {
         background-image: linear-gradient(
@@ -126,17 +125,16 @@ const Container = styled.div`
           #edf7f6 40%,
           #9df9ef 90%,
           #51e2f5 100%
-          
         );
-        animation: slick-hover-2 3s 1s linear infinite;
-          transform: translateY(-20px) translateX(-20px);
+        /* animation: slick-hover-2 3s 1s linear infinite;
+          transform: translateY(-20px) translateX(-20px); */
         border-radius: 50%;
       }
       &:hover {
         animation-name: hoverPop;
         animation-duration: 0.4s;
         animation-fill-direction: forward;
-/* 
+
         &::before {
           animation: slick-hover-2 3s 0.4s linear infinite;
           transform: translateY(-20px) translateX(-20px);
@@ -144,10 +142,9 @@ const Container = styled.div`
         &::after {
           animation: slick-hover 3s 0.4s linear infinite reverse;
           transform: translateY(20px) translateX(20px);
-        } */
+        }
       }
-      @media screen and (max-width: 900px) {
-      }
+ 
     }
 
     @keyframes hoverPop {
