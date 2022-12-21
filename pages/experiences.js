@@ -87,7 +87,7 @@ const Container = styled.div`
       font-size: 18px;
       margin: 0;
     }
-   
+
     @media screen and (max-width: 400px) {
       width: 350px;
       height: 600px;
@@ -135,18 +135,23 @@ const Container = styled.div`
   }
 
   & button {
-    background-color: #3edd84;
-    color: white;
+    background-color: white;
+    color: black;
     width: 100px;
     height: 40px;
     border-radius: 3px;
-    border: none;
+    border: 2px solid black;
     text-align: center;
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 2px;
+    transition: 0.7s ease;
     cursor: pointer;
+    :hover {
+      color: white;
+      background-color: #000;
+    }
   }
 `;
 
@@ -154,6 +159,7 @@ const Title = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 3rem;
+  margin-bottom: 1rem;
   & h1 {
     font-size: 2.5rem;
     font-family: "Mukta", sans-serif;
