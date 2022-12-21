@@ -157,7 +157,12 @@ const Title = styled.div`
   & h1 {
     font-size: 2.5rem;
     font-family: "Mukta", sans-serif;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.3rem;
+    transition: 1s ease;
+    :hover {
+      letter-spacing: 0.6rem;
+      color: #edf756;
+    }
   }
   @media screen and (max-width: 900px) {
     margin-top: 1rem;
