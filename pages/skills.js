@@ -4,7 +4,7 @@ export default function Skills() {
   return (
     <Container>
       <Title>
-        <h1>&lsaquo; SKILLS &rsaquo;</h1>
+        <h1>SKILLS</h1>
       </Title>
       <ul className="icons">
         <li>
