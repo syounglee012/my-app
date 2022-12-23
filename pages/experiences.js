@@ -7,7 +7,7 @@ export default function Experiences() {
   return (
     <Container>
       <Title>
-        <h1>&lsaquo; WORK EXPERIENCES &rsaquo;</h1>
+        <h1>WORK EXPERIENCES</h1>
       </Title>
       <div className="container">
         <div className="square">

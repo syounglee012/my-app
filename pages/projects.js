@@ -4,7 +4,7 @@ export default function Projects() {
   return (
     <Container>
       <Title>
-        <h1>&lsaquo; PROJECTS &rsaquo;</h1>
+        <h1>PROJECTS</h1>
       </Title>
       <section id="timeline">
         <div className="tl-item">

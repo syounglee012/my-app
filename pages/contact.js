@@ -1,6 +1,33 @@
 import styled from "styled-components";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 export default function Contact({ close }) {
-  // feather.replace();
+  const form = useRef(null);
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+  
+    const templatePrams = form.current;
+    emailjs
+      .sendForm(
+        process.env.EMAIL_SERVICE_ID,
+        process.env.EMAIL_TEMPLATE_ID,
+        templatePrams,
+        process.env.EMAIL_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <Wrap>
@@ -769,25 +796,31 @@ export default function Contact({ close }) {
           </svg>
         </div>
 
-        <form>
+        <form onSubmit={sendEmail} ref={form} >
           <h1 class="title  mb-4">Contact Me</h1>
           <div class="form-group position-relative">
-            <label for="formName" class="d-block"></label>
+            <label htmlFor="user_name" class="d-block"></label>
             <input
               type="text"
+              name="user_name"
               id="formName"
               class="form-control form-control-lg thick"
               placeholder="Name"
+              ref={nameRef}
+
             />
           </div>
 
           <div class="form-group position-relative">
-            <label for="formEmail" class="d-block"></label>
+            <label htmlFor="user_email" class="d-block"></label>
             <input
               type="email"
+              name="user_email"
               id="formEmail"
               class="form-control form-control-lg thick"
               placeholder="E-mail"
+              ref={emailRef}
+
             />
           </div>
 
@@ -797,11 +830,13 @@ export default function Contact({ close }) {
               class="form-control form-control-lg"
               rows="7"
               placeholder="Message"
+              name="message"
+              ref={messageRef}
             ></textarea>
           </div>
 
           <div class="text-center">
-            <button type="submit" class="btn btn-primary" tabIndex="-1">
+            <button type="submit" class="btn btn-primary" tabIndex="-1" >
               Send
             </button>
           </div>
@@ -1009,6 +1044,5 @@ const Wrap = styled.div`
     box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
     background-size: 100% 100%;
     transform: translateY(-0.15em);
-
   }
 `;
