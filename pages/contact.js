@@ -4,17 +4,19 @@ import emailjs from "@emailjs/browser";
 
 export default function Contact({ close }) {
   const form = useRef(null);
-
-console.log(form)
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+  
+    const templatePrams = form.current;
     emailjs
       .sendForm(
         process.env.EMAIL_SERVICE_ID,
         process.env.EMAIL_TEMPLATE_ID,
-        form.current,
+        templatePrams,
         process.env.EMAIL_PUBLIC_KEY
       )
       .then(
@@ -794,27 +796,31 @@ console.log(form)
           </svg>
         </div>
 
-        <form ref={form} onSubmit={sendEmail}>
+        <form onSubmit={sendEmail} ref={form} >
           <h1 class="title  mb-4">Contact Me</h1>
           <div class="form-group position-relative">
-            <label for="user_name" class="d-block"></label>
+            <label htmlFor="user_name" class="d-block"></label>
             <input
               type="text"
               name="user_name"
               id="formName"
               class="form-control form-control-lg thick"
               placeholder="Name"
+              ref={nameRef}
+
             />
           </div>
 
           <div class="form-group position-relative">
-            <label for="user_email" class="d-block"></label>
+            <label htmlFor="user_email" class="d-block"></label>
             <input
               type="email"
               name="user_email"
               id="formEmail"
               class="form-control form-control-lg thick"
               placeholder="E-mail"
+              ref={emailRef}
+
             />
           </div>
 
@@ -825,11 +831,12 @@ console.log(form)
               rows="7"
               placeholder="Message"
               name="message"
+              ref={messageRef}
             ></textarea>
           </div>
 
           <div class="text-center">
-            <button type="submit" class="btn btn-primary" tabIndex="-1">
+            <button type="submit" class="btn btn-primary" tabIndex="-1" >
               Send
             </button>
           </div>
