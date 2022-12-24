@@ -15,22 +15,37 @@ export default function Experiences() {
             <img src="images/triump.jpeg" className="mask" />
           </div>
           <div className="bottomWrap">
-            <h1 className="h1">Front-End Developer</h1>
-            <h2>Sep 2022 - Present</h2>
-            <h4>Triumph Group (Seattle, WA) - Contract via BlueRock</h4>
+            <h1 className="h1">Front End Developer</h1>
+            <h2>Sep 2022 - Present (Remote)</h2>
+            <h4>
+              Triumph Group (Seattle, WA) - Contract via BlueRock Marketing
+            </h4>
+            <h3>Key Qualifications & Responsibilities</h3>
             <ul>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
+              <li>
+                Implemented the company wibsite and landing pages from concept
+                through deployment.
+              </li>
+              <li>
+                Standardized all output with a new, reponsive, mobile-first
+                approach and strategy.
+              </li>
+              <li>Assessed UX and UI designs for technical feasibility.</li>
+              <li>
+                Collaborated with product team members to implement new feature
+                developments.
+              </li>
+              <li>Worked well independently and within a team setting.</li>
+              <li>
+                Coordinate with the web development team to design user
+                interfaces for client websites using HTML, JavaScript, and
+                Next.js
+              </li>
             </ul>
-
-            <button>RESUME</button>
           </div>
+            <div className="buttonDiv">
+              <button>RESUME</button>
+            </div>
         </div>
       </div>
     </Container>
@@ -75,7 +90,7 @@ const Container = styled.div`
       text-align: left;
       font-family: "Merriweather", serif;
       color: #000;
-      margin: 1rem 0 0;
+      margin: 1.5rem 0 0;
       letter-spacing: 2px;
     }
     & h2 {
@@ -88,9 +103,14 @@ const Container = styled.div`
       margin: 0;
     }
 
+    & h3 {
+      margin: 1rem 0 0;
+    }
+
+
     @media screen and (max-width: 400px) {
       width: 350px;
-      height: 600px;
+      height: fit-content;
       .h1 {
         font-size: x-large;
       }
@@ -99,6 +119,7 @@ const Container = styled.div`
       }
       & h4 {
         font-size: medium;
+        width: 280px;
       }
       & h5 {
         font-size: 14px;
@@ -127,13 +148,26 @@ const Container = styled.div`
 
   & ul {
     text-align: justify;
-    padding-right: 30px;
+    padding: 0 30px;
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     color: #777;
-    line-height: 18px;
+    line-height: 1.6rem;
+    margin: 0;
+    @media screen and (max-width: 400px) {
+      line-height: 1.2rem;
+      text-align: left;
+      padding: 0 20px;
+
+    }
   }
 
+  .buttonDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+  }
   & button {
     background-color: white;
     color: black;

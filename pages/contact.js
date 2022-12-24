@@ -10,8 +10,8 @@ export default function Contact({ close }) {
 
   const sendEmail = (e) => {
     e.preventDefault();
-  
     const templatePrams = form.current;
+    console.log(templatePrams)
     emailjs
       .sendForm(
         process.env.EMAIL_SERVICE_ID,
@@ -798,7 +798,7 @@ export default function Contact({ close }) {
 
         <form onSubmit={sendEmail} ref={form} >
           <h1 class="title  mb-4">Contact Me</h1>
-          <div class="form-group position-relative">
+          <div class="form-group name">
             <label htmlFor="user_name" class="d-block"></label>
             <input
               type="text"
@@ -811,7 +811,7 @@ export default function Contact({ close }) {
             />
           </div>
 
-          <div class="form-group position-relative">
+          <div class="form-group email">
             <label htmlFor="user_email" class="d-block"></label>
             <input
               type="email"
