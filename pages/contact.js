@@ -10,13 +10,12 @@ export default function Contact({ close }) {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    const templatePrams = form.current;
-    console.log(templatePrams)
+    
     emailjs
       .sendForm(
         process.env.EMAIL_SERVICE_ID,
         process.env.EMAIL_TEMPLATE_ID,
-        templatePrams,
+        form.current,
         process.env.EMAIL_PUBLIC_KEY
       )
       .then(
@@ -806,7 +805,6 @@ export default function Contact({ close }) {
               id="formName"
               class="form-control form-control-lg thick"
               placeholder="Name"
-              ref={nameRef}
 
             />
           </div>
@@ -819,7 +817,6 @@ export default function Contact({ close }) {
               id="formEmail"
               class="form-control form-control-lg thick"
               placeholder="E-mail"
-              ref={emailRef}
 
             />
           </div>
@@ -831,7 +828,6 @@ export default function Contact({ close }) {
               rows="7"
               placeholder="Message"
               name="message"
-              ref={messageRef}
             ></textarea>
           </div>
 
