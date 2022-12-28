@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import SentModal from "./sent-modal";
 
 export default function Contact({ close }) {
+  const [isOpen, setIsOpen] = React.useState(false);
   const form = useRef(null);
   const nameRef = useRef(null);
   const emailRef = useRef(null);
@@ -10,7 +12,6 @@ export default function Contact({ close }) {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    
     emailjs
       .sendForm(
         process.env.EMAIL_SERVICE_ID,
@@ -21,6 +22,10 @@ export default function Contact({ close }) {
       .then(
         (result) => {
           console.log(result.text);
+          setIsOpen(true);
+          e.target[0].value = null;
+          e.target[1].value = null;
+          e.target[2].value = null;
         },
         (error) => {
           console.log(error.text);
@@ -30,6 +35,9 @@ export default function Contact({ close }) {
 
   return (
     <Wrap>
+      <div className="none">
+        <SentModal open={isOpen} close={() => setIsOpen(false)} />
+      </div>
       <div className="container">
         <div className="wrap">
           <button className="btn" onClick={close}>
@@ -795,7 +803,7 @@ export default function Contact({ close }) {
           </svg>
         </div>
 
-        <form onSubmit={sendEmail} ref={form} >
+        <form onSubmit={sendEmail} ref={form}>
           <h1 class="title  mb-4">Contact Me</h1>
           <div class="form-group name">
             <label htmlFor="user_name" class="d-block"></label>
@@ -805,7 +813,7 @@ export default function Contact({ close }) {
               id="formName"
               class="form-control form-control-lg thick"
               placeholder="Name"
-
+              required
             />
           </div>
 
@@ -817,7 +825,7 @@ export default function Contact({ close }) {
               id="formEmail"
               class="form-control form-control-lg thick"
               placeholder="E-mail"
-
+              required
             />
           </div>
 
@@ -828,11 +836,12 @@ export default function Contact({ close }) {
               rows="7"
               placeholder="Message"
               name="message"
+              required
             ></textarea>
           </div>
 
           <div class="text-center">
-            <button type="submit" class="btn btn-primary" tabIndex="-1" >
+            <button type="submit" class="btn btn-primary" tabIndex="-1">
               Send
             </button>
           </div>
@@ -852,7 +861,11 @@ const Wrap = styled.div`
   max-width: 850px;
   background-color: #f2f6f8;
   border-radius: 20px;
-  z-index: 100000;
+  z-index: 100;
+  .none {
+    position: absolute;
+  }
+
   svg {
     display: flex;
     padding: 6rem 0 0 2rem;
