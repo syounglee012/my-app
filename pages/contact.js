@@ -862,6 +862,7 @@ const Wrap = styled.div`
   background-color: #f2f6f8;
   border-radius: 20px;
   z-index: 100;
+
   .none {
     position: absolute;
   }
@@ -944,6 +945,7 @@ const Wrap = styled.div`
       width: 40px;
       height: 40px;
       margin: 1rem 0 0 1rem;
+
       .bi {
         width: 40px;
         height: 40px;
