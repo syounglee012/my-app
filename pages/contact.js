@@ -5,10 +5,8 @@ import SentModal from "./sent-modal";
 
 export default function Contact({ close }) {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [isExitOpen, setIsExitOpen] = React.useState(false);
   const form = useRef(null);
-  const nameRef = useRef(null);
-  const emailRef = useRef(null);
-  const messageRef = useRef(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -36,11 +34,16 @@ export default function Contact({ close }) {
   return (
     <Wrap>
       <div className="none">
-        <SentModal open={isOpen} close={() => setIsOpen(false)} />
+        <SentModal
+          open={isOpen}
+          close={() => setIsOpen(false)}
+          exitOpen={isExitOpen}
+          exitClose={() => setIsExitOpen(false)}
+        />
       </div>
       <div className="container">
         <div className="wrap">
-          <button className="btn" onClick={close}>
+          <button className="btn" onClick={() => setIsExitOpen(true)}>
             <img className="bi" src="images/x.svg" />
           </button>
 

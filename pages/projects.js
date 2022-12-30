@@ -4,7 +4,13 @@ export default function Projects() {
   return (
     <Container>
       <Title>
-        <h1>PROJECTS</h1>
+      <a>
+          <span> </span>
+          <span> </span>
+          <span> </span>
+          <span> </span>
+          PROJECTS
+        </a>
       </Title>
       <section id="timeline">
         <div className="tl-item">
@@ -118,7 +124,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   font-weight: 300;
-  margin-top: 3rem;
   font-size: 16px;
   line-height: 1.75;
 
@@ -150,7 +155,7 @@ const Container = styled.div`
     transform: translate3d(0, 0, 0);
     position: relative;
     width: 33.3333%;
-    height: 80vh;
+    height: 85vh;
     /* min-height: 500px; */
     color: #fff;
     overflow: hidden;
@@ -311,21 +316,107 @@ const Container = styled.div`
     
   }
 `;
+
+
 const Title = styled.div`
   display: flex;
   justify-content: center;
-  & h1 {
-    font-size: 2.5rem;
-    font-family: "Mukta", sans-serif;
-    letter-spacing: 0.3rem;
+  margin: 6rem 0 0;
+  a {
+    position: relative;
+    padding: 10px 40px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font: 600 30px consolas;
+    overflow: hidden;
     transition: 1s ease;
-    :hover {
-      letter-spacing: 0.6rem;
+  }
+
+  a span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #171618, #A7C7E7);
+    animation: animate1 3s linear infinite;
+  }
+
+  @keyframes animate1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
     }
   }
-  @media screen and (max-width: 900px) {
-    & h1 {
-      font-size: xx-large;
+
+  a span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to bottom, #171618,#A7C7E7);
+    animation: animate2 3s linear infinite;
+    animation-delay: 1.5s;
+  }
+  @keyframes animate2 {
+    0% {
+      transform: translateY(-100%);
     }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  a span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, #171618,#A7C7E7);
+    animation: animate3 3s linear infinite;
+  }
+
+  @keyframes animate3 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  a span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to top, #171618, #A7C7E7);
+    animation: animate4 3s linear infinite;
+    animation-delay: 1.5s;
+  }
+
+  @keyframes animate4 {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    margin: 4rem 0 2rem;
+    a {
+    padding: 10px 20px;
+    font: 400 22px consolas;
+  }
   } ;
 `;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import Modal from "./modal";
@@ -12,49 +12,79 @@ export default function Nav({
 }) {
   const router = useRouter();
   const [isOpen, setIsOpen] = React.useState(false);
-  const [isMobile, setIsMobile] = React.useState(false);
+  const [isMobileOpen, setIsMobileOpen] = React.useState(false);
+  const toggleRef = useRef(false);
+
+  const HandleToggle = (num) => {
+    setIsMobileOpen(false);
+    if (num == 1) {
+      HandleHomeScroll();
+    } else if (num == 2) {
+      HandleSkillsScroll();
+    } else if (num == 3) {
+      HandleExperiencesScroll();
+    } else if (num == 4) {
+      HandleProjectsScroll();
+    } else {
+      setIsOpen(true);
+    }
+  };
   return (
     <>
-      {!isMobile ? (
-        <HeaderContainer>
-          <h1
-            className="glitch"
-            data-glitch="Young Lee"
-            onClick={() => (window.location.href = "/home")}
+      <HeaderContainer>
+        <h1
+          className={isMobileOpen ? "h1None" : "glitch"}
+          data-glitch="Young Lee"
+          onClick={() => (window.location.href = "/home")}
+        >
+          Young Lee
+        </h1>
+        <div className="container">
+          <ul>
+            <li onClick={() => HandleHomeScroll()}>
+              <span>HOME</span>
+            </li>
+            <li onClick={() => HandleSkillsScroll()}>
+              <span>SKILLS</span>
+            </li>
+            <li onClick={() => HandleExperiencesScroll()}>
+              <span>EXPERIENCES</span>
+            </li>
+            <li onClick={() => HandleProjectsScroll()}>
+              <span>PROJECTS</span>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          className="btn"
+          onClick={() => {
+            setIsOpen(true);
+          }}
+        >
+          Contact Me
+        </button>
+        <MobileContainer>
+          <div
+            class={isMobileOpen ? "hambergurNone" : "hambergur"}
+            onClick={() => setIsMobileOpen(true)}
           >
-            Young Lee
-          </h1>
-          <div className="container">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class={isMobileOpen ? "toggleContainer" : "toggleNone"}>
             <ul>
-              <li onClick={() => HandleHomeScroll()}>
-                <span>HOME</span>
-              </li>
-              <li onClick={() => HandleSkillsScroll()}>
-                <span>SKILLS</span>
-              </li>
-              <li onClick={() => HandleExperiencesScroll()}>
-                <span>EXPERIENCES</span>
-              </li>
-              <li onClick={() => HandleProjectsScroll()}>
-                <span>PROJECTS</span>
-              </li>
+              <li onClick={() => HandleToggle(1)}>HOME</li>
+              <li onClick={() => HandleToggle(2)}>SKILLS</li>
+              <li onClick={() => HandleToggle(3)}>EXPERIENCES</li>
+              <li onClick={() => HandleToggle(4)}>PROJECTS</li>
+              <li onClick={() => HandleToggle(5)}>CONTACT</li>
             </ul>
           </div>
+        </MobileContainer>
+      </HeaderContainer>
 
-          <button
-            className="btn"
-            onClick={() => {
-              setIsOpen(true);
-            }}
-          >
-            Contact Me
-          </button>
-        </HeaderContainer>
-      ) : (
-        <HeaderContainer>
-          <MobileNav setIsOpen={setIsOpen} />
-        </HeaderContainer>
-      )}
       <div className="none">
         <Modal open={isOpen} close={() => setIsOpen(false)} />
       </div>
@@ -120,9 +150,8 @@ const HeaderContainer = styled.header`
       border: none;
       display: flex;
       align-items: center;
-      justify-content: center;
       width: 100%;
-      max-width: 80px;
+      
       &:before,
       &:after {
         position: absolute;
@@ -131,10 +160,14 @@ const HeaderContainer = styled.header`
         content: attr(data-glitch);
         opacity: 0.8;
       }
+
       .glitch {
         font-size: 3em;
       }
     }
+  }
+  .h1None {
+    display: none;
   }
   @keyframes glitch {
     0% {
@@ -242,7 +275,7 @@ const HeaderContainer = styled.header`
   }
 
   @media screen and (max-width: 900px) {
-    padding: 1rem;
+    padding: 1rem 2rem;
     .container {
       display: none;
     }
@@ -252,6 +285,70 @@ const HeaderContainer = styled.header`
 
     .none {
       position: absolute;
+    }
+  }
+`;
+
+const MobileContainer = styled.div`
+  display: none;
+  @media screen and (max-width: 900px) {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: right;
+    .hambergur {
+      display: grid;
+      gap: 0.3rem;
+      width: 1.6rem;
+
+      div {
+        width: 1.6rem;
+        height: 1px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+
+        &:nth-child(2) {
+          width: 1.3rem;
+          background: #fff;
+        }
+      }
+    }
+    .hambergurNone {
+      display: none;
+    }
+    .toggleContainer {
+      width: 100%;
+      height: 102vh;
+      display: flex;
+      justify-content: center;
+      letter-spacing: 0.1rem;
+      font-family: "Mukta", sans-serif;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(2, 2, 2, 1);
+      z-index: 99;
+      display: grid;
+      ul {
+        height: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        text-align: center;
+        justify-items: center;
+        gap: 2rem;
+        align-content: center;
+        li {
+          font-size: 22px;
+          letter-spacing: 3px;
+          font-weight: 900;
+          height: fit-content;
+        }
+      }
+    }
+    .toggleNone {
+      display: none;
     }
   }
 `;

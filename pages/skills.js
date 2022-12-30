@@ -4,7 +4,13 @@ export default function Skills() {
   return (
     <Container>
       <Title>
-        <h1>SKILLS</h1>
+        <a>
+          <span> </span>
+          <span> </span>
+          <span> </span>
+          <span> </span>
+          Skills
+        </a>
       </Title>
       <ul className="icons">
         <li>
@@ -196,22 +202,102 @@ const Container = styled.div`
 const Title = styled.div`
   display: flex;
   justify-content: center;
-  & h1 {
-    font-size: 2.5rem;
-    font-family: "Mukta", sans-serif;
-    letter-spacing: 0.3rem;
-    margin: 4rem 0 0;
+  a {
+    position: relative;
+    padding: 10px 40px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font: 700 30px consolas;
+    overflow: hidden;
     transition: 1s ease;
-    :hover {
-      letter-spacing: 0.6rem;
-      color: #edf756;
+    margin-top: 4rem;
+  }
+
+  a span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #171618,#DAF7A6);
+    animation: animate1 3s linear infinite;
+  }
+
+  @keyframes animate1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
     }
   }
+
+  a span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to bottom, #171618,#DAF7A6);
+    animation: animate2 3s linear infinite;
+    animation-delay: 1.5s;
+  }
+  @keyframes animate2 {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  a span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, #171618, #DAF7A6);
+    animation: animate3 3s linear infinite;
+  }
+
+  @keyframes animate3 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  a span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to top, #171618,#DAF7A6);
+    animation: animate4 3s linear infinite;
+    animation-delay: 1.5s;
+  }
+
+  @keyframes animate4 {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
   @media screen and (max-width: 900px) {
     margin-top: 4rem;
-
-    & h1 {
-      font-size: x-large;
-    }
+    a {
+    padding: 10px 20px;
+    font: 400 22px consolas;
+  }
   } ;
 `;

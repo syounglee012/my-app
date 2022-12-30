@@ -73,7 +73,7 @@ const BlackContainer = styled.div`
 const Container = styled.div`
   display: flex;
   width: 100%;
-  height: 969px;
+  height: 900px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -116,8 +116,7 @@ const Container = styled.div`
       &::after {
         background-image: linear-gradient(0deg, #e5eaf5 20%, #edf756 100%);
         border-radius: 50%;
-        /* animation: slick-hover 3s 1s linear infinite reverse;
-          transform: translateY(20px) translateX(20px); */
+        animation: slick-hover 3s 1s linear infinite reverse;
       }
       &::before {
         background-image: linear-gradient(
@@ -126,25 +125,31 @@ const Container = styled.div`
           #9df9ef 90%,
           #51e2f5 100%
         );
-        /* animation: slick-hover-2 3s 1s linear infinite;
-          transform: translateY(-20px) translateX(-20px); */
+        animation: slick-hover-2 3s 1s linear infinite;
         border-radius: 50%;
       }
-      &:hover {
-        animation-name: hoverPop;
-        animation-duration: 0.4s;
-        animation-fill-direction: forward;
-
-        &::before {
-          animation: slick-hover-2 3s 0.4s linear infinite;
-          transform: translateY(-20px) translateX(-20px);
-        }
+      @media screen and (max-width: 900px) {
         &::after {
-          animation: slick-hover 3s 0.4s linear infinite reverse;
-          transform: translateY(20px) translateX(20px);
+          animation: none;
+        }
+        &::before {
+          animation: none;
+        }
+        &:hover {
+          animation-name: hoverPop;
+          animation-duration: 0.4s;
+          animation-fill-direction: forward;
+
+          &::before {
+            animation: slick-hover-2 3s 0.4s linear infinite;
+            transform: translateY(-20px) translateX(-20px);
+          }
+          &::after {
+            animation: slick-hover 3s 0.4s linear infinite reverse;
+            transform: translateY(20px) translateX(20px);
+          }
         }
       }
- 
     }
 
     @keyframes hoverPop {
