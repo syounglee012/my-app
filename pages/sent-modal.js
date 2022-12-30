@@ -94,7 +94,8 @@ const Wrap = styled.div`
   .modal .lowerbox {
     display: flex;
     font-size: 24px;
-    font-family: "Mukta", sans-serif;
+    font-family: "Pacifico", cursive;
+
   }
   .modal .left {
     width: 173px;
@@ -117,7 +118,8 @@ const Wrap = styled.div`
 
   .modal .cancel {
     font-size: 24px;
-    font-family: "Mukta", sans-serif;
+    font-family: "Pacifico", cursive;
+
   }
   & section {
     width: 100%;
@@ -162,4 +164,8 @@ const Wrap = styled.div`
       opacity: 1;
     }
   }
+
+  @media screen and (max-width: 900px) {
+      
+    }
 `;

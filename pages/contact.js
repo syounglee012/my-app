@@ -875,13 +875,13 @@ const Wrap = styled.div`
     padding: 6rem 0 0 2rem;
   }
   @media screen and (max-width: 900px) {
-    max-width: 450px;
-    max-height: 750px;
+    max-width: 350px;
+    max-height: 600px;
     display: grid;
     grid-template-columns: 1fr;
 
     svg {
-      margin: 0 -3rem -4rem 5rem;
+      margin: 0 2rem -4rem 4rem;
       padding: 0;
     }
   }
@@ -964,7 +964,7 @@ const Wrap = styled.div`
       grid-template-columns: 1fr;
       width: 300px;
       .btn {
-        margin: 1rem 0 0 1rem;
+        margin: 0;
       }
     }
   }
@@ -985,14 +985,6 @@ const Wrap = styled.div`
       height: 40px;
       margin: 0;
     }
-    @media screen and (max-width: 900px) {
-      margin: 0 0 0 2rem;
-      gap: 1rem;
-      .title {
-        margin: 2rem 0 0 0;
-        letter-spacing: 1px;
-      }
-    }
     .form-control {
       background-color: #f2f6f8;
       border-radius: 2rem;
@@ -1004,7 +996,7 @@ const Wrap = styled.div`
         height: 3.3rem;
         padding: 0.5rem 2rem;
       }
-
+      
       &:focus {
         background-color: #f2f6f8;
         border: none;
@@ -1022,12 +1014,28 @@ const Wrap = styled.div`
       color: #838788;
       left: 0;
     }
-
+    
     input,
     textarea {
       font-family: "Quicksand", sans-serif;
       color: #212529;
       font-size: 1.1rem;
+    }
+    @media screen and (max-width: 900px) {
+      margin: 0 0 0 2rem;
+      gap: 1rem;
+      .title {
+        margin: 1rem 1rem 0 0;
+        letter-spacing: 1px;
+      }
+      .form-control {
+        width: 300px;
+      }
+      .message .form-control {
+      padding: 0.5rem 2rem;
+      width: 300px;
+      height: 100px;
+    }
     }
   }
 

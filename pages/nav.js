@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import Modal from "./modal";
-import MobileNav from "./home/mobile-nav";
 
 export default function Nav({
   HandleHomeScroll,
@@ -298,17 +297,17 @@ const MobileContainer = styled.div`
     justify-content: right;
     .hambergur {
       display: grid;
-      gap: 0.3rem;
+      gap: 0.2rem;
       width: 1.6rem;
 
       div {
-        width: 1.6rem;
+        width: 1.3rem;
         height: 1px;
         border: 1px solid #fff;
         border-radius: 5px;
 
         &:nth-child(2) {
-          width: 1.3rem;
+          width: 1rem;
           background: #fff;
         }
       }
