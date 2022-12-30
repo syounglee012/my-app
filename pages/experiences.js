@@ -15,45 +15,84 @@ export default function Experiences() {
           WORK EXPERIENCES
         </a>
       </Title>
-      <div className="container">
-        <div className="square">
-          <div className="imageWrap">
-            <img src="images/triump.jpeg" className="mask" />
-          </div>
-          <div className="bottomWrap">
-            <h1 className="h1">Front End Developer</h1>
-            <h2>Sep 2022 - Present (Remote)</h2>
-            <h4>
-              Triumph Group (Seattle, WA) - Contract via BlueRock Marketing
-            </h4>
-            <h3>Key Qualifications & Responsibilities</h3>
-            <ul>
-              <li>
-                Implemented the company wibsite and landing pages from concept
-                through deployment.
-              </li>
-              <li>
-                Standardized all output with a new, reponsive, mobile-first
-                approach and strategy.
-              </li>
-              <li>Assessed UX and UI designs for technical feasibility.</li>
-              <li>
-                Collaborated with product team members to implement new feature
-                developments.
-              </li>
-              <li>Worked well independently and within a team setting.</li>
-              <li>
-                Coordinate with the web development team to design user
-                interfaces for client websites using HTML, JavaScript, and
-                Next.js
-              </li>
-            </ul>
-          </div>
-            <div className="buttonDiv">
-              <button>RESUME</button>
+        <figure className="img_wrapper">
+          <div className="img">
+            <div className="square">
+              <div className="imageWrap">
+                <img src="images/triump.jpeg" className="mask" />
+              </div>
+              <div className="bottomWrap">
+                <h1 className="h1">Front End Developer</h1>
+                <h2>Sep 2022 - Present (Remote)</h2>
+                <h4>
+                  Triumph Group (Seattle, WA) - Contract via BlueRock Marketing
+                </h4>
+                <h3>Key Qualifications & Responsibilities</h3>
+                <ul>
+                  <li>
+                    Implemented the company wibsite and landing pages from
+                    concept through deployment.
+                  </li>
+                  <li>
+                    Standardized all output with a new, reponsive, mobile-first
+                    approach and strategy.
+                  </li>
+                  <li>Assessed UX and UI designs for technical feasibility.</li>
+                  <li>
+                    Collaborated with product team members to implement new
+                    feature developments.
+                  </li>
+                  <li>Worked well independently and within a team setting.</li>
+                  <li>
+                    Coordinate with the web development team to design user
+                    interfaces for client websites using HTML, JavaScript, and
+                    Next.js
+                  </li>
+                </ul>
+              </div>
+              <div className="buttonDiv">
+                <button>RESUME</button>
+              </div>
             </div>
-        </div>
-      </div>
+          </div>
+
+          <figcaption></figcaption>
+          <ul className="social_media">
+            <li>
+              <a href="#">
+                <i className="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i className="fa fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i className="fa fa-google-plus"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i className="fa fa-instagram"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i className="fa fa-pinterest"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i className="fa fa-whatsapp"></i>
+              </a>
+            </li>
+          </ul>
+        </figure>
     </Container>
   );
 }
@@ -66,11 +105,103 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  .img {
+        max-width: 100%;
+      }
 
+      .img_wrapper {
+        width: fit-content;
+        height: fit-content;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .img {
+        position: relative;
+        height: 100%;
+      }
+
+      figure:hover figcaption {
+        transform: rotate(20deg) translateX(0);
+      }
+
+      figure:hover .social_media {
+        transform: translateX(0);
+      }
+
+      figcaption {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.7);
+        top: 0px;
+        left: 70%;
+        width: 50%;
+        height: 150%;
+        transform: rotate(20deg) translateX(100%);
+        transition: all 0.35s;
+      }
+
+      .social_media {
+        position: absolute;
+        bottom: 5%;
+        right: 0;
+        list-style: none;
+        transform: translateX(100%);
+        transition: all 0.35s;
+      }
+
+      .social_media li {
+        border-bottom: 1px solid transparent;
+        width: 45px;
+        height: 45px;
+        position: relative;
+      }
+
+      .social_media li:nth-child(1) a {
+        background: #3b5998;
+      }
+
+      .social_media li:nth-child(2) a {
+        background: #1da1f2;
+      }
+
+      .social_media li:nth-child(3) a {
+        background: #dd4b39;
+      }
+
+      .social_media li:nth-child(4) a {
+        background: #e1306c;
+      }
+
+      .social_media li:nth-child(5) a {
+        background: #bd081c;
+      }
+
+      .social_media li:nth-child(6) a {
+        background: #075e54;
+      }
+
+      .social_media a {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        line-height: 45px;
+        font-size: 20px;
+        text-align: center;
+        /* background: inherit; */
+        color: #fff;
+        transition: all 0.35s;
+      }
+
+      .social_media a:hover {
+        width: 65px;
+      }
   .container {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: fit-content;
     height: 100%;
   }
   .bottomWrap {
@@ -79,9 +210,19 @@ const Container = styled.div`
   }
   @media screen and (max-width: 900px) {
     height: 100%;
+    width: 100%;
+    .container {
+      
+    }
     .bottomWrap {
       padding-left: 20px;
-    }
+      }
+      figcaption {
+        top: 10%;
+        left: 70%;
+        width: 70%;
+        height: 100%;
+      }
   }
 
   .square {
@@ -111,9 +252,9 @@ const Container = styled.div`
     & h3 {
       margin: 1rem 0 0;
     }
+     
 
-
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 900px) {
       width: 350px;
       height: fit-content;
       .h1 {
@@ -131,6 +272,7 @@ const Container = styled.div`
       }
     }
   }
+
   .imageWrap {
     display: flex;
     background: url("images/building.jpeg") no-repeat center center/cover;
@@ -163,7 +305,6 @@ const Container = styled.div`
       line-height: 1.2rem;
       text-align: left;
       padding: 0 20px;
-
     }
   }
 
@@ -217,7 +358,7 @@ const Title = styled.div`
     right: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to right, #171618, #FAA0A0);
+    background: linear-gradient(to right, #171618, #faa0a0);
     animation: animate1 3s linear infinite;
   }
 
@@ -236,7 +377,7 @@ const Title = styled.div`
     right: 0;
     height: 100%;
     width: 3px;
-    background: linear-gradient(to bottom, #171618, #FAA0A0);
+    background: linear-gradient(to bottom, #171618, #faa0a0);
     animation: animate2 3s linear infinite;
     animation-delay: 1.5s;
   }
@@ -255,7 +396,7 @@ const Title = styled.div`
     right: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to left, #171618, #FAA0A0);
+    background: linear-gradient(to left, #171618, #faa0a0);
     animation: animate3 3s linear infinite;
   }
 
@@ -274,7 +415,7 @@ const Title = styled.div`
     left: 0;
     height: 100%;
     width: 3px;
-    background: linear-gradient(to top, #171618, #FAA0A0);
+    background: linear-gradient(to top, #171618, #faa0a0);
     animation: animate4 3s linear infinite;
     animation-delay: 1.5s;
   }
@@ -292,9 +433,9 @@ const Title = styled.div`
     margin: 4rem 0 0;
 
     a {
-    padding: 10px 20px;
-    font: 400 22px consolas;
-    margin: 0 0 2rem;
-  }
+      padding: 10px 20px;
+      font: 400 22px consolas;
+      margin: 0 0 2rem;
+    }
   } ;
 `;
