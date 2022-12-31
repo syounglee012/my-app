@@ -4,13 +4,8 @@ export default function Projects() {
   return (
     <Container>
       <Title>
-      <a>
-          <span> </span>
-          <span> </span>
-          <span> </span>
-          <span> </span>
-          PROJECTS
-        </a>
+        <p id="test">PROJECTS</p>
+        <div id="underline"></div>
       </Title>
       <section id="timeline">
         <div className="tl-item">
@@ -47,7 +42,7 @@ export default function Projects() {
             </ul>
           </div>
         </div>
-        <div className="tl-item" >
+        <div className="tl-item">
           <div className="tl-bg" id="lgb"></div>
 
           <div className="tl-year">
@@ -204,11 +199,11 @@ const Container = styled.div`
       }
 
       .tl-year {
-        border-top: 1px solid #edf756;
-        border-bottom: 1px solid #edf756;
-        color: #edf756;
+        border-top: 1px solid aqua;
+        border-bottom: 1px solid aqua;
+        color: aqua;
         letter-spacing: 0.1rem;
-        text-shadow: 0 0 3px #edf756, 0 0 3px #edf756;
+        text-shadow: 0 0 3px aqua, 0 0 3px aqua;
         transition: 0.9s ease;
       }
 
@@ -225,7 +220,7 @@ const Container = styled.div`
     @media screen and (max-width: 900px) {
       width: 100%;
       height: 60vh;
-      
+
       &:hover {
         width: 100% !important;
       }
@@ -245,7 +240,7 @@ const Container = styled.div`
       font-family: "Pathway Gothic One", Helvetica Neue, Helvetica, Arial,
         sans-serif;
       text-transform: uppercase;
-      color: #1779cf;
+      color:#edf756;
       font-size: 1.44rem;
       font-weight: normal;
     }
@@ -256,15 +251,15 @@ const Container = styled.div`
     @media screen and (max-width: 900px) {
       top: 10.5%;
       overflow: auto;
-     h1 {
-      font-size: 0.9rem;
-      font-weight: 600;
-      text-shadow: #031625;
-     }
-     ul {
-       font-size: .7rem;
-       padding: 0 0 0 1rem;
-     }
+      h1 {
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-shadow: #031625;
+      }
+      ul {
+        font-size: 0.7rem;
+        padding: 0 0 0 1rem;
+      }
     }
   }
 
@@ -283,13 +278,12 @@ const Container = styled.div`
       font-size: 1.7rem;
       line-height: 0;
       :hover {
-        color: #edf756;
+        color: aqua;
       }
     }
     @media screen and (max-width: 900px) {
       top: 7%;
       p {
-
         font-size: 1.2rem;
       }
     }
@@ -313,110 +307,43 @@ const Container = styled.div`
       display: grid;
       grid-template-columns: 1fr;
     }
-    
   }
 `;
 
-
 const Title = styled.div`
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
-  margin: 6rem 0 0;
-  a {
-    position: relative;
-    padding: 10px 40px;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font: 600 30px consolas;
-    overflow: hidden;
-    transition: 1s ease;
+  align-items: center;
+  flex-direction: column;
+  
+  p {
+    height: 64px;
+    font-family: "Segoe UI";
+    font-weight: 500;
+    font-size: 50px;
+    color: aqua;
+    letter-spacing: -5px;
+    margin: 4rem 0 0;
   }
-
-  a span:nth-child(1) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to right, #171618, #A7C7E7);
-    animation: animate1 3s linear infinite;
-  }
-
-  @keyframes animate1 {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
-
-  a span:nth-child(2) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 3px;
-    background: linear-gradient(to bottom, #171618,#A7C7E7);
-    animation: animate2 3s linear infinite;
-    animation-delay: 1.5s;
-  }
-  @keyframes animate2 {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(100%);
-    }
-  }
-
-  a span:nth-child(3) {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to left, #171618,#A7C7E7);
-    animation: animate3 3s linear infinite;
-  }
-
-  @keyframes animate3 {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-  a span:nth-child(4) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 3px;
-    background: linear-gradient(to top, #171618, #A7C7E7);
-    animation: animate4 3s linear infinite;
-    animation-delay: 1.5s;
-  }
-
-  @keyframes animate4 {
-    0% {
-      transform: translateY(100%);
-    }
-    100% {
-      transform: translateY(-100%);
-    }
+  #underline {
+    width: 200px;
+    height: 8px;
+    background-color: white;
   }
 
   @media screen and (max-width: 900px) {
-    margin: 4rem 0 2rem;
-    a {
-    padding: 10px 20px;
-    font: 400 22px consolas;
+    p {
+    height: 38px;
+      font-size: 30px;
+      letter-spacing: -3px;
+    }
+    #underline {
+    width: 120px;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 2rem;
   }
   } ;
 `;

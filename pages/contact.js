@@ -44,13 +44,23 @@ export default function Contact({ close }) {
       <div className="container">
         <div className="wrap">
           <button className="btn" onClick={() => setIsExitOpen(true)}>
-            <img className="bi" src="images/x.svg" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-x"
+              viewBox="0 0 16 16"
+            >
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
           </button>
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 790 563"
             fill="none"
+            id="svg"
           >
             <g id="Image">
               <g id="g14">
@@ -862,15 +872,15 @@ const Wrap = styled.div`
   max-height: 550px;
   width: 100%;
   max-width: 850px;
-  background-color: #f2f6f8;
+  background-color: black;
   border-radius: 20px;
   z-index: 100;
-
+  border: 2px solid white;
   .none {
     position: absolute;
   }
 
-  svg {
+  #svg {
     display: flex;
     padding: 6rem 0 0 2rem;
   }
@@ -880,7 +890,7 @@ const Wrap = styled.div`
     display: grid;
     grid-template-columns: 1fr;
 
-    svg {
+    #svg {
       margin: 0 2rem -4rem 4rem;
       padding: 0;
     }
@@ -950,6 +960,7 @@ const Wrap = styled.div`
       margin: 1rem 0 0 1rem;
 
       .bi {
+        color: white;
         width: 40px;
         height: 40px;
       }
@@ -978,8 +989,8 @@ const Wrap = styled.div`
     margin: 3rem 0 0 2rem;
 
     .title {
-      font-family: "Pacifico", cursive;
-      color: black;
+      font-family: "Mukta", sans-serif;
+      color: white;
       font-size: 2.5rem;
       border: none;
       height: 40px;
@@ -996,7 +1007,7 @@ const Wrap = styled.div`
         height: 3.3rem;
         padding: 0.5rem 2rem;
       }
-      
+
       &:focus {
         background-color: #f2f6f8;
         border: none;
@@ -1014,7 +1025,7 @@ const Wrap = styled.div`
       color: #838788;
       left: 0;
     }
-    
+
     input,
     textarea {
       font-family: "Quicksand", sans-serif;
@@ -1023,7 +1034,6 @@ const Wrap = styled.div`
     }
     @media screen and (max-width: 900px) {
       margin: 0 0 0 2rem;
-      gap: 1rem;
       .title {
         margin: 1rem 1rem 0 0;
         letter-spacing: 1px;
@@ -1032,10 +1042,10 @@ const Wrap = styled.div`
         width: 300px;
       }
       .message .form-control {
-      padding: 0.5rem 2rem;
-      width: 300px;
-      height: 100px;
-    }
+        padding: 0.5rem 2rem;
+        width: 300px;
+        height: 150px;
+      }
     }
   }
 
@@ -1049,7 +1059,7 @@ const Wrap = styled.div`
     line-height: 2.5rem;
     padding: 0 4rem;
     border: 0;
-    border-radius: 3rem;
+    border-radius: 2rem;
     margin: 0;
     background-image: linear-gradient(
       131deg,

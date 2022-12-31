@@ -98,7 +98,7 @@ const BlackContainer = styled.div`
   }
 
   h1 {
-    color: yellow;
+    color: #FFFAA0;
     font-family: tahoma;
     font-size: 2.5rem;
     font-weight: 1;
@@ -126,8 +126,8 @@ const BlackContainer = styled.div`
   }
 
   .message {
-    background-color: yellow;
-    color: #333;
+    background-color: #FFFAA0;
+    color: #111;
     display: block;
     font-weight: 900;
     overflow: hidden;

@@ -4,13 +4,8 @@ export default function Skills() {
   return (
     <Container>
       <Title>
-        <a>
-          <span> </span>
-          <span> </span>
-          <span> </span>
-          <span> </span>
-          Skills
-        </a>
+      <p id="test">SKILLS</p>
+        <div id="underline"></div>
       </Title>
       <ul className="icons">
         <li>
@@ -200,104 +195,41 @@ const Container = styled.div`
 `;
 
 const Title = styled.div`
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
-  a {
-    position: relative;
-    padding: 10px 40px;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font: 700 30px consolas;
-    overflow: hidden;
-    transition: 1s ease;
-    margin-top: 4rem;
-  }
+  align-items: center;
+  flex-direction: column;
+  
+  p {
 
-  a span:nth-child(1) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to right, #171618,#DAF7A6);
-    animation: animate1 3s linear infinite;
+    height: 50px;
+    font-family: "Segoe UI";
+    font-weight: 500;
+    font-size: 50px;
+    color: aqua;
+    letter-spacing: -4px;
+    margin: 3rem 0 0;
   }
-
-  @keyframes animate1 {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
-
-  a span:nth-child(2) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 3px;
-    background: linear-gradient(to bottom, #171618,#DAF7A6);
-    animation: animate2 3s linear infinite;
-    animation-delay: 1.5s;
-  }
-  @keyframes animate2 {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(100%);
-    }
-  }
-
-  a span:nth-child(3) {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to left, #171618, #DAF7A6);
-    animation: animate3 3s linear infinite;
-  }
-
-  @keyframes animate3 {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-  a span:nth-child(4) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 3px;
-    background: linear-gradient(to top, #171618,#DAF7A6);
-    animation: animate4 3s linear infinite;
-    animation-delay: 1.5s;
-  }
-
-  @keyframes animate4 {
-    0% {
-      transform: translateY(100%);
-    }
-    100% {
-      transform: translateY(-100%);
-    }
+  #underline {
+    width: 145px;
+    height: 8px;
+    background-color: white;
   }
 
   @media screen and (max-width: 900px) {
-    margin-top: 4rem;
-    a {
-    padding: 10px 20px;
-    font: 400 22px consolas;
+    p {
+    height: 30px;
+      font-size: 30px;
+      letter-spacing: -3px;
+      margin: 7rem 0 0;
+    }
+    #underline {
+    width: 85px;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 2rem;
   }
   } ;
 `;

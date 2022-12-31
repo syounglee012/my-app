@@ -11,7 +11,7 @@ export default function SentModal(props) {
           <>
             <div className="dim" onClick={close}>
               <WhiteBackground>
-                <h2>Message Sent!</h2>
+                <h2>Message Sent</h2>
               </WhiteBackground>
             </div>
           </>
@@ -45,12 +45,12 @@ export default function SentModal(props) {
 const WhiteBackground = styled.div`
   width: 250px;
   height: fit-content;
-  background-color: black;
+  background-color: white;
   border-radius: 20px;
 
   & h2 {
-    color: white;
-    font-family: "Pacifico", cursive;
+    color: black;
+    font-family: "Bebas Neue", cursive;
     text-align: center;
     letter-spacing: 3px;
   }
@@ -85,22 +85,24 @@ const Wrap = styled.div`
 
   .modal .upperbox {
     height: 97px;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: #fff 2px solid;
+    border-bottom: black 2px solid;
   }
 
   .modal .lowerbox {
     display: flex;
     font-size: 24px;
-    font-family: "Pacifico", cursive;
-
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 3px;
   }
   .modal .left {
+    color: black;
     width: 173px;
-    height: 97px;
-    border-right: #fff 2px solid;
+    height: 73px;
+    border-right: black 2px solid;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,7 +110,7 @@ const Wrap = styled.div`
   }
   .modal .right {
     width: 173px;
-    height: 97px;
+    height: 73px;
     color: #1fb57e;
     display: flex;
     justify-content: center;
@@ -118,16 +120,18 @@ const Wrap = styled.div`
 
   .modal .cancel {
     font-size: 24px;
-    font-family: "Pacifico", cursive;
+    letter-spacing: 1px;
+    font-family: "Bebas Neue", cursive;
+
 
   }
   & section {
     width: 100%;
-    max-width: 335px;
-    height: 190px;
+    max-width: 350px;
+    height: 170px;
     margin: 0 auto;
     border-radius: 20px;
-    background-color: black;
+    background-color: #fff;
     box-shadow: 0 4px 8px 0 rgba(3, 1, 2, 0.08);
     /* 팝업이 열릴때 스르륵 열리는 효과 */
     animation: modal-show 0.3s;

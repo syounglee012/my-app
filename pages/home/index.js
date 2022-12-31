@@ -69,7 +69,7 @@ const BlackContainer = styled.div`
   @media screen and (max-width: 900px) {
     background: url("images/background7.jpeg") no-repeat center center/cover;
   }
-`;
+  `;
 const Container = styled.div`
   display: flex;
   width: 100%;
@@ -116,7 +116,6 @@ const Container = styled.div`
       &::after {
         background-image: linear-gradient(0deg, #e5eaf5 20%, #edf756 100%);
         border-radius: 50%;
-        animation: slick-hover 3s 1s linear infinite reverse;
       }
       &::before {
         background-image: linear-gradient(
@@ -125,17 +124,10 @@ const Container = styled.div`
           #9df9ef 90%,
           #51e2f5 100%
         );
-        animation: slick-hover-2 3s 1s linear infinite;
         border-radius: 50%;
       }
-      @media screen and (max-width: 900px) {
-        &::after {
-          animation: none;
-        }
-        &::before {
-          animation: none;
-        }
-        &:hover {
+     
+          &:hover {
           animation-name: hoverPop;
           animation-duration: 0.4s;
           animation-fill-direction: forward;
@@ -149,7 +141,6 @@ const Container = styled.div`
             transform: translateY(20px) translateX(20px);
           }
         }
-      }
     }
 
     @keyframes hoverPop {
