@@ -22,7 +22,7 @@ export default function Experiences() {
               </div>
               <div className="bottomWrap">
                 <h1 className="h1">Front End Developer</h1>
-                <h2>Sep 2022 - Present (Remote)</h2>
+                <h2>Aug 2022 - Present (Remote)</h2>
                 <h4>
                   Triumph Group (Seattle, WA) - Contract via BlueRock Marketing
                 </h4>
@@ -50,10 +50,12 @@ export default function Experiences() {
                 </ul>
               </div>
               <div className="buttonDiv">
-           
-
-                <button type="button" onClick={()=>router.push("/public/files/resume.pdf")}>RESUME</button>
-               
+                <button
+                  type="button"
+                  onClick={() => window.open('files/resume.pdf')}
+                >
+                  RESUME
+                </button>
               </div>
             </div>
           </div>
@@ -61,13 +63,7 @@ export default function Experiences() {
           <figcaption></figcaption>
           <ul className="social_media">
             <li>
-              <a
-                onClick={() =>
-                  window.open(
-                    "https://github.com/syounglee012"
-                  )
-                }
-              >
+              <a onClick={() => window.open("https://github.com/syounglee012")}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
