@@ -879,6 +879,11 @@ const Wrap = styled.div`
   .none {
     position: absolute;
   }
+  .bi {
+    :hover {
+      fill: #ff923c;
+    }
+  }
 
   #svg {
     display: flex;
@@ -998,7 +1003,7 @@ const Wrap = styled.div`
     }
     .form-control {
       background-color: #f2f6f8;
-      border-radius: 2rem;
+      border-radius: 20px;
       border: none;
       box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
       width: 400px;
@@ -1059,7 +1064,7 @@ const Wrap = styled.div`
     line-height: 2.5rem;
     padding: 0 4rem;
     border: 0;
-    border-radius: 2rem;
+    border-radius: 10px;
     margin: 0;
     background-image: linear-gradient(
       131deg,
@@ -1076,5 +1081,6 @@ const Wrap = styled.div`
     box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
     background-size: 100% 100%;
     transform: translateY(-0.15em);
+    color: aqua;
   }
 `;

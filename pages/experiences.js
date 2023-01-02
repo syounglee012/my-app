@@ -50,7 +50,10 @@ export default function Experiences() {
                 </ul>
               </div>
               <div className="buttonDiv">
-                <button>RESUME</button>
+           
+
+                <button type="button" onClick={()=>router.push("/public/files/resume.pdf")}>RESUME</button>
+               
               </div>
             </div>
           </div>
