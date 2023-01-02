@@ -111,7 +111,7 @@ const Wrap = styled.div`
   .modal .right {
     width: 173px;
     height: 73px;
-    color: #1fb57e;
+    color: red;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -52,7 +52,7 @@ export default function Experiences() {
               <div className="buttonDiv">
                 <button
                   type="button"
-                  onClick={() => window.open('files/resume.pdf')}
+                  onClick={() => window.open("files/resume.pdf")}
                 >
                   RESUME
                 </button>
@@ -62,6 +62,21 @@ export default function Experiences() {
 
           <figcaption></figcaption>
           <ul className="social_media">
+            <li>
+              <a onClick={() => window.open("https://www.triumphgroup.com")}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="black"
+                  class="bi bi-window"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" />
+                  <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm13 2v2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zM2 14a1 1 0 0 1-1-1V6h14v7a1 1 0 0 1-1 1H2z" />
+                </svg>
+              </a>
+            </li>
             <li>
               <a onClick={() => window.open("https://github.com/syounglee012")}>
                 <svg
@@ -76,6 +91,7 @@ export default function Experiences() {
                 </svg>
               </a>
             </li>
+
             <li>
               <a
                 onClick={() =>
@@ -184,16 +200,18 @@ const Container = styled.div`
     position: relative;
     cursor: pointer;
   }
-
   .social_media li:nth-child(1) a {
+    background: #fff;
+  }
+  .social_media li:nth-child(2) a {
     background: #171515;
   }
 
-  .social_media li:nth-child(2) a {
+  .social_media li:nth-child(3) a {
     background: #0077b5;
   }
 
-  .social_media li:nth-child(3) a {
+  .social_media li:nth-child(4) a {
     background: #dd4b39;
   }
 

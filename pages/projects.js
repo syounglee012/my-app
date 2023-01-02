@@ -40,6 +40,32 @@ export default function Projects() {
               </li>
               <li>Built a robust social login feature to reduce friction</li>
             </ul>
+
+            <div id="icons">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="white"
+                class="bi bi-file-earmark-play"
+                viewBox="0 0 16 16"
+                onClick={()=> window.open('https://youtu.be/t1LJ9YDRG0s')}
+              >
+                <path d="M6 6.883v4.234a.5.5 0 0 0 .757.429l3.528-2.117a.5.5 0 0 0 0-.858L6.757 6.454a.5.5 0 0 0-.757.43z" />
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="white"
+                class="bi bi-github"
+                viewBox="0 0 16 16"
+                onClick={()=> window.open('https://github.com/syounglee012/Soldier-Challengers')}
+              >
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+              </svg>
+            </div>
           </div>
         </div>
         <div className="tl-item">
@@ -67,6 +93,32 @@ export default function Projects() {
                 photos with different dimensions
               </li>
             </ul>
+
+            <div id="icons">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="white"
+                class="bi bi-file-earmark-play"
+                viewBox="0 0 16 16"
+                onClick={()=> window.open('https://www.youtube.com/watch?v=_XbL2yDDNwc')}
+              >
+                <path d="M6 6.883v4.234a.5.5 0 0 0 .757.429l3.528-2.117a.5.5 0 0 0 0-.858L6.757 6.454a.5.5 0 0 0-.757.43z" />
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="white"
+                class="bi bi-github"
+                viewBox="0 0 16 16"
+                onClick={()=> window.open('https://github.com/syounglee012/Looking-Good')}
+              >
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+              </svg>
+            </div>
           </div>
         </div>
         <div className="tl-item">
@@ -103,6 +155,32 @@ export default function Projects() {
                 users to quickly locate nearby restrooms
               </li>
             </ul>
+
+            <div id="icons">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="white"
+                class="bi bi-file-earmark-play"
+                viewBox="0 0 16 16"
+                onClick={()=> window.open('https://www.youtube.com/watch?v=-qfgqgFdOCw')}
+              >
+                <path d="M6 6.883v4.234a.5.5 0 0 0 .757.429l3.528-2.117a.5.5 0 0 0 0-.858L6.757 6.454a.5.5 0 0 0-.757.43z" />
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="white"
+                class="bi bi-github"
+                viewBox="0 0 16 16"
+                onClick={()=> window.open('https://github.com/syounglee012/Seoul-Restroom')}
+              >
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+              </svg>
+            </div>
           </div>
         </div>
       </section>
@@ -150,12 +228,28 @@ const Container = styled.div`
     transform: translate3d(0, 0, 0);
     position: relative;
     width: 33.3333%;
-    height: 85vh;
+    height: 90vh;
     /* min-height: 500px; */
     color: #fff;
     overflow: hidden;
     transition: width 0.5s ease;
+    #icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0 0;
+      transition: 0.7s ease;
 
+      svg {
+        cursor: pointer;
+        :hover {
+          transition: 0.3s ease;
+          transform: translateY(-5px);
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
     &:before,
     &:after {
       transform: translate3d(0, 0, 0);
@@ -187,7 +281,9 @@ const Container = styled.div`
 
     &:hover {
       width: 44% !important;
-
+      #icons {
+        display: flex;
+      }
       &:after {
         opacity: 0;
       }
@@ -240,7 +336,7 @@ const Container = styled.div`
       font-family: "Pathway Gothic One", Helvetica Neue, Helvetica, Arial,
         sans-serif;
       text-transform: uppercase;
-      color:#edf756;
+      color: #edf756;
       font-size: 1.44rem;
       font-weight: normal;
     }
@@ -317,7 +413,7 @@ const Title = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
+
   p {
     height: 64px;
     font-family: "Segoe UI";
@@ -335,15 +431,15 @@ const Title = styled.div`
 
   @media screen and (max-width: 900px) {
     p {
-    height: 38px;
+      height: 38px;
       font-size: 30px;
       letter-spacing: -3px;
     }
     #underline {
-    width: 120px;
-    height: 4px;
-    background-color: white;
-    margin-bottom: 2rem;
-  }
+      width: 120px;
+      height: 4px;
+      background-color: white;
+      margin-bottom: 2rem;
+    }
   } ;
 `;
