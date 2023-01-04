@@ -44,8 +44,8 @@ export default function Projects() {
             <div id="icons">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
+                width="35"
+                height="35"
                 fill="white"
                 class="bi bi-file-earmark-play"
                 viewBox="0 0 16 16"
@@ -56,8 +56,8 @@ export default function Projects() {
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
+                width="35"
+                height="35"
                 fill="white"
                 class="bi bi-github"
                 viewBox="0 0 16 16"
@@ -97,8 +97,8 @@ export default function Projects() {
             <div id="icons">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
+                width="35"
+                height="35"
                 fill="white"
                 class="bi bi-file-earmark-play"
                 viewBox="0 0 16 16"
@@ -109,8 +109,8 @@ export default function Projects() {
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
+                width="35"
+                height="35"
                 fill="white"
                 class="bi bi-github"
                 viewBox="0 0 16 16"
@@ -159,8 +159,8 @@ export default function Projects() {
             <div id="icons">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
+                width="35"
+                height="35"
                 fill="white"
                 class="bi bi-file-earmark-play"
                 viewBox="0 0 16 16"
@@ -171,8 +171,8 @@ export default function Projects() {
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
+                width="35"
+                height="35"
                 fill="white"
                 class="bi bi-github"
                 viewBox="0 0 16 16"
@@ -193,7 +193,7 @@ const Container = styled.div`
   justify-content: center;
   font-family: "Bodoni Moda", serif;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
   justify-content: center;
   align-items: center;
   font-weight: 300;
@@ -237,7 +237,7 @@ const Container = styled.div`
       display: flex;
       justify-content: center;
       gap: 1rem;
-      margin: 1rem 0 0;
+      margin: 4rem 0 0;
       transition: 0.7s ease;
 
       svg {
@@ -259,6 +259,7 @@ const Container = styled.div`
       top: 0;
       width: 100%;
       height: 100%;
+
     }
 
     &:after {
@@ -301,6 +302,10 @@ const Container = styled.div`
         letter-spacing: 0.1rem;
         text-shadow: 0 0 3px aqua, 0 0 3px aqua;
         transition: 0.9s ease;
+        top: 22%;
+        @media screen and (max-width: 900px){
+          top: 7%;
+        }
       }
 
       .tl-content {
@@ -316,6 +321,13 @@ const Container = styled.div`
     @media screen and (max-width: 900px) {
       width: 100%;
       height: 60vh;
+      #icons{
+        margin: 2rem 0 0;
+      }
+      svg {
+        width: 25px;
+        height: 25px;
+      }
 
       &:hover {
         width: 100% !important;
@@ -329,7 +341,7 @@ const Container = styled.div`
     z-index: 1;
     text-align: center;
     margin: 0 1.618em;
-    top: 55%;
+    top: 30%;
     opacity: 0;
 
     h1 {
@@ -353,7 +365,7 @@ const Container = styled.div`
         text-shadow: #031625;
       }
       ul {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         padding: 0 0 0 1rem;
       }
     }

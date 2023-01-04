@@ -872,7 +872,7 @@ const Wrap = styled.div`
   max-height: 550px;
   width: 100%;
   max-width: 850px;
-  background-color: black;
+  background: url("images/background7.jpeg") no-repeat center center/cover;
   border-radius: 20px;
   z-index: 100;
   border: 2px solid white;
