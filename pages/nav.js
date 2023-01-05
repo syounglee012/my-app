@@ -12,7 +12,10 @@ export default function Nav({
   const router = useRouter();
   const [isOpen, setIsOpen] = React.useState(false);
   const [isMobileOpen, setIsMobileOpen] = React.useState(false);
-  const toggleRef = useRef(false);
+  const [isHomeClicked, setIsHomneClicked] = React.useState(false);
+  const [isSkillClicked, setIsSkillsClicked] = React.useState(false);
+  const [isExpClicked, setIsExpClicked] = React.useState(false);
+  const [isProjClicked, setIsProjClicked] = React.useState(false);
 
   const HandleToggle = (num) => {
     setIsMobileOpen(false);
@@ -28,6 +31,30 @@ export default function Nav({
       setIsOpen(true);
     }
   };
+
+  const HandleClicked = (num) => {
+    if (num == 0) {
+      setIsHomneClicked(true);
+      setIsSkillsClicked(false);
+      setIsExpClicked(false);
+      setIsProjClicked(false);
+    } else if (num == 1) {
+      setIsHomneClicked(false);
+      setIsSkillsClicked(true);
+      setIsExpClicked(false);
+      setIsProjClicked(false);
+    } else if (num == 2) {
+      setIsHomneClicked(false);
+      setIsSkillsClicked(false);
+      setIsExpClicked(true);
+      setIsProjClicked(false);
+    } else {
+      setIsHomneClicked(false);
+      setIsSkillsClicked(false);
+      setIsExpClicked(false);
+      setIsProjClicked(true);
+    }
+  };
   return (
     <>
       <HeaderContainer>
@@ -40,17 +67,41 @@ export default function Nav({
         </h1>
         <div className="container">
           <ul>
-            <li onClick={() => HandleHomeScroll()}>
-              <span>HOME</span>
+            <li
+              onClick={() => {
+                HandleHomeScroll(), HandleClicked(0);
+              }}
+            >
+              <span className={isHomeClicked ? "clicked" : "unClicked"}>
+                HOME
+              </span>
             </li>
-            <li onClick={() => HandleSkillsScroll()}>
-              <span>SKILLS</span>
+            <li
+              onClick={() => {
+                HandleSkillsScroll(), HandleClicked(1);
+              }}
+            >
+              <span className={isSkillClicked ? "clicked" : "unClicked"}>
+                SKILLS
+              </span>
             </li>
-            <li onClick={() => HandleExperiencesScroll()}>
-              <span>EXPERIENCES</span>
+            <li
+              onClick={() => {
+                HandleExperiencesScroll(), HandleClicked(2);
+              }}
+            >
+              <span className={isExpClicked ? "clicked" : "unClicked"}>
+                EXPERIENCES
+              </span>
             </li>
-            <li onClick={() => HandleProjectsScroll()}>
-              <span>PROJECTS</span>
+            <li
+              onClick={() => {
+                HandleProjectsScroll(), HandleClicked(3);
+              }}
+            >
+              <span className={isProjClicked ? "clicked" : "unClicked"}>
+                PROJECTS
+              </span>
             </li>
           </ul>
         </div>
@@ -150,7 +201,7 @@ const HeaderContainer = styled.header`
       display: flex;
       align-items: center;
       width: 100%;
-      
+
       &:before,
       &:after {
         position: absolute;
@@ -207,7 +258,11 @@ const HeaderContainer = styled.header`
     display: inline-block;
     padding: 0 20px;
   }
+  .clicked {
+    color: #edf756;
+    transition: 1s ease;
 
+  }
   & span {
     position: relative;
     display: block;
