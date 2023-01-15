@@ -6,7 +6,7 @@ export default function Main() {
     <BlackContainer>
       <div className="flyinTxtCont">
         <div className="flyIn lineOne">Hello!</div>
-        <div className="flyIn lineTwo">I&#39;m Young Lee</div>
+        <div className="flyIn lineTwo">I&#39;m Sam Lee</div>
         <div className="flyIn lineThree">Front-End Developer</div>
         <div className="flyIn lineFour">Based In Seattle</div>
       </div>

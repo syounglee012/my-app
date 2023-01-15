@@ -107,15 +107,22 @@ const Wrap = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    :hover {
+      color: #fff;
+      background-color: black;
+    }
   }
   .modal .right {
-    width: 173px;
+    width: 177px;
     height: 73px;
     color: red;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    cursor: pointer; :hover {
+      color: #fff;
+      background-color: red;
+    }
   }
 
   .modal .cancel {

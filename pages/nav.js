@@ -60,10 +60,10 @@ export default function Nav({
       <HeaderContainer>
         <h1
           className={isMobileOpen ? "h1None" : "glitch"}
-          data-glitch="Young Lee"
+          data-glitch="Sam Lee"
           onClick={() => (window.location.href = "/home")}
         >
-          Young Lee
+          Sam Lee
         </h1>
         <div className="container">
           <ul>
@@ -160,7 +160,7 @@ const HeaderContainer = styled.header`
     font-size: x-large;
     font-family: "Bebas Neue", cursive;
     color: white;
-    padding: 0.5rem;
+    padding: 0.2rem 0.5rem;
     border: 2px solid white;
     text-decoration: none;
     margin: 0;
@@ -170,7 +170,7 @@ const HeaderContainer = styled.header`
     &:before,
     &:after {
       position: absolute;
-      top: 31.5%;
+      top: 30%;
       display: block;
       content: attr(data-glitch);
       opacity: 0.8;

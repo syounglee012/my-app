@@ -22,31 +22,40 @@ export default function Experiences() {
               </div>
               <div className="bottomWrap">
                 <h1 className="h1">Front End Developer</h1>
-                <h2>Sep 2022 - Present (Remote)</h2>
                 <h4>
-                  Triumph Group (Seattle, WA) - Contract via BlueRock Marketing
+                  TRIUMPH (Seattle, WA) - Contract via BlueRock Marketing
                 </h4>
+                <h4>September 2022 - Present (Remote)</h4>
                 <h3>Key Qualifications & Responsibilities</h3>
                 <ul>
                   <li>
-                    Implemented the company wibsite and landing pages from
-                    concept through deployment.
+                    Develop a reusable advanced search component built with
+                    Algolia that allows customers to search for either
+                    products/services or the locations that are associated.
+                    Built to be extended to other search tools as requested.
                   </li>
                   <li>
-                    Standardized all output with a new, reponsive, mobile-first
-                    approach and strategy.
+                    Applying the dynamic search used by more than 5000 employees
+                    and other consumers, significantly reduced the number of
+                    required searches and costs allocated with each query.
                   </li>
-                  <li>Assessed UX and UI designs for technical feasibility.</li>
                   <li>
-                    Collaborated with product team members to implement new
-                    feature developments.
+                    Using the Google API implemented a robust locations finder
+                    of all 28 locations of Triumph in 8 different countries,
+                    enabling users to scroll in the globe to locate, and see a
+                    more detailed view associated with each different location.
+                  </li>
+                  <li>
+                    Architectured back end data model for all of the data that
+                    is consumed by the company website and features using
+                    Strapi.
                   </li>
                   <li>Worked well independently and within a team setting.</li>
                   <li>
-                    Coordinate with the web development team to design user
-                    interfaces for client websites using HTML, JavaScript, and
-                    Next.js
-                  </li> 
+                    Collaborate with UX designers to implement more user
+                    friendly UI and enable responsive design to support the web
+                    app on all different platforms.
+                  </li>
                 </ul>
               </div>
               <div className="buttonDiv">
@@ -187,7 +196,7 @@ const Container = styled.div`
   .social_media {
     position: absolute;
     bottom: 5%;
-    right: 0;
+    right: 0%;
     list-style: none;
     transform: translateX(100%);
     transition: all 0.35s;
@@ -240,7 +249,7 @@ const Container = styled.div`
     height: 100%;
   }
   .bottomWrap {
-    padding-left: 30px;
+    padding-left: 40px;
     border-top: 1rem double #000;
   }
   @media screen and (max-width: 900px) {
@@ -261,7 +270,7 @@ const Container = styled.div`
 
   .square {
     width: 700px;
-    height: 730px;
+    height: 750px;
     background: white;
     color: #000;
     border-radius: 20px;
@@ -270,12 +279,8 @@ const Container = styled.div`
       text-align: left;
       font-family: "Merriweather", serif;
       color: #000;
-      margin: 1.5rem 0 0;
       letter-spacing: 2px;
-    }
-    & h2 {
-      margin: 0;
-      letter-spacing: 1px;
+      margin: 1rem 0 0;
     }
 
     & h4 {
@@ -324,16 +329,17 @@ const Container = styled.div`
     border-radius: 4px;
     object-fit: contain;
     width: 220px;
-    height: 250px;
+    height: 220px;
   }
 
   & ul {
+    max-width: 630px;
     text-align: justify;
-    padding: 0 30px;
+    padding: 0 50px;
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     color: #777;
-    line-height: 1.6rem;
+    line-height: 1.2rem;
     margin: 0;
     @media screen and (max-width: 400px) {
       line-height: 1.1rem;
@@ -346,7 +352,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
+    height: 80px;
   }
   & button {
     background-color: white;
