@@ -8,6 +8,11 @@ export default function Skills() {
         <div id="underline"></div>
       </Title>
       <ul className="icons">
+
+        <li>
+          <img src="https://img.icons8.com/color/96/null/javascript--v1.png" />
+          <p>JavaScript</p>
+        </li>
         <li>
           <img src="https://img.icons8.com/color/96/null/html-5--v1.png" />
           <p>HTML</p>
@@ -15,11 +20,6 @@ export default function Skills() {
         <li>
           <img src="https://img.icons8.com/color/96/null/css3.png" />
           <p>CSS</p>
-        </li>
-
-        <li>
-          <img src="https://img.icons8.com/color/96/null/javascript--v1.png" />
-          <p>JavaScript</p>
         </li>
         <li>
           <img src="https://img.icons8.com/color/96/null/react-native.png" />
