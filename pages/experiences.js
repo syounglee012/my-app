@@ -35,7 +35,7 @@ export default function Experiences() {
                     Built to be extended to other search tools as requested.
                   </li>
                   <li>
-                    Applying the dynamic search used by more than 5000 employees
+                    Applying the dynamic and federated search used by more than 5000 employees
                     and other consumers, significantly reduced the number of
                     required searches and costs allocated with each query.
                   </li>
@@ -105,7 +105,7 @@ export default function Experiences() {
               <a
                 onClick={() =>
                   window.open(
-                    "https://www.linkedin.com/in/sungyoung-lee-10008b221/"
+                    "https://www.linkedin.com/in/sam-lee-10008b221/"
                   )
                 }
               >
