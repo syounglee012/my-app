@@ -25,7 +25,7 @@ export default function SentModal(props) {
                 <div className="lowerbox">
                   <div
                     className="left"
-                    onClick={() => router.push("/") & close}
+                    onClick={() => window.location.href = '/'}
                   >
                     YES
                   </div>
