@@ -294,20 +294,20 @@ const Container = styled.div`
 
     @media screen and (max-width: 900px) {
       width: 350px;
-      line-height: 1.3rem;
+      line-height: 1rem;
       height: fit-content;
       .h1 {
-        font-size: x-large;
+        font-size: large;
       }
-      & h2 {
+      & h3 {
         font-size: medium;
       }
       & h4 {
-        font-size: medium;
-        width: 280px;
+        font-size: small;
+        width: 350px;
       }
       & h5 {
-        font-size: 14px;
+        font-size: small;
       }
     }
   }
@@ -319,9 +319,12 @@ const Container = styled.div`
     align-items: center;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    @media screen and (max-width: 400px) {
-      width: 350px;
-      height: 150px;
+    @media screen and (max-width: 500px) {
+      width: 352px;
+      height: 70px;
+      & img {
+        width: 150px;
+      }
     }
   }
   .mask {
@@ -341,10 +344,11 @@ const Container = styled.div`
     color: #777;
     line-height: 1.2rem;
     margin: 0;
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 500px) {
       line-height: 1.1rem;
       text-align: left;
       padding: 0 20px;
+      font-size: 10px;
     }
   }
 
