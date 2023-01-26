@@ -66,10 +66,7 @@ const BlackContainer = styled.div`
   width: 100%;
   height: 100%;
   background: url("images/background7.jpeg") no-repeat center center/cover;
-  @media screen and (max-width: 900px) {
-    background: url("images/background7.jpeg") no-repeat center center/cover;
-  }
-  `;
+`;
 const Container = styled.div`
   display: flex;
   width: 100%;
@@ -87,17 +84,19 @@ const Container = styled.div`
     display: flex;
     justify-content: space-between;
     .container {
+      display: flex;
       width: 100%;
-      margin-top: 8rem;
+      margin-top: 10rem;
       animation: fadeIn 2s linear;
+      justify-content: center;
     }
     .item {
       align-items: center;
       display: flex;
-      height: 600px;
+      height: 500px;
       justify-content: center;
       position: relative;
-      width: 600px;
+      width: 500px;
       z-index: 10;
       img {
         object-fit: cover;
@@ -126,21 +125,21 @@ const Container = styled.div`
         );
         border-radius: 50%;
       }
-     
-          &:hover {
-          animation-name: hoverPop;
-          animation-duration: 0.4s;
-          animation-fill-direction: forward;
 
-          &::before {
-            animation: slick-hover-2 3s 0.4s linear infinite;
-            transform: translateY(-20px) translateX(-20px);
-          }
-          &::after {
-            animation: slick-hover 3s 0.4s linear infinite reverse;
-            transform: translateY(20px) translateX(20px);
-          }
+      &:hover {
+        animation-name: hoverPop;
+        animation-duration: 0.4s;
+        animation-fill-direction: forward;
+
+        &::before {
+          animation: slick-hover-2 3s 0.4s linear infinite;
+          transform: translateY(-20px) translateX(-20px);
         }
+        &::after {
+          animation: slick-hover 3s 0.4s linear infinite reverse;
+          transform: translateY(20px) translateX(20px);
+        }
+      }
     }
 
     @keyframes hoverPop {
@@ -203,7 +202,17 @@ const Container = styled.div`
         transform: translateY(-20px) translateX(-20px);
       }
     }
-    @media screen and (max-width: 900px) {
+    
+  }
+  & img {
+    width: 100%;
+    height: 100%;
+    max-width: 520px;
+    max-height: 669px;
+    margin-top: 4em;
+  }
+  @media screen and (max-width: 704px) {
+    & main {
       display: grid;
       .container {
         margin-top: 12rem;
@@ -214,15 +223,37 @@ const Container = styled.div`
         width: 250px;
       }
     }
-  }
-  & img {
-    width: 100%;
+    display: grid;
     height: 100%;
-    max-width: 520px;
-    max-height: 669px;
-    margin-top: 4em;
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 850px) and (min-width: 705px) {
+    & main {
+      gap: 2rem;
+      .container {
+        margin-top: 9rem;
+        margin-bottom: 2rem;
+      }
+      .item {
+        height: 300px;
+        width: 300px;
+      }
+    }
+    display: grid;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 1250px) and (min-width: 851px) {
+    & main {
+      gap: 2rem;
+      .container {
+        margin-top: 6rem;
+        margin-bottom: 2rem;
+      }
+      .item {
+        height: 400px;
+        width: 400px;
+      }
+    }
     display: grid;
     height: 100%;
   }

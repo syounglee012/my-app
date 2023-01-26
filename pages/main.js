@@ -29,7 +29,7 @@ const BlackContainer = styled.div`
   margin: 12rem 0 0;
 
   .flyinTxtCont {
-    height: 100%;
+    height: fit-content;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -109,20 +109,12 @@ const BlackContainer = styled.div`
     position: relative;
     width: 100%;
     animation: fadeIn 2s linear;
-    @media screen and (max-width: 900px) {
-      font-size: 18px;
-      margin: 7rem 0 0 -2rem;
-      width: 350px;
-    }
+  
   }
 
   h1 span {
     font-size: 40px;
     margin-right: 1rem;
-    @media screen and (max-width: 900px) {
-      font-size: 18px;
-      margin-right: 0;
-    }
   }
 
   .message {
@@ -136,9 +128,6 @@ const BlackContainer = styled.div`
     top: 0.2rem;
     left: 250px;
     animation: openclose 7s ease-in-out infinite;
-    @media screen and (max-width: 900px) {
-      left: 130px;
-    }
   }
 
   .word1,
@@ -212,7 +201,160 @@ const BlackContainer = styled.div`
       text-indent: 0;
     }
   }
-  @media screen and (max-width: 900px) {
+ 
+  @media screen and (max-width: 704px) {
+    width: 270px;
+    position: absolute;
+    margin: 0 0 0;
+    h1 {
+      font-size: 14px;
+      margin: 22rem 0 0;
+      width: 270px;
+    }
+    h1 span {
+      font-size: 14px;
+      margin-right: 0;
+    }
+    .message {
+      left: 110px;
+    }
+    .lineOne,
+    .lineTwo {
+      font-size: 2rem;
+    }
+    .lineThree {
+      font-size: 1rem;
+      margin-top: 1em;
+      text-align: center;
+      letter-spacing: 0.3rem;
+    }
+    .lineFour {
+      font-size: 0.8rem;
+      letter-spacing: 0.3rem;
+    }
+    @keyframes openclose {
+      0% {
+        top: 0rem;
+        width: 0;
+      }
+      5% {
+        top: 0rem;
+        width: 0;
+      }
+      15% {
+        top: 0rem;
+        width: 105px;
+      }
+      30% {
+        top: 0rem;
+        width: 105px;
+      }
+      33% {
+        top: 0rem;
+        width: 0;
+      }
+      35% {
+        top: 0rem;
+        width: 0;
+      }
+      38% {
+        top: -1.35rem;
+      }
+      48% {
+        top: -1.35rem;
+        width: 125px;
+      }
+      62% {
+        top: -1.35rem;
+        width: 125px;
+      }
+      66% {
+        top: -1.35rem;
+        width: 0;
+        text-indent: 0;
+      }
+      71% {
+        top: -2.65rem;
+        width: 0;
+        text-indent: 0;
+      }
+      86% {
+        top: -2.65rem;
+        width: 190px;
+      }
+      95% {
+        top: -2.65rem;
+        width: 190px;
+      }
+      98% {
+        top: -2.65rem;
+        width: 0;
+        text-indent: 0;
+      }
+      100% {
+        top: 0;
+        width: 0;
+        text-indent: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 850px) and (min-width: 705px) {
+    h1 {
+      font-size: 18px;
+      width: 350px;
+    }
+    h1 span {
+      font-size: 18px;
+      margin-right: 0;
+    }
+    .message {
+      left: 130px;
+      
+    }
+    .lineOne,
+    .lineTwo {
+      font-size: 3rem;
+    }
+    .lineThree {
+      font-size: 1.6rem;
+      margin-top: 1em;
+      text-align: center;
+      letter-spacing: 0.3rem;
+    }
+    .lineFour {
+      font-size: 1rem;
+      letter-spacing: 0.3rem;
+    }
+  }
+  @media screen and (max-width: 1250px) and (min-width:851px) {
+    h1 {
+      font-size: 18px;
+      width: 350px;
+    }
+    h1 span {
+      font-size: 18px;
+      margin-right: 0;
+    }
+   
+    .message {
+      left: 130px;
+    }
+    .lineOne,
+    .lineTwo {
+      font-size: 4rem;
+    }
+    .lineThree {
+      font-size: 2rem;
+      margin-top: 1em;
+      text-align: center;
+      letter-spacing: 0.3rem;
+    }
+    .lineFour {
+      font-size: 1rem;
+      letter-spacing: 0.3rem;
+    }
+  }
+  @media screen and (max-width: 1250px) and (min-width: 704px) {
     @keyframes openclose {
       0% {
         top: 0rem;
@@ -277,27 +419,6 @@ const BlackContainer = styled.div`
         width: 0;
         text-indent: 0;
       }
-    }
-  }
-
-  @media screen and (max-width: 900px) {
-    width: 270px;
-    position: absolute;
-    margin: 0 0 0;
-
-    .lineOne,
-    .lineTwo {
-      font-size: 2rem;
-    }
-    .lineThree {
-      font-size: 1rem;
-      margin-top: 1em;
-      text-align: center;
-      letter-spacing: 0.3rem;
-    }
-    .lineFour {
-      font-size: 0.8rem;
-      letter-spacing: 0.3rem;
     }
   }
 `;

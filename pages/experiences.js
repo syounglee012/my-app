@@ -292,7 +292,7 @@ const Container = styled.div`
       margin: 1rem 0 0;
     }
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 500px) {
       width: 350px;
       line-height: 1rem;
       height: fit-content;
@@ -404,7 +404,7 @@ const Title = styled.div`
     margin-bottom: 2rem;
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 500px) {
     p {
       height: 30px;
       font-size: 30px;

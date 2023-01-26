@@ -157,7 +157,7 @@ const HeaderContainer = styled.header`
   float: left;
 
   & h1 {
-    font-size: x-large;
+    font-size: large;
     font-family: "Bebas Neue", cursive;
     color: white;
     padding: 0.2rem 0.5rem;
@@ -170,7 +170,7 @@ const HeaderContainer = styled.header`
     &:before,
     &:after {
       position: absolute;
-      top: 30%;
+      top: 35%;
       display: block;
       content: attr(data-glitch);
       opacity: 0.8;
@@ -194,8 +194,8 @@ const HeaderContainer = styled.header`
       }
     }
 
-    @media only screen and (max-width: 900px) {
-      font-size: 0.8rem;
+    @media only screen and (max-width: 1200px) {
+      font-size: 1rem;
       letter-spacing: 1px;
       border: none;
       display: flex;
@@ -205,7 +205,7 @@ const HeaderContainer = styled.header`
       &:before,
       &:after {
         position: absolute;
-        top: 37%;
+        top: 33%;
         display: block;
         content: attr(data-glitch);
         opacity: 0.8;
@@ -266,7 +266,7 @@ const HeaderContainer = styled.header`
   & span {
     position: relative;
     display: block;
-    font-size: x-large;
+    font-size: large;
     cursor: pointer;
     :hover {
       letter-spacing: 0.3rem;
@@ -307,7 +307,7 @@ const HeaderContainer = styled.header`
   }
 
   & button {
-    font-size: 24px;
+    font-size: 20px;
     width: 100%;
     height: 35px;
     max-width: 150px;
@@ -328,7 +328,7 @@ const HeaderContainer = styled.header`
     }
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1200px) {
     padding: 1rem 2rem;
     .container {
       display: none;
@@ -345,7 +345,7 @@ const HeaderContainer = styled.header`
 
 const MobileContainer = styled.div`
   display: none;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1200px) {
     width: 100%;
     height: fit-content;
     display: flex;
