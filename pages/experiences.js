@@ -103,7 +103,7 @@ export default function Experiences() {
             <li>
               <a
                 onClick={() =>
-                  window.open("https://www.linkedin.com/in/sam-lee-10008b221/")
+                  window.open("https://www.linkedin.com/in/swe-samlee/")
                 }
               >
                 <svg
