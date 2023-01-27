@@ -865,8 +865,6 @@ export default function Contact({ close }) {
 }
 
 const Wrap = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   justify-content: center;
   height: 100%;
   max-height: 550px;
@@ -888,17 +886,6 @@ const Wrap = styled.div`
   #svg {
     display: flex;
     padding: 6rem 0 0 2rem;
-  }
-  @media screen and (max-width: 900px) {
-    max-width: 350px;
-    max-height: 600px;
-    display: grid;
-    grid-template-columns: 1fr;
-
-    #svg {
-      margin: 0 2rem -4rem 4rem;
-      padding: 0;
-    }
   }
 
   #envelope {
@@ -976,13 +963,6 @@ const Wrap = styled.div`
         transform: translateY(-3px);
       }
     }
-    @media screen and (max-width: 900px) {
-      grid-template-columns: 1fr;
-      width: 300px;
-      .btn {
-        margin: 0;
-      }
-    }
   }
 
   form {
@@ -991,6 +971,7 @@ const Wrap = styled.div`
     max-height: 500px;
     display: grid;
     justify-items: center;
+    gap: 1.5rem;
     margin: 3rem 0 0 2rem;
 
     .title {
@@ -998,7 +979,7 @@ const Wrap = styled.div`
       color: white;
       font-size: 2.5rem;
       border: none;
-      height: 40px;
+      height: 60px;
       margin: 0;
     }
     .form-control {
@@ -1037,50 +1018,105 @@ const Wrap = styled.div`
       color: #212529;
       font-size: 1.1rem;
     }
-    @media screen and (max-width: 900px) {
-      margin: 0 0 0 2rem;
+
+    .btn.btn-primary {
+      width: 100%;
+      max-width: 200px;
+      letter-spacing: 1px;
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      padding: 0 4rem;
+      border: 0;
+      border-radius: 10px;
+      margin: 0;
+      background-image: linear-gradient(
+        131deg,
+        #ffd340,
+        #ff923c,
+        #ff923c,
+        #ff923c
+      );
+      background-size: 300% 100%;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn.btn-primary:hover:enabled {
+      box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
+      background-size: 100% 100%;
+      transform: translateY(-0.15em);
+      color: aqua;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    max-width: 300px;
+    max-height: 500px;
+    .container {
+      grid-template-columns: 1fr;
+      width: 150px;
+      .btn {
+        margin: 0;
+      }
+    }
+    #svg {
+      margin: 0 2rem -4rem 4rem;
+      padding: 0;
+    }
+    form {
+      gap: 0.4rem;
+      margin: 3.5rem 0 0 1.3rem;
+      .title {
+        letter-spacing: 1px;
+        font-size: 1.5rem;
+        height: 30px;
+        margin-top: 1rem;
+      }
+
+      .form-control {
+        width: 240px;
+      }
+      .message .form-control {
+        padding: 0.5rem 2rem;
+        width: 240px;
+        height: 100px;
+      }
+      .btn.btn-primary {
+        max-width: 100px;
+        padding: 0 2rem;
+      }
+    }
+  }
+  @media screen and (max-width: 900px) and (min-width: 501px) {
+    max-width: 350px;
+    max-height: 600px;
+    .container {
+      grid-template-columns: 1fr;
+      width: 300px;
+      .btn {
+        margin: 0;
+      }
+    }
+    #svg {
+      margin: 0 2rem -4rem 4rem;
+      padding: 0;
+    }
+    form {
+      gap: 0.7rem;
       .title {
         margin: 1rem 1rem 0 0;
         letter-spacing: 1px;
+        font-size: 2rem;
       }
+
       .form-control {
         width: 300px;
       }
       .message .form-control {
         padding: 0.5rem 2rem;
         width: 300px;
-        height: 150px;
+        height: 100px;
       }
     }
-  }
-
-  .btn.btn-primary {
-    width: 100%;
-    max-width: 200px;
-    letter-spacing: 1px;
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    height: 2.5rem;
-    line-height: 2.5rem;
-    padding: 0 4rem;
-    border: 0;
-    border-radius: 10px;
-    margin: 0;
-    background-image: linear-gradient(
-      131deg,
-      #ffd340,
-      #ff923c,
-      #ff923c,
-      #ff923c
-    );
-    background-size: 300% 100%;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .btn.btn-primary:hover:enabled {
-    box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
-    background-size: 100% 100%;
-    transform: translateY(-0.15em);
-    color: aqua;
   }
 `;

@@ -28,10 +28,6 @@ export default function Home() {
     projectsRef.current.scrollIntoView({ behavior: "smooth" }, 1000);
   };
 
-  useEffect(() => {
-    homeRef.current.scrollIntoView({ behavior: "smooth" }, 1000);
-  }, []);
-
   return (
     <BlackContainer ref={homeRef}>
       <Header />

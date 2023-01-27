@@ -243,7 +243,7 @@ const Title = styled.div`
     font-size: 50px;
     color: aqua;
     letter-spacing: -4px;
-    margin: 2.5rem 0 0;
+    margin:4rem 0 0;
   }
   #underline {
     width: 145px;
@@ -267,7 +267,7 @@ const Title = styled.div`
   }
   @media screen and (max-width: 1250px) and (min-width: 851px) {
     p {
-      height: 40px;
+      height: 38px;
       font-size: 40px;
       letter-spacing: -3px;
       margin: 3rem 0 0;

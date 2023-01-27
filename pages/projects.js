@@ -217,8 +217,9 @@ const Container = styled.div`
     &:hover {
       .tl-item {
         width: 33.3333%;
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 1265px) {
           width: 100%;
+          
         }
       }
     }
@@ -303,7 +304,7 @@ const Container = styled.div`
         text-shadow: 0 0 3px aqua, 0 0 3px aqua;
         transition: 0.9s ease;
         top: 22%;
-        @media screen and (max-width: 900px){
+        @media screen and (max-width: 1265px){
           top: 7%;
         }
       }
@@ -318,9 +319,10 @@ const Container = styled.div`
         filter: grayscale(0);
       }
     }
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1265px) {
       width: 100%;
       height: 60vh;
+      margin-bottom: 5rem;
       #icons{
         margin: 2rem 0 0;
       }
@@ -343,7 +345,6 @@ const Container = styled.div`
     margin: 0 1.618em;
     top: 30%;
     opacity: 0;
-
     h1 {
       font-family: "Pathway Gothic One", Helvetica Neue, Helvetica, Arial,
         sans-serif;
@@ -360,15 +361,16 @@ const Container = styled.div`
       top: 10.5%;
       overflow: auto;
       h1 {
-        font-size: 0.9rem;
+        font-size: 1rem;
         font-weight: 600;
         text-shadow: #031625;
       }
       ul {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         padding: 0 0 0 1rem;
       }
     }
+
   }
 
   .tl-year {
@@ -395,6 +397,11 @@ const Container = styled.div`
         font-size: 1.2rem;
       }
     }
+    @media screen and (max-width: 1500px) and (min-width: 1265px) {
+      p {
+        font-size: 1.4rem;
+      }
+    }
   }
 
   .tl-bg {
@@ -410,7 +417,7 @@ const Container = styled.div`
     filter: grayscale(100%) brightness(40%);
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1265px) {
     #timeline {
       display: grid;
       grid-template-columns: 1fr;
@@ -440,8 +447,7 @@ const Title = styled.div`
     height: 8px;
     background-color: white;
   }
-
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 850px) {
     p {
       height: 38px;
       font-size: 30px;
@@ -449,6 +455,19 @@ const Title = styled.div`
     }
     #underline {
       width: 120px;
+      height: 4px;
+      background-color: white;
+      margin-bottom: 2rem;
+    }
+  }
+  @media screen and (max-width: 1250px) and (min-width: 851px){
+    p {
+      height: 51px;
+      font-size: 40px;
+      letter-spacing: -3px;
+    }
+    #underline {
+      width: 170px;
       height: 4px;
       background-color: white;
       margin-bottom: 2rem;

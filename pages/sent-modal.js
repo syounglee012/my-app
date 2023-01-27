@@ -25,7 +25,7 @@ export default function SentModal(props) {
                 <div className="lowerbox">
                   <div
                     className="left"
-                    onClick={() => window.location.href = '/'}
+                    onClick={() => (window.location.href = "/")}
                   >
                     YES
                   </div>
@@ -119,7 +119,8 @@ const Wrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer; :hover {
+    cursor: pointer;
+    :hover {
       color: #fff;
       background-color: red;
     }
@@ -129,8 +130,6 @@ const Wrap = styled.div`
     font-size: 24px;
     letter-spacing: 1px;
     font-family: "Bebas Neue", cursive;
-
-
   }
   & section {
     width: 100%;
@@ -177,6 +176,27 @@ const Wrap = styled.div`
   }
 
   @media screen and (max-width: 900px) {
-      
+    & section {
+      max-width: 250px;
+      height: 100px;
     }
+
+    .modal .upperbox {
+      height: 60px;
+    }
+
+    .modal .lowerbox {
+      font-size: 18px;
+    }
+    .modal .left {
+      height: 40px;
+    }
+    .modal .right {
+      height: 40px;
+    }
+
+    .modal .cancel {
+      font-size: 18px;
+    }
+  }
 `;

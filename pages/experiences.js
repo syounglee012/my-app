@@ -22,9 +22,7 @@ export default function Experiences() {
               </div>
               <div className="bottomWrap">
                 <h1 className="h1">Front End Developer</h1>
-                <h4>
-                  TRIUMPH (Seattle, WA) - Contract via BlueRock Marketing
-                </h4>
+                <h4>TRIUMPH (Redmond, WA) - Contract via BlueRock Marketing</h4>
                 <h4>September 2022 - Present (Remote)</h4>
                 <h3>Key Qualifications & Responsibilities</h3>
                 <ul>
@@ -35,9 +33,10 @@ export default function Experiences() {
                     Built to be extended to other search tools as requested.
                   </li>
                   <li>
-                    Applying the dynamic and federated search used by more than 5000 employees
-                    and other consumers, significantly reduced the number of
-                    required searches and costs allocated with each query.
+                    Applying the dynamic and federated search used by more than
+                    5000 employees and other consumers, significantly reduced
+                    the number of required searches and costs allocated with
+                    each query.
                   </li>
                   <li>
                     Using the Google API implemented a robust locations finder
@@ -104,9 +103,7 @@ export default function Experiences() {
             <li>
               <a
                 onClick={() =>
-                  window.open(
-                    "https://www.linkedin.com/in/sam-lee-10008b221/"
-                  )
+                  window.open("https://www.linkedin.com/in/sam-lee-10008b221/")
                 }
               >
                 <svg
@@ -150,7 +147,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   font-family: "Mukta", sans-serif;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -252,21 +249,6 @@ const Container = styled.div`
     padding-left: 40px;
     border-top: 1rem double #000;
   }
-  @media screen and (max-width: 900px) {
-    height: 100%;
-    width: 100%;
-    .container {
-    }
-    .bottomWrap {
-      padding-left: 20px;
-    }
-    figcaption {
-      top: 10%;
-      left: 80%;
-      width: 60%;
-      height: 110%;
-    }
-  }
 
   .square {
     width: 700px;
@@ -291,25 +273,6 @@ const Container = styled.div`
     & h3 {
       margin: 1rem 0 0;
     }
-
-    @media screen and (max-width: 500px) {
-      width: 350px;
-      line-height: 1rem;
-      height: fit-content;
-      .h1 {
-        font-size: large;
-      }
-      & h3 {
-        font-size: medium;
-      }
-      & h4 {
-        font-size: small;
-        width: 350px;
-      }
-      & h5 {
-        font-size: small;
-      }
-    }
   }
 
   .imageWrap {
@@ -319,13 +282,6 @@ const Container = styled.div`
     align-items: center;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    @media screen and (max-width: 500px) {
-      width: 352px;
-      height: 70px;
-      & img {
-        width: 150px;
-      }
-    }
   }
   .mask {
     clip: rect(0px, 460px, 220px, 0px);
@@ -344,12 +300,6 @@ const Container = styled.div`
     color: #777;
     line-height: 1.2rem;
     margin: 0;
-    @media screen and (max-width: 500px) {
-      line-height: 1.1rem;
-      text-align: left;
-      padding: 0 20px;
-      font-size: 10px;
-    }
   }
 
   .buttonDiv {
@@ -378,6 +328,98 @@ const Container = styled.div`
       font-weight: 700;
     }
   }
+  @media screen and (max-width: 650px) {
+    height: 100%;
+    width: 100%;
+    .container {
+    }
+    .bottomWrap {
+      padding-left: 20px;
+    }
+    figcaption {
+      top: 10%;
+      left: 80%;
+      width: 60%;
+      height: 110%;
+    }
+    .square {
+      width: 350px;
+      line-height: 1rem;
+      height: fit-content;
+      .h1 {
+        font-size: large;
+      }
+      & h3 {
+        font-size: medium;
+      }
+      & h4 {
+        font-size: small;
+        width: 350px;
+      }
+      & h5 {
+        font-size: small;
+      }
+    }
+    .imageWrap {
+      width: 352px;
+      height: 70px;
+      & img {
+        width: 150px;
+      }
+    }
+    & ul {
+      line-height: 1.1rem;
+      text-align: left;
+      padding: 0 20px;
+      font-size: 10px;
+    }
+  }
+  @media screen and (max-width: 1250px) and (min-width: 651px){
+    height: 100%;
+    width: 100%;
+    .container {
+    }
+    .bottomWrap {
+      padding-left: 20px;
+    }
+    figcaption {
+      top: 10%;
+      left: 80%;
+      width: 60%;
+      height: 110%;
+    }
+    .square {
+      width: 500px;
+      line-height: 1.5rem;
+      height: fit-content;
+      .h1 {
+        font-size: 24px;
+      }
+      & h3 {
+        font-size: 18px;
+      }
+      & h4 {
+        font-size: 16px;
+        width: 500px;
+      }
+      & h5 {
+        font-size: small;
+      }
+    }
+    .imageWrap {
+      width: 100%;
+      height: 120px;
+      & img {
+        width: 150px;
+      }
+    }
+    & ul {
+      line-height: 1.1rem;
+      text-align: left;
+      padding: 0 20px;
+      font-size: 12px;
+    }
+  }
 `;
 
 const Title = styled.div`
@@ -395,7 +437,7 @@ const Title = styled.div`
     font-size: 50px;
     color: aqua;
     letter-spacing: -4px;
-    margin: 3rem 0 0;
+    margin: 4rem 0 0;
   }
   #underline {
     width: 290px;
@@ -404,7 +446,8 @@ const Title = styled.div`
     margin-bottom: 2rem;
   }
 
-  @media screen and (max-width: 500px) {
+
+  @media screen and (max-width: 850px) {
     p {
       height: 30px;
       font-size: 30px;
@@ -416,5 +459,19 @@ const Title = styled.div`
       background-color: white;
       margin-bottom: 2rem;
     }
-  } ;
+  }
+  @media screen and (max-width: 1250px) and (min-width: 851px) {
+    p {
+      height: 39px;
+      font-size: 40px;
+      letter-spacing: -3px;
+      margin: 5rem 0 0;
+    }
+    #underline {
+      width: 233px;
+      height: 4px;
+      background-color: white;
+      margin-bottom: 2rem;
+    }
+  }
 `;
