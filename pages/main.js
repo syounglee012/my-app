@@ -243,11 +243,11 @@ const BlackContainer = styled.div`
       }
       15% {
         top: 0rem;
-        width: 105px;
+        width: 86px;
       }
       30% {
         top: 0rem;
-        width: 105px;
+        width: 86px;
       }
       33% {
         top: 0rem;
@@ -262,11 +262,11 @@ const BlackContainer = styled.div`
       }
       48% {
         top: -1.35rem;
-        width: 125px;
+        width: 105px;
       }
       62% {
         top: -1.35rem;
-        width: 125px;
+        width: 105px;
       }
       66% {
         top: -1.35rem;
@@ -301,7 +301,7 @@ const BlackContainer = styled.div`
   @media screen and (max-width: 850px) and (min-width: 705px) {
     h1 {
       font-size: 18px;
-      width: 350px;
+      width: 270px;
     }
     h1 span {
       font-size: 18px;

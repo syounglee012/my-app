@@ -4,11 +4,18 @@ export default function Skills() {
   return (
     <Container>
       <Title>
-      <p id="test">SKILLS</p>
+        <p id="test">SKILLS</p>
         <div id="underline"></div>
       </Title>
       <ul className="icons">
-
+        <li>
+        <img src="https://img.icons8.com/color/48/null/c-programming.png"/>
+        <p>C</p>
+        </li>
+        <li>
+        <img src="https://img.icons8.com/color/48/null/python--v1.png"/>
+        <p>Python</p>
+        </li>
         <li>
           <img src="https://img.icons8.com/color/96/null/javascript--v1.png" />
           <p>JavaScript</p>
@@ -21,6 +28,10 @@ export default function Skills() {
           <img src="https://img.icons8.com/color/96/null/css3.png" />
           <p>CSS</p>
         </li>
+          <li>
+          <img src="https://img.icons8.com/external-bearicons-blue-bearicons/64/null/external-SQL-file-extension-bearicons-blue-bearicons.png"/>
+          <p>SQL</p>
+          </li>
         <li>
           <img src="https://img.icons8.com/color/96/null/react-native.png" />
           <p>React.js</p>
@@ -33,6 +44,10 @@ export default function Skills() {
         <li>
           <img src="/images/node.png" />
           <p>Node.js</p>
+        </li>
+        <li>
+        <img src="/images/axios.png" />
+          <p>Axios</p>
         </li>
         <li>
           <img src="https://img.icons8.com/color/96/null/redux.png" />
@@ -110,8 +125,8 @@ const Container = styled.div`
   /* padding: 5rem 2rem 5rem; */
 
   & img {
-    width: 86px;
-    height: 86px;
+    width: 70px;
+    height: 70px;
     transition: transform 250ms;
     /* object-fit: contain; */
     :hover {
@@ -122,8 +137,8 @@ const Container = styled.div`
   & ul {
     width: 1000px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 3.5rem;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3rem;
     padding: 0;
     margin: 0;
   }
@@ -139,26 +154,6 @@ const Container = styled.div`
 
     & p {
       text-align: center;
-    }
-  }
-
-  @media screen and (max-width: 900px) {
-    height: 100%;
-    font-size: 10px;
-    font-weight: 400;
-    padding: 0;
-    gap: 1rem;
-
-    & ul {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 0;
-      padding: 0.6rem;
-      width: auto;
-    }
-    & img {
-      width: 32px;
-      height: 32px;
     }
   }
 
@@ -191,7 +186,46 @@ const Container = styled.div`
         transform: translatey(5px);
       }
     }
-  } ;
+  }
+
+  @media screen and (max-width: 850px) {
+    height: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0;
+    gap: 1rem;
+
+    & ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 0;
+      padding: 0.6rem;
+      width: auto;
+    }
+    & img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  @media screen and (max-width: 1250px) and (min-width: 851px) {
+    height: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0;
+    gap: 1rem;
+
+    & ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 0;
+      padding: 0.6rem;
+      width: auto;
+    }
+    & img {
+      width: 60px;
+      height: 60px;
+    }
+  }
 `;
 
 const Title = styled.div`
@@ -201,16 +235,15 @@ const Title = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
-  p {
 
+  p {
     height: 50px;
     font-family: "Segoe UI";
     font-weight: 500;
     font-size: 50px;
     color: aqua;
     letter-spacing: -4px;
-    margin: 3rem 0 0;
+    margin: 2.5rem 0 0;
   }
   #underline {
     width: 145px;
@@ -218,18 +251,32 @@ const Title = styled.div`
     background-color: white;
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 850px) {
     p {
-    height: 30px;
+      height: 30px;
       font-size: 30px;
       letter-spacing: -3px;
       margin: 7rem 0 0;
     }
     #underline {
-    width: 85px;
-    height: 4px;
-    background-color: white;
-    margin-bottom: 2rem;
+      width: 85px;
+      height: 4px;
+      background-color: white;
+      margin-bottom: 2rem;
+    }
   }
-  } ;
+  @media screen and (max-width: 1250px) and (min-width: 851px) {
+    p {
+      height: 40px;
+      font-size: 40px;
+      letter-spacing: -3px;
+      margin: 3rem 0 0;
+    }
+    #underline {
+      width: 115px;
+      height: 4px;
+      background-color: white;
+      margin-bottom: 2rem;
+    }
+  }
 `;
