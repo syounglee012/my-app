@@ -11,7 +11,7 @@ export default function SentModal(props) {
           <>
             <div className="dim" onClick={close}>
               <WhiteBackground>
-                <h2>Message Sent</h2>
+                <h2>Message Sent!</h2>
               </WhiteBackground>
             </div>
           </>
@@ -53,6 +53,12 @@ const WhiteBackground = styled.div`
     font-family: "Bebas Neue", cursive;
     text-align: center;
     letter-spacing: 3px;
+  }
+  @media screen and (max-width: 900px) {
+    width: 180px;
+    & h2 {
+      font-size: 18px;
+    }
   }
 `;
 const Wrap = styled.div`
