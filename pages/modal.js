@@ -11,7 +11,7 @@ export default function Modal(props) {
         {open ? (
           <>
             <div className="dim" >
-              <Contact close={close}/>
+              <Contact open={open} close={close}/>
             </div>
           </>
         ) : null}

@@ -3,13 +3,13 @@ import { useRouter } from "next/router";
 
 export default function SentModal(props) {
   const router = useRouter();
-  const { open, close, exitOpen, exitClose } = props;
+  const { open, close, exitOpen, exitClose, sentOpen, sentClose} = props;
   return (
     <Wrap>
-      <div className={open || exitOpen ? "openModal modal" : "modal"}>
-        {open ? (
+      <div className={sentOpen || exitOpen ? "openModal modal" : "modal"}>
+        {sentOpen ? (
           <>
-            <div className="dim" onClick={close}>
+            <div className="dim" onClick={sentClose}>
               <WhiteBackground>
                 <h2>Message Sent!</h2>
               </WhiteBackground>
@@ -25,7 +25,7 @@ export default function SentModal(props) {
                 <div className="lowerbox">
                   <div
                     className="left"
-                    onClick={() => (window.location.href = "/")}
+                    onClick={close}
                   >
                     YES
                   </div>

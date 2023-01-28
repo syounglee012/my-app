@@ -3,9 +3,10 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import SentModal from "./sent-modal";
 
-export default function Contact({ close }) {
-  const [isOpen, setIsOpen] = React.useState(false);
+export default function Contact({ open, close }) {
+  // const [isOpen, setIsOpen] = React.useState(false);
   const [isExitOpen, setIsExitOpen] = React.useState(false);
+  const [sentOpen, setIsSentOpen] = React.useState(false);
   const form = useRef(null);
 
   const sendEmail = (e) => {
@@ -19,8 +20,8 @@ export default function Contact({ close }) {
       )
       .then(
         (result) => {
+          setIsSentOpen(true);
           console.log(result.text);
-          setIsOpen(true);
           e.target[0].value = null;
           e.target[1].value = null;
           e.target[2].value = null;
@@ -35,10 +36,12 @@ export default function Contact({ close }) {
     <Wrap>
       <div className="none">
         <SentModal
-          open={isOpen}
-          close={() => setIsOpen(false)}
+          open={open}
+          close={close}
           exitOpen={isExitOpen}
           exitClose={() => setIsExitOpen(false)}
+          sentOpen={sentOpen}
+          sentClose={() => setIsSentOpen(false)}
         />
       </div>
       <div className="container">

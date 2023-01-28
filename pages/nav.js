@@ -61,7 +61,9 @@ export default function Nav({
         <h1
           className={isMobileOpen ? "h1None" : "glitch"}
           data-glitch="Sam Lee"
-          onClick={() => (window.location.href = "/home")}
+          onClick={() => {
+            HandleHomeScroll(), HandleClicked(0);
+          }}
         >
           Sam Lee
         </h1>

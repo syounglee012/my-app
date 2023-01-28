@@ -9,7 +9,7 @@ export default function Experiences() {
 
   return (
     <>
-      <Container>
+      <Container >
         <Title>
           <p id="test">EXPERIENCES</p>
           <div id="underline"></div>
@@ -136,7 +136,7 @@ export default function Experiences() {
           </ul>
         </figure>
       </Container>
-      <div className="none">
+      <div className="none" >
         <Modal open={isOpen} close={() => setIsOpen(false)} />
       </div>
     </>
