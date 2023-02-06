@@ -62,7 +62,8 @@ export default function Nav({
           className={isMobileOpen ? "h1None" : "glitch"}
           data-glitch="Sam Lee"
           onClick={() => {
-            HandleHomeScroll(), HandleClicked(0);
+            window.location.href = "https://samlee.tech/"
+            // HandleHomeScroll(), HandleClicked(0);
           }}
         >
           Sam Lee
