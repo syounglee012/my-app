@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useState, useLayoutEffect } from "react";
 import styled from "styled-components";
 import Header from "../header";
 import Nav from "../nav";
@@ -13,6 +13,7 @@ export default function Home() {
   const skillsRef = useRef(null);
   const experiencesRef = useRef(null);
   const projectsRef = useRef(null);
+  const [show, setShow] = useState(false);
 
   const HandleHomeScroll = () => {
     homeRef.current.scrollIntoView({ behavior: "smooth" }, 1000);
@@ -28,33 +29,40 @@ export default function Home() {
     projectsRef.current.scrollIntoView({ behavior: "smooth" }, 1000);
   };
 
+  useLayoutEffect(() => {
+    setShow(true);
+  }, []);
   return (
-    <BlackContainer ref={homeRef}>
-      <Header />
-      <Nav
-        HandleHomeScroll={HandleHomeScroll}
-        HandleSkillsScroll={HandleSkillsScroll}
-        HandleExperiencesScroll={HandleExperiencesScroll}
-        HandleProjectsScroll={HandleProjectsScroll}
-      />
-      <Container>
-        <main>
-          <div className="container">
-            <div className="item">
-              <img src="images/profile1.png" alt="profile picture" />
-            </div>
-          </div>
-          <Main />
-        </main>
-        <div ref={skillsRef} />
-      </Container>
-      <Skills />
-      <div ref={experiencesRef} />
-      <Experiences />
-      <div ref={projectsRef} />
-      <Projects />
-      <Footer />
-    </BlackContainer>
+    <>
+      {show ? (
+        <BlackContainer ref={homeRef}>
+          <Header />
+          <Nav
+            HandleHomeScroll={HandleHomeScroll}
+            HandleSkillsScroll={HandleSkillsScroll}
+            HandleExperiencesScroll={HandleExperiencesScroll}
+            HandleProjectsScroll={HandleProjectsScroll}
+          />
+          <Container>
+            <main>
+              <div className="container">
+                <div className="item">
+                  <img src="images/profile1.png" alt="profile picture" />
+                </div>
+              </div>
+              <Main />
+            </main>
+            <div ref={skillsRef} />
+          </Container>
+          <Skills />
+          <div ref={experiencesRef} />
+          <Experiences />
+          <div ref={projectsRef} />
+          <Projects />
+          <Footer />
+        </BlackContainer>
+      ) : null}
+    </>
   );
 }
 
@@ -198,7 +206,6 @@ const Container = styled.div`
         transform: translateY(-20px) translateX(-20px);
       }
     }
-    
   }
   & img {
     width: 100%;
