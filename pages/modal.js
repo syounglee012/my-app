@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Contact from "./contact";
 export default function Modal(props) {
   const router = useRouter();
-  const { open, close} = props;
+  const {open, close} = props;
 
   return (
     <Wrap>

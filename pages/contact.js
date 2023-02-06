@@ -1,12 +1,13 @@
+import React, { useRef, useState, useLayoutEffect } from "react";
 import styled from "styled-components";
-import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import SentModal from "./sent-modal";
 
 export default function Contact({ open, close }) {
   // const [isOpen, setIsOpen] = React.useState(false);
-  const [isExitOpen, setIsExitOpen] = React.useState(false);
-  const [sentOpen, setIsSentOpen] = React.useState(false);
+  const [isExitOpen, setIsExitOpen] = useState(false);
+  const [sentOpen, setIsSentOpen] = useState(false);
+  const [show, setShow] = useState(false);
   const form = useRef(null);
 
   const sendEmail = (e) => {
@@ -32,9 +33,12 @@ export default function Contact({ open, close }) {
       );
   };
 
+  useLayoutEffect(() => {
+    setShow(true);
+  }, [isExitOpen, sentOpen]);
   return (
     <Wrap>
-      <div className="none">
+      {show ? (
         <SentModal
           open={open}
           close={close}
@@ -43,7 +47,8 @@ export default function Contact({ open, close }) {
           sentOpen={sentOpen}
           sentClose={() => setIsSentOpen(false)}
         />
-      </div>
+      ) : null}
+
       <div className="container">
         <div className="wrap">
           <button className="btn" onClick={() => setIsExitOpen(true)}>
