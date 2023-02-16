@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import Modal from "./modal";
@@ -62,8 +62,7 @@ export default function Nav({
           className={isMobileOpen ? "h1None" : "glitch"}
           data-glitch="Sam Lee"
           onClick={() => {
-            window.location.href = "https://samlee.tech/"
-            // HandleHomeScroll(), HandleClicked(0);
+            window.location.href = "https://samlee.tech/";
           }}
         >
           Sam Lee
@@ -203,7 +202,6 @@ const HeaderContainer = styled.header`
       border: none;
       display: flex;
       align-items: center;
-      width: 100%;
 
       &:before,
       &:after {
@@ -264,7 +262,6 @@ const HeaderContainer = styled.header`
   .clicked {
     color: #edf756;
     transition: 1s ease;
-
   }
   & span {
     position: relative;
@@ -349,7 +346,7 @@ const HeaderContainer = styled.header`
 const MobileContainer = styled.div`
   display: none;
   @media screen and (max-width: 1200px) {
-    width: 100%;
+    color: white;
     height: fit-content;
     display: flex;
     justify-content: right;
@@ -401,6 +398,7 @@ const MobileContainer = styled.div`
           letter-spacing: 3px;
           font-weight: 900;
           height: fit-content;
+          color: white;
         }
       }
     }

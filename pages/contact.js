@@ -33,9 +33,12 @@ export default function Contact({ open, close }) {
       );
   };
 
+  
+
   useLayoutEffect(() => {
     setShow(true);
   }, [isExitOpen, sentOpen]);
+
   return (
     <Wrap>
       {show ? (
@@ -871,6 +874,7 @@ export default function Contact({ open, close }) {
     </Wrap>
   );
 }
+
 
 const Wrap = styled.div`
   justify-content: center;
