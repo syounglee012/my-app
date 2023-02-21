@@ -1,1 +1,1 @@
-URL: samlee.tech
+URL: https://samlee.tech/ 
