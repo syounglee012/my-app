@@ -49,7 +49,7 @@ export default function Projects() {
                 fill="white"
                 class="bi bi-file-earmark-play"
                 viewBox="0 0 16 16"
-                onClick={()=> window.open('https://youtu.be/t1LJ9YDRG0s')}
+                onClick={() => window.open("https://youtu.be/t1LJ9YDRG0s")}
               >
                 <path d="M6 6.883v4.234a.5.5 0 0 0 .757.429l3.528-2.117a.5.5 0 0 0 0-.858L6.757 6.454a.5.5 0 0 0-.757.43z" />
                 <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
@@ -61,7 +61,11 @@ export default function Projects() {
                 fill="white"
                 class="bi bi-github"
                 viewBox="0 0 16 16"
-                onClick={()=> window.open('https://github.com/syounglee012/Soldier-Challengers')}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/syounglee012/Soldier-Challengers"
+                  )
+                }
               >
                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
               </svg>
@@ -72,7 +76,7 @@ export default function Projects() {
           <div className="tl-bg" id="lgb"></div>
 
           <div className="tl-year">
-            <p className="f2 heading--sanSerif">Looking Good Blog</p>
+            <p className="f2 heading--sanSerif">Looking-Good Blog</p>
           </div>
 
           <div className="tl-content">
@@ -102,7 +106,9 @@ export default function Projects() {
                 fill="white"
                 class="bi bi-file-earmark-play"
                 viewBox="0 0 16 16"
-                onClick={()=> window.open('https://www.youtube.com/watch?v=_XbL2yDDNwc')}
+                onClick={() =>
+                  window.open("https://www.youtube.com/watch?v=_XbL2yDDNwc")
+                }
               >
                 <path d="M6 6.883v4.234a.5.5 0 0 0 .757.429l3.528-2.117a.5.5 0 0 0 0-.858L6.757 6.454a.5.5 0 0 0-.757.43z" />
                 <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
@@ -114,7 +120,9 @@ export default function Projects() {
                 fill="white"
                 class="bi bi-github"
                 viewBox="0 0 16 16"
-                onClick={()=> window.open('https://github.com/syounglee012/Looking-Good')}
+                onClick={() =>
+                  window.open("https://github.com/syounglee012/Looking-Good")
+                }
               >
                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
               </svg>
@@ -164,7 +172,9 @@ export default function Projects() {
                 fill="white"
                 class="bi bi-file-earmark-play"
                 viewBox="0 0 16 16"
-                onClick={()=> window.open('https://www.youtube.com/watch?v=-qfgqgFdOCw')}
+                onClick={() =>
+                  window.open("https://www.youtube.com/watch?v=-qfgqgFdOCw")
+                }
               >
                 <path d="M6 6.883v4.234a.5.5 0 0 0 .757.429l3.528-2.117a.5.5 0 0 0 0-.858L6.757 6.454a.5.5 0 0 0-.757.43z" />
                 <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
@@ -176,7 +186,67 @@ export default function Projects() {
                 fill="white"
                 class="bi bi-github"
                 viewBox="0 0 16 16"
-                onClick={()=> window.open('https://github.com/syounglee012/Seoul-Restroom')}
+                onClick={() =>
+                  window.open("https://github.com/syounglee012/Seoul-Restroom")
+                }
+              >
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div className="tl-item">
+          <div className="tl-bg" id="dd"></div>
+
+          <div className="tl-year">
+            <p className="f2 heading--sanSerif">Daily Devotion</p>
+          </div>
+
+          <div className="tl-content">
+            <h1 className="f3 text--accent ttu">
+              Offers daily devotions based on the Book of Proverbs and a search
+              function that covers all books of the Bible
+            </h1>
+            <ul>
+              <li>
+                Constructed the web application to enable the automatic update
+                of the Proverbs chapter based on the current date
+              </li>
+              <li>
+                Implemented a dynamic and responsive user interface that works
+                seamlessly on any screen size
+              </li>
+              <li>
+                Incorporated a rapid and reactive search function that includes
+                all books of the Bible
+              </li>
+            </ul>
+
+            <div id="icons">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                fill="white"
+                class="bi bi-window"
+                viewBox="0 0 16 16"
+                onClick={() =>
+                  window.open("https://proverbs-daily-devotion.click")
+                }
+              >
+                <path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" />
+                <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm13 2v2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zM2 14a1 1 0 0 1-1-1V6h14v7a1 1 0 0 1-1 1H2z" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                fill="white"
+                class="bi bi-github"
+                viewBox="0 0 16 16"
+                onClick={() =>
+                  window.open("https://github.com/syounglee012/daily_devotion")
+                }
               >
                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
               </svg>
@@ -209,17 +279,18 @@ const Container = styled.div`
   #sr {
     background: url("images/sr.png") no-repeat center center/contain;
   }
+  #dd {
+    background: url("images/dd.png") no-repeat center center/contain;
+  }
 
   #timeline {
     display: flex;
-    /* background-color: #031625; */
 
     &:hover {
       .tl-item {
         width: 33.3333%;
         @media screen and (max-width: 1265px) {
           width: 100%;
-          
         }
       }
     }
@@ -230,7 +301,6 @@ const Container = styled.div`
     position: relative;
     width: 33.3333%;
     height: 90vh;
-    /* min-height: 500px; */
     color: #fff;
     overflow: hidden;
     transition: width 0.5s ease;
@@ -260,7 +330,6 @@ const Container = styled.div`
       top: 0;
       width: 100%;
       height: 100%;
-
     }
 
     &:after {
@@ -304,7 +373,7 @@ const Container = styled.div`
         text-shadow: 0 0 3px aqua, 0 0 3px aqua;
         transition: 0.9s ease;
         top: 22%;
-        @media screen and (max-width: 1265px){
+        @media screen and (max-width: 1265px) {
           top: 7%;
         }
       }
@@ -323,7 +392,7 @@ const Container = styled.div`
       width: 100%;
       height: 60vh;
       margin-bottom: 5rem;
-      #icons{
+      #icons {
         margin: 2rem 0 0;
       }
       svg {
@@ -350,7 +419,7 @@ const Container = styled.div`
         sans-serif;
       text-transform: uppercase;
       color: #edf756;
-      font-size: 1.44rem;
+      font-size: 1.2rem;
       font-weight: normal;
     }
 
@@ -366,11 +435,10 @@ const Container = styled.div`
         text-shadow: #031625;
       }
       ul {
-        font-size: 0.9rem;
+        font-size: 1rem;
         padding: 0 0 0 1rem;
       }
     }
-
   }
 
   .tl-year {
@@ -397,9 +465,9 @@ const Container = styled.div`
         font-size: 1.2rem;
       }
     }
-    @media screen and (max-width: 1500px) and (min-width: 1265px) {
+    @media screen and (max-width: 1800px) and (min-width: 1265px) {
       p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
       }
     }
   }
@@ -460,7 +528,7 @@ const Title = styled.div`
       margin-bottom: 2rem;
     }
   }
-  @media screen and (max-width: 1250px) and (min-width: 851px){
+  @media screen and (max-width: 1250px) and (min-width: 851px) {
     p {
       height: 51px;
       font-size: 40px;
