@@ -47,7 +47,7 @@ export default function Projects() {
                 width="35"
                 height="35"
                 fill="white"
-                class="bi bi-file-earmark-play"
+                className="bi bi-file-earmark-play"
                 viewBox="0 0 16 16"
                 onClick={() => window.open("https://youtu.be/t1LJ9YDRG0s")}
               >
@@ -59,7 +59,7 @@ export default function Projects() {
                 width="35"
                 height="35"
                 fill="white"
-                class="bi bi-github"
+                className="bi bi-github"
                 viewBox="0 0 16 16"
                 onClick={() =>
                   window.open(
@@ -104,7 +104,7 @@ export default function Projects() {
                 width="35"
                 height="35"
                 fill="white"
-                class="bi bi-file-earmark-play"
+                className="bi bi-file-earmark-play"
                 viewBox="0 0 16 16"
                 onClick={() =>
                   window.open("https://www.youtube.com/watch?v=_XbL2yDDNwc")
@@ -118,7 +118,7 @@ export default function Projects() {
                 width="35"
                 height="35"
                 fill="white"
-                class="bi bi-github"
+                className="bi bi-github"
                 viewBox="0 0 16 16"
                 onClick={() =>
                   window.open("https://github.com/syounglee012/Looking-Good")
@@ -170,7 +170,7 @@ export default function Projects() {
                 width="35"
                 height="35"
                 fill="white"
-                class="bi bi-file-earmark-play"
+                className="bi bi-file-earmark-play"
                 viewBox="0 0 16 16"
                 onClick={() =>
                   window.open("https://www.youtube.com/watch?v=-qfgqgFdOCw")
@@ -184,7 +184,7 @@ export default function Projects() {
                 width="35"
                 height="35"
                 fill="white"
-                class="bi bi-github"
+                className="bi bi-github"
                 viewBox="0 0 16 16"
                 onClick={() =>
                   window.open("https://github.com/syounglee012/Seoul-Restroom")
@@ -228,7 +228,7 @@ export default function Projects() {
                 width="35"
                 height="35"
                 fill="white"
-                class="bi bi-window"
+                className="bi bi-window"
                 viewBox="0 0 16 16"
                 onClick={() =>
                   window.open("https://proverbs-daily-devotion.click")
@@ -242,7 +242,7 @@ export default function Projects() {
                 width="35"
                 height="35"
                 fill="white"
-                class="bi bi-github"
+                className="bi bi-github"
                 viewBox="0 0 16 16"
                 onClick={() =>
                   window.open("https://github.com/syounglee012/daily_devotion")

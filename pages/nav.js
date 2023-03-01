@@ -118,14 +118,14 @@ export default function Nav({
         </button>
         <MobileContainer>
           <div
-            class={isMobileOpen ? "hambergurNone" : "hambergur"}
+            className={isMobileOpen ? "hambergurNone" : "hambergur"}
             onClick={() => setIsMobileOpen(true)}
           >
             <div></div>
             <div></div>
             <div></div>
           </div>
-          <div class={isMobileOpen ? "toggleContainer" : "toggleNone"}>
+          <div className={isMobileOpen ? "toggleContainer" : "toggleNone"}>
             <ul>
               <li onClick={() => HandleToggle(1)}>HOME</li>
               <li onClick={() => HandleToggle(2)}>SKILLS</li>
@@ -354,7 +354,7 @@ const MobileContainer = styled.div`
       display: grid;
       gap: 0.2rem;
       width: 1.6rem;
-
+      cursor: pointer;
       div {
         width: 1.3rem;
         height: 1px;
@@ -399,6 +399,7 @@ const MobileContainer = styled.div`
           font-weight: 900;
           height: fit-content;
           color: white;
+          cursor: pointer;
         }
       }
     }

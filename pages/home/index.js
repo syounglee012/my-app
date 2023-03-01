@@ -7,6 +7,7 @@ import Footer from "../footer";
 import Skills from "../skills";
 import Experiences from "../experiences";
 import Projects from "../projects";
+import Image from "next/image";
 
 export default function Home() {
   const homeRef = useRef(null);
@@ -47,7 +48,15 @@ export default function Home() {
             <main>
               <div className="container">
                 <div className="item">
-                  <img src="images/profile1.png" alt="profile picture" />
+                  <Image
+                  className={"img-box"}
+                  src={"/images/profile1.png"}
+                  alt={"profile-picture"}
+                  width={520}
+                  height={669}
+                  priority={true}
+                  unoptimized={false} 
+                  />
                 </div>
               </div>
               <Main />
@@ -102,7 +111,7 @@ const Container = styled.div`
       position: relative;
       width: 500px;
       z-index: 10;
-      img {
+      .img-box {
         object-fit: cover;
       }
       &::before,
@@ -133,7 +142,6 @@ const Container = styled.div`
       &:hover {
         animation-name: hoverPop;
         animation-duration: 0.4s;
-        animation-fill-direction: forward;
 
         &::before {
           animation: slick-hover-2 3s 0.4s linear infinite;
@@ -207,7 +215,7 @@ const Container = styled.div`
       }
     }
   }
-  & img {
+   .img-box {
     width: 100%;
     height: 100%;
     max-width: 520px;

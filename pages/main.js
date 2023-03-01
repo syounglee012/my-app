@@ -12,10 +12,10 @@ export default function Main() {
       </div>
       <h1>
         <span>always be</span>
-        <div class="message">
-          <div class="word1">humble</div>
-          <div class="word2">creative</div>
-          <div class="word3">hardworking</div>
+        <div className="message">
+          <div className="word1">humble</div>
+          <div className="word2">creative</div>
+          <div className="word3">hardworking</div>
         </div>
       </h1>
     </BlackContainer>
