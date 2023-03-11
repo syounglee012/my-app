@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import styled from "styled-components";
 
 export default function Skills() {
@@ -117,19 +116,16 @@ const Container = styled.div`
   display: grid;
   width: 100%;
   height: 100vh;
-  /* background-color: black; */
   color: white;
   letter-spacing: 1px;
   font-weight: 600;
   align-items: center;
   justify-content: center;
-  /* padding: 5rem 2rem 5rem; */
 
   & img {
     width: 70px;
     height: 70px;
     transition: transform 250ms;
-    /* object-fit: contain; */
     :hover {
       transform: translateY(-5px);
     }
@@ -160,30 +156,24 @@ const Container = styled.div`
 
   @keyframes float {
     0% {
-      /* box-shadow: -10px 5px 10px 0px rgba(22, 43, 88, 0.8); */
       transform: translatey(5px);
     }
     50% {
-      /* box-shadow: 10px 10px 20px 0px rgba(81, 124, 146, 0.8); */
       transform: translatey(-25px);
     }
     100% {
-      /* box-shadow: -10px 5px 10px 0px rgba(22, 43, 88, 0.8); */
       transform: translatey(5px);
     }
   }
   @media screen and (max-width: 900px) {
     @keyframes float {
       0% {
-        /* box-shadow: -10px 5px 10px 0px rgba(22, 43, 88, 0.8); */
         transform: translatey(5px);
       }
       50% {
-        /* box-shadow: 10px 10px 20px 0px rgba(81, 124, 146, 0.8); */
         transform: translatey(-10px);
       }
       100% {
-        /* box-shadow: -10px 5px 10px 0px rgba(22, 43, 88, 0.8); */
         transform: translatey(5px);
       }
     }

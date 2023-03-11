@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import { useRouter } from "next/router";
 
 export default function SentModal(props) {
-  const router = useRouter();
   const { open, close, exitOpen, exitClose, sentOpen, sentClose} = props;
   return (
     <Wrap>

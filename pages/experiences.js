@@ -1,11 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { useRouter } from "next/router";
 import Modal from "./modal";
 import Image from "next/image";
 
 export default function Experiences() {
-  const router = useRouter();
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (

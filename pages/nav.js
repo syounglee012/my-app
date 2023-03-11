@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { useRouter } from "next/router";
 import Modal from "./modal";
 
 export default function Nav({
@@ -9,7 +8,6 @@ export default function Nav({
   HandleExperiencesScroll,
   HandleProjectsScroll,
 }) {
-  const router = useRouter();
   const [isOpen, setIsOpen] = React.useState(false);
   const [isMobileOpen, setIsMobileOpen] = React.useState(false);
   const [isHomeClicked, setIsHomneClicked] = React.useState(false);
@@ -323,8 +321,6 @@ const HeaderContainer = styled.header`
       letter-spacing: 0.3rem;
       color: #edf756;
       transition: 0.7s ease;
-
-      /* opacity: 0.5; */
     }
   }
 

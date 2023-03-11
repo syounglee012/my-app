@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import { useRouter } from "next/router";
 import Contact from "./contact";
 export default function Modal(props) {
-  const router = useRouter();
   const {open, close} = props;
 
   return (
@@ -44,7 +42,6 @@ const Wrap = styled.div`
   .modal.openModal {
     display: flex;
     align-items: center;
-    /* 팝업이 열릴때 스르륵 열리는 효과 */
     animation: modal-bg-show 0.2s;
   }
 
