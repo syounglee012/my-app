@@ -13,9 +13,9 @@ export default function Main() {
       <h1>
         <span>always be</span>
         <div className="message">
-          <div className="word1">humble</div>
-          <div className="word2">creative</div>
-          <div className="word3">hardworking</div>
+          <div className="word1">patient</div>
+          <div className="word2">learning</div>
+          <div className="word3">communicating</div>
         </div>
       </h1>
     </BlackContainer>
@@ -147,11 +147,11 @@ const BlackContainer = styled.div`
     }
     15% {
       top: -0.1rem;
-      width: 200px;
+      width: 210px;
     }
     30% {
       top: -0.1rem;
-      width: 200px;
+      width: 210px;
     }
     33% {
       top: -0.1rem;
@@ -166,11 +166,11 @@ const BlackContainer = styled.div`
     }
     48% {
       top: -3.9rem;
-      width: 237px;
+      width: 250px;
     }
     62% {
       top: -3.9rem;
-      width: 237px;
+      width: 250px;
     }
     66% {
       top: -3.9rem;
@@ -184,11 +184,11 @@ const BlackContainer = styled.div`
     }
     86% {
       top: -7.6rem;
-      width: 375px;
+      width: 425px;
     }
     95% {
       top: -7.6rem;
-      width: 375px;
+      width: 425px;
     }
     98% {
       top: -7.6rem;

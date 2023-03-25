@@ -38,7 +38,7 @@ export default function Skills() {
         </li>
 
         <li>
-          <img src="/images/next.svg" />
+          <img src="/images/next.svg" className="nextLogo" />
           <p>Next.js</p>
         </li>
         <li>
@@ -151,6 +151,10 @@ const Container = styled.div`
 
     & p {
       text-align: center;
+    }
+
+    .nextLogo {
+      color: white;
     }
   }
 
