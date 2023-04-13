@@ -38,7 +38,7 @@ export default function Skills() {
         </li>
 
         <li>
-          <img src="/images/next.svg" className="nextLogo" />
+          <img src="/images/nextjs.png" className="nextLogo" />
           <p>Next.js</p>
         </li>
         <li>
@@ -123,8 +123,8 @@ const Container = styled.div`
   justify-content: center;
 
   & img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     transition: transform 250ms;
     :hover {
       transform: translateY(-5px);
@@ -202,7 +202,7 @@ const Container = styled.div`
       height: 40px;
     }
   }
-  @media screen and (max-width: 1250px) and (min-width: 851px) {
+  @media screen and (max-width: 1350px) and (min-width: 851px) {
     height: 100%;
     font-size: 16px;
     font-weight: 400;
@@ -260,7 +260,7 @@ const Title = styled.div`
       margin-bottom: 2rem;
     }
   }
-  @media screen and (max-width: 1250px) and (min-width: 851px) {
+  @media screen and (max-width: 1350px) and (min-width: 851px) {
     p {
       height: 38px;
       font-size: 40px;

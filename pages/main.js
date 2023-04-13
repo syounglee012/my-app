@@ -14,7 +14,7 @@ export default function Main() {
         <span>always be</span>
         <div className="message">
           <div className="word1">learning</div>
-          <div className="word2">listening</div>
+          <div className="word2">responsible</div>
           <div className="word3">communicating</div>
         </div>
       </h1>
@@ -166,11 +166,11 @@ const BlackContainer = styled.div`
     }
     48% {
       top: -3.9rem;
-      width: 265px;
+      width: 335px;
     }
     62% {
       top: -3.9rem;
-      width: 265px;
+      width: 335px;
     }
     66% {
       top: -3.9rem;
@@ -209,7 +209,7 @@ const BlackContainer = styled.div`
     h1 {
       font-size: 14px;
       margin: 22rem 0 0;
-      width: 270px;
+      width: 300px;
     }
     h1 span {
       font-size: 14px;
@@ -243,11 +243,11 @@ const BlackContainer = styled.div`
       }
       15% {
         top: 0rem;
-        width: 86px;
+        width: 106px;
       }
       30% {
         top: 0rem;
-        width: 86px;
+        width: 106px;
       }
       33% {
         top: 0rem;
@@ -262,11 +262,11 @@ const BlackContainer = styled.div`
       }
       48% {
         top: -1.35rem;
-        width: 105px;
+        width: 140px;
       }
       62% {
         top: -1.35rem;
-        width: 105px;
+        width: 140px;
       }
       66% {
         top: -1.35rem;
@@ -280,11 +280,11 @@ const BlackContainer = styled.div`
       }
       86% {
         top: -2.65rem;
-        width: 190px;
+        width: 175px;
       }
       95% {
         top: -2.65rem;
-        width: 190px;
+        width: 175px;
       }
       98% {
         top: -2.65rem;
@@ -326,7 +326,7 @@ const BlackContainer = styled.div`
       letter-spacing: 0.3rem;
     }
   }
-  @media screen and (max-width: 1250px) and (min-width:851px) {
+  @media screen and (max-width: 1350px) and (min-width:851px) {
     h1 {
       font-size: 18px;
       width: 350px;
@@ -354,7 +354,33 @@ const BlackContainer = styled.div`
       letter-spacing: 0.3rem;
     }
   }
-  @media screen and (max-width: 1250px) and (min-width: 704px) {
+  @media screen and (max-width: 1350px) and (min-width: 704px) {
+    h1 {
+      font-size: 18px;
+      width: 350px;
+    }
+    h1 span {
+      font-size: 18px;
+      margin-right: 0;
+    }
+    .message {
+      left: 130px;
+      
+    }
+    .lineOne,
+    .lineTwo {
+      font-size: 3rem;
+    }
+    .lineThree {
+      font-size: 1.6rem;
+      margin-top: 1em;
+      text-align: center;
+      letter-spacing: 0.3rem;
+    }
+    .lineFour {
+      font-size: 1rem;
+      letter-spacing: 0.3rem;
+    }
     @keyframes openclose {
       0% {
         top: 0rem;
@@ -366,11 +392,11 @@ const BlackContainer = styled.div`
       }
       15% {
         top: 0rem;
-        width: 105px;
+        width: 130px;
       }
       30% {
         top: 0rem;
-        width: 105px;
+        width: 130px;
       }
       33% {
         top: 0rem;
@@ -385,11 +411,11 @@ const BlackContainer = styled.div`
       }
       48% {
         top: -1.7rem;
-        width: 125px;
+        width: 170px;
       }
       62% {
         top: -1.7rem;
-        width: 125px;
+        width: 170px;
       }
       66% {
         top: -1.7rem;
@@ -403,11 +429,11 @@ const BlackContainer = styled.div`
       }
       86% {
         top: -3.4rem;
-        width: 190px;
+        width: 235px;
       }
       95% {
         top: -3.4rem;
-        width: 190px;
+        width: 235px;
       }
       98% {
         top: -3.4rem;

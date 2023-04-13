@@ -1,4 +1,4 @@
-import React, { useRef, useState, useLayoutEffect } from "react";
+import React, { useRef, useState, useEffect,  useLayoutEffect } from "react";
 import styled from "styled-components";
 import Header from "../header";
 import Nav from "../nav";
@@ -33,6 +33,9 @@ export default function Home() {
   useLayoutEffect(() => {
     setShow(true);
   }, []);
+  
+
+
   return (
     <>
       {show ? (
@@ -64,6 +67,7 @@ export default function Home() {
             <div ref={skillsRef} />
           </Container>
           <Skills />
+          <div className="ui" />
           <div ref={experiencesRef} />
           <Experiences />
           <div ref={projectsRef} />
@@ -79,6 +83,10 @@ const BlackContainer = styled.div`
   width: 100%;
   height: 100%;
   background: url("images/background7.jpeg") no-repeat center center/cover;
+  background-attachment: fixed;
+.ui {
+
+}
 `;
 const Container = styled.div`
   display: flex;
@@ -253,7 +261,7 @@ const Container = styled.div`
     height: 100%;
   }
 
-  @media screen and (max-width: 1250px) and (min-width: 851px) {
+  @media screen and (max-width: 1350px) and (min-width: 851px) {
     & main {
       gap: 2rem;
       .container {
@@ -278,3 +286,4 @@ const Container = styled.div`
     }
   }
 `;
+

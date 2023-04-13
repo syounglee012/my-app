@@ -28,9 +28,9 @@ export default function Experiences() {
                  />
               </div>
               <div className="bottomWrap">
-                <h1 className="h1">Front End Developer</h1>
-                <h4>TRIUMPH (Redmond, WA) - Contract via BlueRock Marketing</h4>
-                <h4>September 2022 - Present (Remote)</h4>
+                <h1 className="h1">Front-End Developer</h1>
+                <h4>TRIUMPH (Seattle, WA) - Contract via BlueRock Marketing</h4>
+                <h4>September 2022 - Present</h4>
                 <h3>Key Qualifications & Responsibilities</h3>
                 <ul>
                   <li>
@@ -262,13 +262,12 @@ const Container = styled.div`
     height: 750px;
     background: white;
     color: #000;
-    border-radius: 20px;
 
     .h1 {
       text-align: left;
       font-family: "Merriweather", serif;
       color: #000;
-      letter-spacing: 2px;
+      letter-spacing: 1.6px;
       margin: 1rem 0 0;
     }
 
@@ -287,12 +286,9 @@ const Container = styled.div`
     background: url("images/building.jpeg") no-repeat center center/cover;
     justify-content: center;
     align-items: center;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
   }
   .mask {
     clip: rect(0px, 460px, 220px, 0px);
-    border-radius: 4px;
     object-fit: contain;
     width: 220px;
     height: 220px;
@@ -320,7 +316,6 @@ const Container = styled.div`
     color: black;
     width: 100px;
     height: 40px;
-    border-radius: 3px;
     border: 2px solid black;
     text-align: center;
     text-decoration: none;
@@ -354,17 +349,17 @@ const Container = styled.div`
       line-height: 1rem;
       height: fit-content;
       .h1 {
-        font-size: large;
+        font-size: 16px;
       }
       & h3 {
-        font-size: medium;
+        font-size: 11px;
       }
       & h4 {
-        font-size: small;
+        font-size: 11px;
         width: 350px;
       }
       & h5 {
-        font-size: small;
+        font-size: 10px;
       }
     }
     .imageWrap {
@@ -381,7 +376,7 @@ const Container = styled.div`
       font-size: 10px;
     }
   }
-  @media screen and (max-width: 1250px) and (min-width: 651px){
+  @media screen and (max-width: 1350px) and (min-width: 651px){
     height: 100%;
     width: 100%;
     .container {
@@ -467,7 +462,7 @@ const Title = styled.div`
       margin-bottom: 2rem;
     }
   }
-  @media screen and (max-width: 1250px) and (min-width: 851px) {
+  @media screen and (max-width: 1350px) and (min-width: 851px) {
     p {
       height: 39px;
       font-size: 40px;

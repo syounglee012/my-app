@@ -995,7 +995,6 @@ const Wrap = styled.div`
     }
     .form-control {
       background-color: #f2f6f8;
-      border-radius: 20px;
       border: none;
       box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
       width: 400px;
@@ -1027,7 +1026,7 @@ const Wrap = styled.div`
     textarea {
       font-family: "Quicksand", sans-serif;
       color: #212529;
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     .btn.btn-primary {

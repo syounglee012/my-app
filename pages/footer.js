@@ -26,4 +26,5 @@ const FooterContainer = styled.div`
   bottom: 0;
   font-family: "Bodoni Moda", serif;
   background-color: black;
+  color: white;
 `;

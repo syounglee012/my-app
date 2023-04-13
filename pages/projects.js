@@ -267,7 +267,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.75;
 
   #sc {
@@ -289,7 +289,7 @@ const Container = styled.div`
     &:hover {
       .tl-item {
         width: 33.3333%;
-        @media screen and (max-width: 1265px) {
+        @media screen and (max-width: 1300px) {
           width: 100%;
         }
       }
@@ -373,7 +373,7 @@ const Container = styled.div`
         text-shadow: 0 0 3px aqua, 0 0 3px aqua;
         transition: 0.9s ease;
         top: 22%;
-        @media screen and (max-width: 1265px) {
+        @media screen and (max-width: 1300px) {
           top: 7%;
         }
       }
@@ -388,7 +388,7 @@ const Container = styled.div`
         filter: grayscale(0);
       }
     }
-    @media screen and (max-width: 1265px) {
+    @media screen and (max-width: 1350px) {
       width: 100%;
       height: 60vh;
       margin-bottom: 5rem;
@@ -419,7 +419,7 @@ const Container = styled.div`
         sans-serif;
       text-transform: uppercase;
       color: #edf756;
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: normal;
     }
 
@@ -435,6 +435,7 @@ const Container = styled.div`
         text-shadow: #031625;
       }
       ul {
+        display: none;
         font-size: 1rem;
         padding: 0 0 0 1rem;
       }
@@ -453,7 +454,7 @@ const Container = styled.div`
     p {
       font-family: "Pathway Gothic One", Helvetica Neue, Helvetica, Arial,
         sans-serif;
-      font-size: 1.7rem;
+      font-size: 1.4rem;
       line-height: 0;
       :hover {
         color: aqua;
@@ -462,12 +463,12 @@ const Container = styled.div`
     @media screen and (max-width: 900px) {
       top: 7%;
       p {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
     }
-    @media screen and (max-width: 1800px) and (min-width: 1265px) {
+    @media screen and (max-width: 1800px) and (min-width: 1350px) {
       p {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
     }
   }
@@ -485,7 +486,7 @@ const Container = styled.div`
     filter: grayscale(100%) brightness(40%);
   }
 
-  @media screen and (max-width: 1265px) {
+  @media screen and (max-width: 1350px) {
     #timeline {
       display: grid;
       grid-template-columns: 1fr;
@@ -515,7 +516,7 @@ const Title = styled.div`
     height: 8px;
     background-color: white;
   }
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 1350px) {
     p {
       height: 38px;
       font-size: 30px;
@@ -528,7 +529,7 @@ const Title = styled.div`
       margin-bottom: 2rem;
     }
   }
-  @media screen and (max-width: 1250px) and (min-width: 851px) {
+  @media screen and (max-width: 1350px) and (min-width: 851px) {
     p {
       height: 51px;
       font-size: 40px;
