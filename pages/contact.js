@@ -882,7 +882,6 @@ const Wrap = styled.div`
   width: 100%;
   max-width: 850px;
   background: url("images/background7.jpeg") no-repeat center center/cover;
-  border-radius: 20px;
   z-index: 100;
   border: 2px solid white;
   .none {
@@ -1039,7 +1038,6 @@ const Wrap = styled.div`
       line-height: 2.5rem;
       padding: 0 4rem;
       border: 0;
-      border-radius: 10px;
       margin: 0;
       background-image: linear-gradient(
         131deg,
