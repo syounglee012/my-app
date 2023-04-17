@@ -62,8 +62,5 @@ jobs:
       - name: Build
         run: yarn build
 
-        env:  EMAIL_PUBLIC_KEY: ${{ secrets.EMAIL_PUBLIC_KEY }}
-         EMAIL_SERVICE_ID: ${{ secrets.EMAIL_SERVICE_ID }}
-         EMAIL_TEMPLATE_ID: ${{ secrets.EMAIL_TEMPLATE_ID }}
 
 
