@@ -21,7 +21,6 @@ export default function Contact({ open, close }) {
       .then(
         (result) => {
           setIsSentOpen(true);
-          console.log(result.text);
           e.target[0].value = null;
           e.target[1].value = null;
           e.target[2].value = null;
@@ -31,8 +30,6 @@ export default function Contact({ open, close }) {
         }
       );
   };
-
-  
 
   useLayoutEffect(() => {
     setShow(true);
@@ -873,7 +870,6 @@ export default function Contact({ open, close }) {
     </Wrap>
   );
 }
-
 
 const Wrap = styled.div`
   justify-content: center;

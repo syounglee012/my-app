@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect,  useLayoutEffect } from "react";
+import React, { useRef, useState, useEffect, useLayoutEffect } from "react";
 import styled from "styled-components";
 import Header from "../header";
 import Nav from "../nav";
@@ -33,8 +33,6 @@ export default function Home() {
   useLayoutEffect(() => {
     setShow(true);
   }, []);
-  
-
 
   return (
     <>
@@ -52,13 +50,13 @@ export default function Home() {
               <div className="container">
                 <div className="item">
                   <Image
-                  className={"img-box"}
-                  src={"/images/profile1.png"}
-                  alt={"profile-picture"}
-                  width={520}
-                  height={669}
-                  priority={true}
-                  unoptimized={false} 
+                    className={"img-box"}
+                    src={"/images/profile1.png"}
+                    alt={"profile-picture"}
+                    width={520}
+                    height={669}
+                    priority={true}
+                    unoptimized={false}
                   />
                 </div>
               </div>
@@ -84,9 +82,8 @@ const BlackContainer = styled.div`
   height: 100%;
   background: url("images/background7.jpeg") no-repeat center center/cover;
   background-attachment: fixed;
-.ui {
-
-}
+  .ui {
+  }
 `;
 const Container = styled.div`
   display: flex;
@@ -96,7 +93,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   letter-spacing: 0.2rem;
-  animation: txtFlyIn 1s linear;
+  animation: txtFlyIn 2s linear;
 
   & main {
     width: 100%;
@@ -223,7 +220,7 @@ const Container = styled.div`
       }
     }
   }
-   .img-box {
+  .img-box {
     width: 100%;
     height: 100%;
     max-width: 520px;
@@ -286,4 +283,3 @@ const Container = styled.div`
     }
   }
 `;
-

@@ -60,7 +60,7 @@ export default function Nav({
           className={isMobileOpen ? "h1None" : "glitch"}
           data-glitch="Sam Lee"
           onClick={() => {
-            window.location.href = "https://samlee.tech/";
+            window.location.href = "https://www.samlee.tech/";
           }}
         >
           Sam Lee
