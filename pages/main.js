@@ -98,7 +98,7 @@ const BlackContainer = styled.div`
   }
 
   h1 {
-    color: #FFFAA0;
+    color: #fffaa0;
     font-family: tahoma;
     font-size: 2.5rem;
     font-weight: 1;
@@ -109,7 +109,6 @@ const BlackContainer = styled.div`
     position: relative;
     width: 100%;
     animation: fadeIn 2s linear;
-  
   }
 
   h1 span {
@@ -118,7 +117,7 @@ const BlackContainer = styled.div`
   }
 
   .message {
-    background-color: #FFFAA0;
+    background-color: #fffaa0;
     color: #111;
     display: block;
     font-weight: 900;
@@ -201,7 +200,7 @@ const BlackContainer = styled.div`
       text-indent: 0;
     }
   }
- 
+
   @media screen and (max-width: 704px) {
     width: 270px;
     position: absolute;
@@ -309,7 +308,6 @@ const BlackContainer = styled.div`
     }
     .message {
       left: 130px;
-      
     }
     .lineOne,
     .lineTwo {
@@ -326,7 +324,7 @@ const BlackContainer = styled.div`
       letter-spacing: 0.3rem;
     }
   }
-  @media screen and (max-width: 1350px) and (min-width:851px) {
+  @media screen and (max-width: 1350px) and (min-width: 851px) {
     h1 {
       font-size: 18px;
       width: 350px;
@@ -335,7 +333,7 @@ const BlackContainer = styled.div`
       font-size: 18px;
       margin-right: 0;
     }
-   
+
     .message {
       left: 130px;
     }
@@ -365,7 +363,6 @@ const BlackContainer = styled.div`
     }
     .message {
       left: 130px;
-      
     }
     .lineOne,
     .lineTwo {
